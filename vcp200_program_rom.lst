@@ -1,0 +1,3666 @@
+				;
+				;	Disassembled by:
+				;		DASMx object code disassembler
+				;		(c) Copyright 1996-2003   Conquest Consultants
+				;		Version 1.40 (Oct 18 2003)
+				;
+				;	File:		vcp200_program_rom.bin
+				;
+				;	Size:		4096 bytes
+				;	Checksum:	F5AE
+				;	CRC-32:		4181E88F
+				;
+				;	Date:		Mon Sep 28 11:32:54 2020
+				;
+				;	CPU:		Motorola 6805 (6805 family)
+				;
+				;
+				;
+					org	$0000
+				;
+0000				L0000:
+0000				X0000:
+0000 : 00 00 00		"   "		brset	0,X0000,L0003
+0003				L0003:
+0003 : 00 00 00		"   "		brset	0,X0000,L0006
+0006				L0006:
+0006 : 00 00 00		"   "		brset	0,X0000,L0009
+0009				L0009:
+0009				X0009:
+0009 : 00 00 00		"   "		brset	0,X0000,L000C
+000C				L000C:
+000C : 00 00 00		"   "		brset	0,X0000,L000F
+000F				L000F:
+000F : 00 00 00		"   "		brset	0,X0000,L0012
+0012				L0012:
+0012 : 00 00 00		"   "		brset	0,X0000,L0015
+0015				L0015:
+0015				X0015:
+0015 : 00 00 00		"   "		brset	0,X0000,L0018
+0018				L0018:
+0018 : 00 00 00		"   "		brset	0,X0000,L001B
+001B				L001B:
+001B				X001B:
+001B : 00 00 00		"   "		brset	0,X0000,L001E
+001E				L001E:
+001E : 00 00 00		"   "		brset	0,X0000,L0021
+0021				L0021:
+0021 : 00 00 00		"   "		brset	0,X0000,L0024
+0024				L0024:
+0024				X0024:
+0024 : 00 00 00		"   "		brset	0,X0000,L0027
+0027				L0027:
+0027 : 00 00 00		"   "		brset	0,X0000,L002A
+002A				L002A:
+002A : 00 00 00		"   "		brset	0,X0000,L002D
+002D				L002D:
+002D : 00 00 00		"   "		brset	0,X0000,L0030
+0030				L0030:
+0030 : 00 00 00		"   "		brset	0,X0000,L0033
+0033				L0033:
+0033				X0033:
+0033 : 00 00 00		"   "		brset	0,X0000,L0036
+0036				L0036:
+0036 : 00 00 00		"   "		brset	0,X0000,L0039
+0039				L0039:
+0039 : 00 00 00		"   "		brset	0,X0000,L003C
+003C				L003C:
+003C : 00 00 00		"   "		brset	0,X0000,L003F
+003F				L003F:
+003F				X003F:
+003F : 00 00 00		"   "		brset	0,X0000,L0042
+0042				L0042:
+0042 : 00 00 00		"   "		brset	0,X0000,L0045
+0045				L0045:
+0045 : 00 00 00		"   "		brset	0,X0000,L0048
+0048				L0048:
+0048 : 00 00 00		"   "		brset	0,X0000,L004B
+004B				L004B:
+004B : 00 00 00		"   "		brset	0,X0000,L004E
+004E				L004E:
+004E : 00 00 00		"   "		brset	0,X0000,L0051
+0051				L0051:
+0051 : 00 00 00		"   "		brset	0,X0000,L0054
+0054				L0054:
+0054 : 00 00 00		"   "		brset	0,X0000,L0057
+0057				L0057:
+0057 : 00 00 00		"   "		brset	0,X0000,L005A
+005A				L005A:
+005A : 00 00 00		"   "		brset	0,X0000,L005D
+005D				L005D:
+005D : 00 00 00		"   "		brset	0,X0000,L0060
+0060				L0060:
+0060 : 00 00 00		"   "		brset	0,X0000,L0063
+0063				L0063:
+0063 : 00 00 00		"   "		brset	0,X0000,L0066
+0066				L0066:
+0066				X0066:
+0066 : 00 00 00		"   "		brset	0,X0000,L0069
+0069				L0069:
+0069 : 00 00 00		"   "		brset	0,X0000,L006C
+006C				L006C:
+006C : 00 00 00		"   "		brset	0,X0000,L006F
+006F				L006F:
+006F : 00 00 00		"   "		brset	0,X0000,L0072
+0072				L0072:
+0072				X0072:
+0072 : 00 00 00		"   "		brset	0,X0000,L0075
+0075				L0075:
+0075 : 00 00 00		"   "		brset	0,X0000,L0078
+0078				L0078:
+0078 : 00 00 00		"   "		brset	0,X0000,L007B
+007B				L007B:
+007B : 00 00 00		"   "		brset	0,X0000,L007E
+007E				L007E:
+007E : 00 00 00		"   "		brset	0,X0000,L0081
+0081				L0081:
+0081				X0081:
+0081 : 00 00 00		"   "		brset	0,X0000,L0084
+0084				L0084:
+0084 : 00 00 00		"   "		brset	0,X0000,L0087
+0087				L0087:
+0087 : 00 00 00		"   "		brset	0,X0000,L008A
+008A				L008A:
+008A : 00 00 00		"   "		brset	0,X0000,L008D
+008D				L008D:
+008D				X008D:
+008D : 00 00 00		"   "		brset	0,X0000,L0090
+0090				L0090:
+0090				X0090:
+0090 : 00 00 00		"   "		brset	0,X0000,L0093
+0093				L0093:
+0093 : 00 00 00		"   "		brset	0,X0000,L0096
+0096				L0096:
+0096 : 00 00 00		"   "		brset	0,X0000,L0099
+0099				L0099:
+0099 : 00 00 00		"   "		brset	0,X0000,L009C
+009C				L009C:
+009C				X009C:
+009C : 00 00 00		"   "		brset	0,X0000,L009F
+009F				L009F:
+009F				X009F:
+009F : 00 00 00		"   "		brset	0,X0000,L00A2
+00A2				L00A2:
+00A2 : 00 00 00		"   "		brset	0,X0000,L00A5
+00A5				L00A5:
+00A5 : 00 00 00		"   "		brset	0,X0000,L00A8
+00A8				L00A8:
+00A8				X00A8:
+00A8 : 00 00 00		"   "		brset	0,X0000,L00AB
+00AB				L00AB:
+00AB : 00 00 00		"   "		brset	0,X0000,L00AE
+00AE				L00AE:
+00AE				X00AE:
+00AE : 00 00 00		"   "		brset	0,X0000,L00B1
+00B1				L00B1:
+00B1 : 00 00 00		"   "		brset	0,X0000,L00B4
+00B4				L00B4:
+00B4				X00B4:
+00B4 : 00 00 00		"   "		brset	0,X0000,L00B7
+00B7				L00B7:
+00B7 : 00 00 00		"   "		brset	0,X0000,L00BA
+00BA				L00BA:
+00BA				X00BA:
+00BA : 00 00 00		"   "		brset	0,X0000,L00BD
+00BD				L00BD:
+00BD				X00BD:
+00BD : 00 00 00		"   "		brset	0,X0000,L00C0
+00C0				L00C0:
+00C0				X00C0:
+00C0 : 00 00 00		"   "		brset	0,X0000,L00C3
+00C3				L00C3:
+00C3 : 00 00 00		"   "		brset	0,X0000,L00C6
+00C6				L00C6:
+00C6 : 00 00 00		"   "		brset	0,X0000,L00C9
+00C9				L00C9:
+00C9 : 00 00 00		"   "		brset	0,X0000,L00CC
+00CC				L00CC:
+00CC				X00CC:
+00CC : 00 00 00		"   "		brset	0,X0000,L00CF
+00CF				L00CF:
+00CF				X00CF:
+00CF : 00 00 00		"   "		brset	0,X0000,L00D2
+00D2				L00D2:
+00D2				X00D2:
+00D2 : 00 00 00		"   "		brset	0,X0000,L00D5
+00D5				L00D5:
+00D5 : 00 00 00		"   "		brset	0,X0000,L00D8
+00D8				L00D8:
+00D8				X00D8:
+00D8 : 00 00 00		"   "		brset	0,X0000,L00DB
+00DB				L00DB:
+00DB : 00 00 00		"   "		brset	0,X0000,L00DE
+00DE				L00DE:
+00DE : 00 00 00		"   "		brset	0,X0000,L00E1
+00E1				L00E1:
+00E1 : 00 00 00		"   "		brset	0,X0000,L00E4
+00E4				L00E4:
+00E4 : 00 00 00		"   "		brset	0,X0000,L00E7
+00E7				L00E7:
+00E7 : 00 00 00		"   "		brset	0,X0000,L00EA
+00EA				L00EA:
+00EA				X00EA:
+00EA : 00 00 00		"   "		brset	0,X0000,L00ED
+00ED				L00ED:
+00ED				X00ED:
+00ED : 00 00 00		"   "		brset	0,X0000,L00F0
+00F0				L00F0:
+00F0				X00F0:
+00F0 : 00 00 00		"   "		brset	0,X0000,L00F3
+00F3				L00F3:
+00F3 : 00 00 00		"   "		brset	0,X0000,L00F6
+00F6				L00F6:
+00F6 : 00 00 00		"   "		brset	0,X0000,L00F9
+00F9				L00F9:
+00F9				X00F9:
+00F9 : 00 00 00		"   "		brset	0,X0000,L00FC
+00FC				L00FC:
+00FC				X00FC:
+00FC : 00 00 00		"   "		brset	0,X0000,L00FF
+00FF				L00FF:
+00FF				X00FF:
+00FF : 00 00 00		"   "		brset	0,X0000,L0102
+0102				L0102:
+0102 : 00 00 00		"   "		brset	0,X0000,L0105
+0105				L0105:
+0105 : 00 00 00		"   "		brset	0,X0000,L0108
+0108				L0108:
+0108 : 00 00 00		"   "		brset	0,X0000,L010B
+010B				L010B:
+010B : 00 00 00		"   "		brset	0,X0000,L010E
+010E				L010E:
+010E : 00 00 00		"   "		brset	0,X0000,L0111
+0111				L0111:
+0111 : 00 00 00		"   "		brset	0,X0000,L0114
+0114				L0114:
+0114 : 00 00 00		"   "		brset	0,X0000,L0117
+0117				L0117:
+0117 : 00 00 00		"   "		brset	0,X0000,L011A
+011A				L011A:
+011A : 00 00 00		"   "		brset	0,X0000,L011D
+011D				L011D:
+011D : 00 00 00		"   "		brset	0,X0000,L0120
+0120				L0120:
+0120 : 00 00 00		"   "		brset	0,X0000,L0123
+0123				L0123:
+0123 : 00 00 00		"   "		brset	0,X0000,L0126
+0126				L0126:
+0126 : 00 00 00		"   "		brset	0,X0000,L0129
+0129				L0129:
+0129 : 00 00 00		"   "		brset	0,X0000,L012C
+012C				L012C:
+012C : 00 00 00		"   "		brset	0,X0000,L012F
+012F				L012F:
+012F : 00 00 00		"   "		brset	0,X0000,L0132
+0132				L0132:
+0132 : 00 00 00		"   "		brset	0,X0000,L0135
+0135				L0135:
+0135 : 00 00 00		"   "		brset	0,X0000,L0138
+0138				L0138:
+0138 : 00 00 00		"   "		brset	0,X0000,L013B
+013B				L013B:
+013B : 00 00 00		"   "		brset	0,X0000,L013E
+013E				L013E:
+013E : 00 00 00		"   "		brset	0,X0000,L0141
+0141				L0141:
+0141 : 00 00 00		"   "		brset	0,X0000,L0144
+0144				L0144:
+0144 : 00 00 00		"   "		brset	0,X0000,L0147
+0147				L0147:
+0147 : 00 00 00		"   "		brset	0,X0000,L014A
+014A				L014A:
+014A : 00 00 00		"   "		brset	0,X0000,L014D
+014D				L014D:
+014D : 00 00 00		"   "		brset	0,X0000,L0150
+0150				L0150:
+0150 : 00 00 00		"   "		brset	0,X0000,L0153
+0153				L0153:
+0153 : 00 00 00		"   "		brset	0,X0000,L0156
+0156				L0156:
+0156 : 00 00 00		"   "		brset	0,X0000,L0159
+0159				L0159:
+0159 : 00 00 00		"   "		brset	0,X0000,L015C
+015C				L015C:
+015C : 00 00 00		"   "		brset	0,X0000,L015F
+015F				L015F:
+015F : 00 00 00		"   "		brset	0,X0000,L0162
+0162				L0162:
+0162 : 00 00 00		"   "		brset	0,X0000,L0165
+0165				L0165:
+0165 : 00 00 00		"   "		brset	0,X0000,L0168
+0168				L0168:
+0168 : 00 00 00		"   "		brset	0,X0000,L016B
+016B				L016B:
+016B : 00 00 00		"   "		brset	0,X0000,L016E
+016E				L016E:
+016E : 00 00 00		"   "		brset	0,X0000,L0171
+0171				L0171:
+0171 : 00 00 00		"   "		brset	0,X0000,L0174
+0174				L0174:
+0174 : 00 00 00		"   "		brset	0,X0000,L0177
+0177				L0177:
+0177 : 00 00 00		"   "		brset	0,X0000,L017A
+017A				L017A:
+017A : 00 00 00		"   "		brset	0,X0000,L017D
+017D				L017D:
+017D : 00 00 00		"   "		brset	0,X0000,L0180
+0180				L0180:
+0180 : 00 00 00		"   "		brset	0,X0000,L0183
+0183				L0183:
+0183 : 00 00 00		"   "		brset	0,X0000,L0186
+0186				L0186:
+0186 : 00 00 00		"   "		brset	0,X0000,L0189
+0189				L0189:
+0189 : 00 00 00		"   "		brset	0,X0000,L018C
+018C				L018C:
+018C : 00 00 00		"   "		brset	0,X0000,L018F
+018F				L018F:
+018F : 00 00 00		"   "		brset	0,X0000,L0192
+0192				L0192:
+0192 : 00 00 00		"   "		brset	0,X0000,L0195
+0195				L0195:
+0195 : 00 00 00		"   "		brset	0,X0000,L0198
+0198				L0198:
+0198 : 00 00 00		"   "		brset	0,X0000,L019B
+019B				L019B:
+019B : 00 00 00		"   "		brset	0,X0000,L019E
+019E				L019E:
+019E : 00 00 00		"   "		brset	0,X0000,L01A1
+01A1				L01A1:
+01A1 : 00 00 00		"   "		brset	0,X0000,L01A4
+01A4				L01A4:
+01A4 : 00 00 00		"   "		brset	0,X0000,L01A7
+01A7				L01A7:
+01A7 : 00 00 00		"   "		brset	0,X0000,L01AA
+01AA				L01AA:
+01AA : 00 00 00		"   "		brset	0,X0000,L01AD
+01AD				L01AD:
+01AD : 00 00 00		"   "		brset	0,X0000,L01B0
+01B0				L01B0:
+01B0 : 00 00 00		"   "		brset	0,X0000,L01B3
+01B3				L01B3:
+01B3 : 00 00 00		"   "		brset	0,X0000,L01B6
+01B6				L01B6:
+01B6 : 00 00 00		"   "		brset	0,X0000,L01B9
+01B9				L01B9:
+01B9 : 00 00 00		"   "		brset	0,X0000,L01BC
+01BC				L01BC:
+01BC : 00 00 00		"   "		brset	0,X0000,L01BF
+01BF				L01BF:
+01BF : 00 00 00		"   "		brset	0,X0000,L01C2
+01C2				L01C2:
+01C2 : 00 00 00		"   "		brset	0,X0000,L01C5
+01C5				L01C5:
+01C5 : 00 00 00		"   "		brset	0,X0000,L01C8
+01C8				L01C8:
+01C8 : 00 00 00		"   "		brset	0,X0000,L01CB
+01CB				L01CB:
+01CB : 00 00 00		"   "		brset	0,X0000,L01CE
+01CE				L01CE:
+01CE : 00 00 00		"   "		brset	0,X0000,L01D1
+01D1				L01D1:
+01D1 : 00 00 00		"   "		brset	0,X0000,L01D4
+01D4				L01D4:
+01D4 : 00 00 00		"   "		brset	0,X0000,L01D7
+01D7				L01D7:
+01D7 : 00 00 00		"   "		brset	0,X0000,L01DA
+01DA				L01DA:
+01DA : 00 00 00		"   "		brset	0,X0000,L01DD
+01DD				L01DD:
+01DD : 00 00 00		"   "		brset	0,X0000,L01E0
+01E0				L01E0:
+01E0 : 00 00 00		"   "		brset	0,X0000,L01E3
+01E3				L01E3:
+01E3 : 00 00 00		"   "		brset	0,X0000,L01E6
+01E6				L01E6:
+01E6 : 00 00 00		"   "		brset	0,X0000,L01E9
+01E9				L01E9:
+01E9 : 00 00 00		"   "		brset	0,X0000,L01EC
+01EC				L01EC:
+01EC : 00 00 00		"   "		brset	0,X0000,L01EF
+01EF				L01EF:
+01EF : 00 00 00		"   "		brset	0,X0000,L01F2
+01F2				L01F2:
+01F2 : 00 00 00		"   "		brset	0,X0000,L01F5
+01F5				L01F5:
+01F5 : 00 00 00		"   "		brset	0,X0000,L01F8
+01F8				L01F8:
+01F8 : 00 00 00		"   "		brset	0,X0000,L01FB
+01FB				L01FB:
+01FB : 00 00 00		"   "		brset	0,X0000,L01FE
+01FE				L01FE:
+01FE : 00 00 00		"   "		brset	0,X0000,L0201
+0201				L0201:
+0201 : 00 00 00		"   "		brset	0,X0000,L0204
+0204				L0204:
+0204 : 00 00 00		"   "		brset	0,X0000,L0207
+0207				L0207:
+0207 : 00 00 00		"   "		brset	0,X0000,L020A
+020A				L020A:
+020A : 00 00 00		"   "		brset	0,X0000,L020D
+020D				L020D:
+020D : 00 00 00		"   "		brset	0,X0000,L0210
+0210				L0210:
+0210 : 00 00 00		"   "		brset	0,X0000,L0213
+0213				L0213:
+0213 : 00 00 00		"   "		brset	0,X0000,L0216
+0216				L0216:
+0216 : 00 00 00		"   "		brset	0,X0000,L0219
+0219				L0219:
+0219 : 00 00 00		"   "		brset	0,X0000,L021C
+021C				L021C:
+021C : 00 00 00		"   "		brset	0,X0000,L021F
+021F				L021F:
+021F : 00 00 00		"   "		brset	0,X0000,L0222
+0222				L0222:
+0222 : 00 00 00		"   "		brset	0,X0000,L0225
+0225				L0225:
+0225 : 00 00 00		"   "		brset	0,X0000,L0228
+0228				L0228:
+0228 : 00 00 00		"   "		brset	0,X0000,L022B
+022B				L022B:
+022B : 00 00 00		"   "		brset	0,X0000,L022E
+022E				L022E:
+022E : 00 00 00		"   "		brset	0,X0000,L0231
+0231				L0231:
+0231 : 00 00 00		"   "		brset	0,X0000,L0234
+0234				L0234:
+0234 : 00 00 00		"   "		brset	0,X0000,L0237
+0237				L0237:
+0237 : 00 00 00		"   "		brset	0,X0000,L023A
+023A				L023A:
+023A : 00 00 00		"   "		brset	0,X0000,L023D
+023D				L023D:
+023D : 00 00 00		"   "		brset	0,X0000,L0240
+0240				L0240:
+0240 : 00 00 00		"   "		brset	0,X0000,L0243
+0243				L0243:
+0243 : 00 00 00		"   "		brset	0,X0000,L0246
+0246				L0246:
+0246 : 00 00 00		"   "		brset	0,X0000,L0249
+0249				L0249:
+0249 : 00 00 00		"   "		brset	0,X0000,L024C
+024C				L024C:
+024C : 00 00 00		"   "		brset	0,X0000,L024F
+024F				L024F:
+024F : 00 00 00		"   "		brset	0,X0000,L0252
+0252				L0252:
+0252 : 00 00 00		"   "		brset	0,X0000,L0255
+0255				L0255:
+0255 : 00 00 00		"   "		brset	0,X0000,L0258
+0258				L0258:
+0258 : 00 00 00		"   "		brset	0,X0000,L025B
+025B				L025B:
+025B : 00 00 00		"   "		brset	0,X0000,L025E
+025E				L025E:
+025E : 00 00 00		"   "		brset	0,X0000,L0261
+0261				L0261:
+0261 : 00 00 00		"   "		brset	0,X0000,L0264
+0264				L0264:
+0264 : 00 00 00		"   "		brset	0,X0000,L0267
+0267				L0267:
+0267 : 00 00 00		"   "		brset	0,X0000,L026A
+026A				L026A:
+026A : 00 00 00		"   "		brset	0,X0000,L026D
+026D				L026D:
+026D : 00 00 00		"   "		brset	0,X0000,L0270
+0270				L0270:
+0270 : 00 00 00		"   "		brset	0,X0000,L0273
+0273				L0273:
+0273 : 00 00 00		"   "		brset	0,X0000,L0276
+0276				L0276:
+0276 : 00 00 00		"   "		brset	0,X0000,L0279
+0279				L0279:
+0279 : 00 00 00		"   "		brset	0,X0000,L027C
+027C				L027C:
+027C : 00 00 00		"   "		brset	0,X0000,L027F
+027F				L027F:
+027F : 00 00 00		"   "		brset	0,X0000,L0282
+0282				L0282:
+0282 : 00 00 00		"   "		brset	0,X0000,L0285
+0285				L0285:
+0285 : 00 00 00		"   "		brset	0,X0000,L0288
+0288				L0288:
+0288 : 00 00 00		"   "		brset	0,X0000,L028B
+028B				L028B:
+028B : 00 00 00		"   "		brset	0,X0000,L028E
+028E				L028E:
+028E : 00 00 00		"   "		brset	0,X0000,L0291
+0291				L0291:
+0291 : 00 00 00		"   "		brset	0,X0000,L0294
+0294				L0294:
+0294 : 00 00 00		"   "		brset	0,X0000,L0297
+0297				L0297:
+0297 : 00 00 00		"   "		brset	0,X0000,L029A
+029A				L029A:
+029A : 00 00 00		"   "		brset	0,X0000,L029D
+029D				L029D:
+029D : 00 00 00		"   "		brset	0,X0000,L02A0
+02A0				L02A0:
+02A0 : 00 00 00		"   "		brset	0,X0000,L02A3
+02A3				L02A3:
+02A3 : 00 00 00		"   "		brset	0,X0000,L02A6
+02A6				L02A6:
+02A6 : 00 00 00		"   "		brset	0,X0000,L02A9
+02A9				L02A9:
+02A9 : 00 00 00		"   "		brset	0,X0000,L02AC
+02AC				L02AC:
+02AC : 00 00 00		"   "		brset	0,X0000,L02AF
+02AF				L02AF:
+02AF : 00 00 00		"   "		brset	0,X0000,L02B2
+02B2				L02B2:
+02B2 : 00 00 00		"   "		brset	0,X0000,L02B5
+02B5				L02B5:
+02B5 : 00 00 00		"   "		brset	0,X0000,L02B8
+02B8				L02B8:
+02B8 : 00 00 00		"   "		brset	0,X0000,L02BB
+02BB				L02BB:
+02BB : 00 00 00		"   "		brset	0,X0000,L02BE
+02BE				L02BE:
+02BE : 00 00 00		"   "		brset	0,X0000,L02C1
+02C1				L02C1:
+02C1 : 00 00 00		"   "		brset	0,X0000,L02C4
+02C4				L02C4:
+02C4 : 00 00 00		"   "		brset	0,X0000,L02C7
+02C7				L02C7:
+02C7 : 00 00 00		"   "		brset	0,X0000,L02CA
+02CA				L02CA:
+02CA : 00 00 00		"   "		brset	0,X0000,L02CD
+02CD				L02CD:
+02CD : 00 00 00		"   "		brset	0,X0000,L02D0
+02D0				L02D0:
+02D0 : 00 00 00		"   "		brset	0,X0000,L02D3
+02D3				L02D3:
+02D3 : 00 00 00		"   "		brset	0,X0000,L02D6
+02D6				L02D6:
+02D6 : 00 00 00		"   "		brset	0,X0000,L02D9
+02D9				L02D9:
+02D9 : 00 00 00		"   "		brset	0,X0000,L02DC
+02DC				L02DC:
+02DC : 00 00 00		"   "		brset	0,X0000,L02DF
+02DF				L02DF:
+02DF : 00 65 8A		" e "		brset	0,X0065,L026C
+02E2 : E6 EA		"  "		lda	X00EA,x
+02E4 : 00 B3 F9		"   "		brset	0,X00B3,L02E0
+				;
+02E7 : 9E		" "		db	$9E
+				;
+02E8 : B4 F5		"  "		and	X00F5
+02EA : B4 F9		"  "		and	X00F9
+02EC : 9F		" "		txa
+02ED : F0		" "		sub	,x
+02EE : B4 FD		"  "		and	X00FD
+				;
+02F0 : 9E		" "		db	$9E
+				;
+02F1 : B4 FD		"  "		and	X00FD
+02F3 : 9F		" "		txa
+02F4 : B4 B3		"  "		and	X00B3
+02F6 : B0 83		"  "		sub	X0083
+02F8 : 04 3F 7F		" ? "		brset	2,X003F,L037A
+02FB : E8 00		"  "		eor	X0000,x
+02FD : F9		" "		adc	,x
+02FE : 00 DF 04		"   "		brset	0,X00DF,L0305
+0301 : BE CA		"  "		ldx	X00CA
+				;
+0303 : 82		" "		db	$82
+				;
+0304 : 03 AA 8B		"   "		brclr	1,X00AA,L0292
+0307 : 02 CF 82		"   "		brset	1,X00CF,L028C
+030A : 02 BA B3		"   "		brset	1,X00BA,L02C0
+				;
+030D : 8B		" "		db	$8B
+				;
+030E : FF		" "		stx	,x
+030F : C9 09 FD		"   "		adc	X09FD
+0312 : 68 E8		"h "		asl	X00E8,x
+0314 : 06 BC EB		"   "		brset	3,X00BC,L0302
+0317 : 04 BD E8		"   "		brset	2,X00BD,L0302
+031A : 0F F9 84		"   "		brclr	7,X00F9,L02A1
+031D : AE F1		"  "		ldx	#$F1
+031F : FD		" "		jsr	,x						;INFO: index jump
+				;
+0320 : 84		" "		db	$84
+				;
+0321 : E1 AE		"  "		cmp	X00AE,x
+0323 : F1		" "		cmp	,x
+0324 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0325 : FF		" "		stx	,x
+0326 : 7F		" "		clr	,x
+0327 : DB 01 DE		"   "		add	X01DE,x
+032A : 00 D2 02		"   "		brset	0,X00D2,L032F
+032D				L032D:
+032D : F4		" "		and	,x
+032E : B4 33		" 3"		and	X0033
+0330 : E0 B4		"  "		sub	X00B4,x
+0332 : CF FF E6		"   "		stx	XFFE6
+0335 : ED 00		"  "		jsr	L0000,x						;INFO: index jump
+0337 : E1 B8		"  "		cmp	X00B8,x
+0339 : B9 C5		"  "		adc	X00C5
+033B : 81		" "		rts
+033C : DC E8 0F		"   "		jmp	LE80F,x						;INFO: index jump
+				;
+033F : F9		" "		adc	,x
+0340 : 05 FB 0A		"   "		brclr	2,X00FB,L034D
+0343 : EB EE		"  "		add	X00EE,x
+0345 : 1F F8		"  "		bclr	7,X00F8
+0347 : 0B EC 1B		"   "		brclr	5,X00EC,L0365
+034A : 1F FE		"  "		bclr	7,X00FE
+034C : 01 8B 5E		"  ^"		brclr	0,X008B,L03AD
+034F : FA		" "		ora	,x
+0350 : 0A EC 32		"  2"		brset	5,X00EC,L0385
+0353 : 1F F8		"  "		bclr	7,X00F8
+0355 : 0B EC BB		"   "		brclr	5,X00EC,L0313
+0358 : 1F FE		"  "		bclr	7,X00FE
+035A : 01 FE 01		"   "		brclr	0,X00FE,L035E
+035D : 1F E8		"  "		bclr	7,X00E8
+035F : FF		" "		stx	,x
+0360 : B4 1F		"  "		and	X001F
+				;
+0362 : 8B		" "		db	$8B
+				;
+0363 : CC 1F F1		"   "		jmp	L1FF1
+				;
+0366 : B5 B9		"  "		bit	X00B9
+0368 : B8 1B		"  "		eor	X001B
+036A : E8 55		" U"		eor	X0055,x
+				;
+036C : 8B		" "		db	$8B
+				;
+036D : CC F7 F4		"   "		jmp	LF7F4
+				;
+0370 : F1		" "		cmp	,x
+0371 : B4 B9		"  "		and	X00B9
+0373 : B8 1A		"  "		eor	X001A
+0375 : FA		" "		ora	,x
+0376 : FF		" "		stx	,x
+0377 : 54		"T"		lsrx
+0378 : FB		" "		add	,x
+0379 : FF		" "		stx	,x
+037A				L037A:
+037A : 7F		" "		clr	,x
+				;
+037B : 8B		" "		db	$8B
+				;
+037C : CC F4 F1		"   "		jmp	LF4F1
+				;
+037F : B9 B8		"  "		adc	X00B8
+0381 : 1B A8		"  "		bclr	5,X00A8
+0383 : FA		" "		ora	,x
+0384 : 0A EC 3B		"  ;"		brset	5,X00EC,L03C2
+0387 : 1F FA		"  "		bclr	7,X00FA
+0389 : 0B EC A1		"   "		brclr	5,X00EC,L032D
+038C				L038C:
+038C : 1F E6		"  "		bclr	7,X00E6
+038E : D0 05 B0		"   "		sub	X05B0,x
+0391 : 09 28 F8		" ( "		brclr	4,X0028,L038C
+0394 : FD		" "		jsr	,x						;INFO: index jump
+0395 : E0 C7		"  "		sub	X00C7,x
+0397 : 09 FA E3		"   "		brclr	4,X00FA,L037D
+039A : 30 DC		"0 "		neg	X00DC
+039C : 09 B0 FE		"   "		brclr	4,X00B0,L039D
+039F : 06 C0 01		"   "		brset	3,X00C0,L03A3
+03A2 : FD		" "		jsr	,x						;INFO: index jump
+03A3				L03A3:
+03A3 : D4 09 CF		"   "		and	X09CF,x
+03A6 : 09 FD B0		"   "		brclr	4,X00FD,L0359
+03A9 : FE		" "		ldx	,x
+03AA : 04 D7 09		"   "		brset	2,X00D7,L03B6
+03AD				L03AD:
+03AD : D8 05 D5		"   "		eor	X05D5,x
+03B0 : 09 D4 FF		"   "		brclr	4,X00D4,L03B2
+03B3 : 33 32		"32"		com	X0032
+03B5 : F9		" "		adc	,x
+03B6				L03B6:
+03B6 : FE		" "		ldx	,x
+03B7 : E6 D0		"  "		lda	X00D0,x
+03B9 : FD		" "		jsr	,x						;INFO: index jump
+03BA : C7 09 FD		"   "		sta	X09FD
+03BD				L03BD:
+03BD : FE		" "		ldx	,x
+03BE : 09 FE FE		"   "		brclr	4,X00FE,L03BF
+03C1 : F9		" "		adc	,x
+03C2				L03C2:
+03C2 : FD		" "		jsr	,x						;INFO: index jump
+03C3 : FA		" "		ora	,x
+03C4 : FF		" "		stx	,x
+				;
+03C5 : 52		"R"		db	$52
+				;
+03C6 : AE B8		"  "		ldx	#$B8
+03C8 : E2 A8		"  "		sbc	X00A8,x
+03CA : 1D B3		"  "		bclr	6,X00B3
+03CC : B0 80		"  "		sub	X0080
+03CE : 1E B0		"  "		bset	7,X00B0
+03D0 : 81		" "		rts
+				;
+03D1 : 9F		" "		txa
+03D2 : B3 C2		"  "		cpx	X00C2
+03D4 : 83		" "		swi
+03D5 : 0C D7 00		"   "		brset	6,X00D7,L03D8
+03D8				L03D8:
+03D8 : DB 01 DF		"   "		add	X01DF,x
+03DB : FF		" "		stx	,x
+				;
+03DC : 8A		" "		db	$8A
+				;
+03DD : E0 F1		"  "		sub	X00F1,x
+03DF : 5F		"_"		clrx
+03E0 : BB 31		" 1"		add	X0031
+03E2 : B2 72		" r"		sbc	X0072
+03E4 : 25 D7		"% "		bcs	L03BD
+03E6 : 04 C8 FE		"   "		brset	2,X00C8,L03E7
+03E9 : F5		" "		bit	,x
+03EA : B0 80		"  "		sub	X0080
+03EC : 02 B0 09		"   "		brset	1,X00B0,L03F8
+03EF : 27 AF		"' "		beq	L03A0
+03F1 : B4 25		" %"		and	X0025
+03F3 : B0 80		"  "		sub	X0080
+03F5 : 06 DC 09		"   "		brset	3,X00DC,L0401
+03F8				L03F8:
+03F8 : DF 09 E1		"   "		stx	X09E1,x
+03FB : B8 1D		"  "		eor	X001D
+03FD : E1 BF		"  "		cmp	X00BF,x
+03FF : FB		" "		add	,x
+0400				L0400:
+0400 : FF		" "		stx	,x
+0401				L0401:
+0401 : B2 4D		" M"		sbc	X004D
+0403 : 43		"C"		coma
+0404 : 36 38		"68"		ror	X0038
+0406 : 30 34		"04"		neg	X0034
+0408 : 4A		"J"		deca
+				;
+0409 : 32		"2"		db	$32
+				;
+040A : 20 2D		" -"		bra	L0439
+040C : 20 41		" A"		bra	L044F
+				;
+040E : 54		"T"		lsrx
+040F : 58		"X"		aslx
+0410 : B0 05		"  "		sub	X0005
+0412 : FF		" "		stx	,x
+0413 : B0 01		"  "		sub	X0001
+0415 : FE		" "		ldx	,x
+0416 : B0 04		"  "		sub	X0004
+0418				L0418:
+0418 : 00 D1 82		"   "		brset	0,X00D1,L039D
+041B : B0 81		"  "		sub	X0081
+041D : 1D B0		"  "		bclr	6,X00B0
+041F : 80		" "		rti
+				;
+0420 : 83		" "		swi
+0421 : E8 00		"  "		eor	X0000,x
+0423 : E1 A8		"  "		cmp	X00A8,x
+0425 : B9 1C		"  "		adc	X001C
+0427 : B0 81		"  "		sub	X0081
+				;
+0429 : 93		" "		db	$93
+				;
+042A : E8 00		"  "		eor	X0000,x
+042C : F9		" "		adc	,x
+				;
+042D : 85		" "		db	$85
+				;
+042E : F9		" "		adc	,x
+				;
+042F : 86		" "		db	$86
+				;
+0430				L0430:
+0430 : F9		" "		adc	,x
+				;
+0431 : 87 8F		"  "		db	$87, $8F
+				;
+0433 : C7 C1 82		"   "		sta	XC182
+0436 : 02 9D 14		"   "		brset	1,X009D,L044D
+0439				L0439:
+0439 : B0 01		"  "		sub	X0001
+043B : 80		" "		rti
+				;
+043C : F8		" "		eor	,x
+043D : 00 ED F0		"   "		brset	0,X00ED,L0430
+0440 : EC F0		"  "		jmp	L00F0,x						;INFO: index jump
+				;
+0442 : 02 9D 14		"   "		brset	1,X009D,L0459
+0445 : D1 82 B0		"   "		cmp	X82B0,x
+0448 : 01 FC CC		"   "		brclr	0,X00FC,L0417
+044B : 00 05 B0		"   "		brset	0,X0005,L03FE
+				;
+044E : 88		" "		db	$88
+				;
+044F				L044F:
+044F : DC 9C FD		"   "		jmp	L9CFD,x						;INFO: index jump
+				;
+0452 : CD 00 05		"   "		jsr	L0005
+0455 : B0 88		"  "		sub	X0088
+0457 : 74		"t"		lsr	,x
+0458 : 9C		" "		rsp
+0459				L0459:
+0459 : FD		" "		jsr	,x						;INFO: index jump
+045A : CE 00 07		"   "		ldx	X0007
+045D : D9 82 B0		"   "		adc	X82B0,x
+0460 : 01 FF 9D		"   "		brclr	0,X00FF,L0400
+0463 : 14 CF		"  "		bset	2,X00CF
+0465 : 00 05 B0		"   "		brset	0,X0005,L0418
+				;
+0468 : 88		" "		db	$88
+				;
+0469 : 78		"x"		asl	,x
+046A : 9C		" "		rsp
+046B : FD		" "		jsr	,x						;INFO: index jump
+046C : B0 01		"  "		sub	X0001
+046E : FA		" "		ora	,x
+046F : CC 00 05		"   "		jmp	L0005
+				;
+0472 : B0 88		"  "		sub	X0088
+0474 : D8 9C FD		"   "		eor	X9CFD,x
+0477 : CD 00 05		"   "		jsr	L0005
+047A : B0 88		"  "		sub	X0088
+047C : BC 9C		"  "		jmp	L009C
+				;
+047E : FD		" "		jsr	,x						;INFO: index jump
+047F : CE 00 05		"   "		ldx	X0005
+0482 : B0 88		"  "		sub	X0088
+0484 : EC 9C		"  "		jmp	L009C,x						;INFO: index jump
+				;
+0486 : FD		" "		jsr	,x						;INFO: index jump
+0487 : B0 01		"  "		sub	X0001
+0489 : F6		" "		lda	,x
+048A : CD 00 05		"   "		jsr	L0005
+048D : B0 88		"  "		sub	X0088
+048F : B8 9C		"  "		eor	X009C
+0491 : FD		" "		jsr	,x						;INFO: index jump
+0492 : CE 00 05		"   "		ldx	X0005
+0495 : B0 88		"  "		sub	X0088
+0497				L0497:
+0497 : E8 9C		"  "		eor	X009C,x
+0499 : FD		" "		jsr	,x						;INFO: index jump
+049A : CF 00 05		"   "		stx	X0005
+049D : B0 88		"  "		sub	X0088
+049F : FC		" "		jmp	,x						;INFO: index jump
+				;
+04A0 : 9C		" "		rsp
+04A1 : FD		" "		jsr	,x						;INFO: index jump
+04A2 : B0 01		"  "		sub	X0001
+04A4 : EE CD		"  "		ldx	X00CD,x
+04A6 : 00 05 B0		"   "		brset	0,X0005,L0459
+				;
+04A9 : 88		" "		db	$88
+				;
+04AA : B4 9C		"  "		and	X009C
+04AC : FD		" "		jsr	,x						;INFO: index jump
+04AD : CE 00 05		"   "		ldx	X0005
+04B0 : B0 88		"  "		sub	X0088
+04B2 : E4 9C		"  "		and	X009C,x
+04B4 : FD		" "		jsr	,x						;INFO: index jump
+04B5 : CF 00 05		"   "		stx	X0005
+04B8 : B0 88		"  "		sub	X0088
+04BA : F4		" "		and	,x
+04BB : 9C		" "		rsp
+04BC : FD		" "		jsr	,x						;INFO: index jump
+04BD : B0 01		"  "		sub	X0001
+04BF : DE CC 00		"   "		ldx	XCC00,x
+04C2 : 05 B0 88		"   "		brclr	2,X00B0,L044D
+04C5 : F8		" "		eor	,x
+04C6 : 9C		" "		rsp
+04C7 : FD		" "		jsr	,x						;INFO: index jump
+04C8 : CD 00 05		"   "		jsr	L0005
+04CB : B0 88		"  "		sub	X0088
+04CD : 70		"p"		neg	,x
+04CE				L04CE:
+04CE : 9C		" "		rsp
+04CF : FD		" "		jsr	,x						;INFO: index jump
+04D0 : CE 00 05		"   "		ldx	X0005
+04D3				L04D3:
+04D3 : B0 88		"  "		sub	X0088
+04D5 : E0 9C		"  "		sub	X009C,x
+04D7				L04D7:
+04D7 : FD		" "		jsr	,x						;INFO: index jump
+04D8 : CF 00 05		"   "		stx	X0005
+04DB				L04DB:
+04DB : B0 88		"  "		sub	X0088
+04DD : F0		" "		sub	,x
+04DE : 9C		" "		rsp
+04DF : FD		" "		jsr	,x						;INFO: index jump
+04E0 : B0 01		"  "		sub	X0001
+04E2 : BE CC		"  "		ldx	X00CC
+04E4 : 00 05 B0		"   "		brset	0,X0005,L0497
+				;
+04E7 : 88		" "		db	$88
+				;
+04E8 : D0 9C FD		"   "		sub	X9CFD,x
+04EB : CE 00 05		"   "		ldx	X0005
+04EE : B0 88		"  "		sub	X0088
+04F0 : 7C		"|"		inc	,x
+04F1 : 9C		" "		rsp
+04F2 : FD		" "		jsr	,x						;INFO: index jump
+04F3 : CF 00 05		"   "		stx	X0005
+04F6				L04F6:
+04F6 : B0 88		"  "		sub	X0088
+04F8 : D4 9C FD		"   "		and	X9CFD,x
+04FB : 9D		" "		nop
+04FC : 14 8F		"  "		bset	2,X008F
+				;
+04FE : 7B		"{"		db	$7B
+				;
+04FF : B0 01		"  "		sub	X0001
+0501 : 80		" "		rti
+				;
+0502 : F8		" "		eor	,x
+0503 : 00 ED F0		"   "		brset	0,X00ED,L04F6
+0506 : EC F0		"  "		jmp	L00F0,x						;INFO: index jump
+				;
+0508 : 19 B0		"  "		bclr	4,X00B0
+050A : FE		" "		ldx	,x
+050B : 40		"@"		nega
+050C : B0 09		"  "		sub	X0009
+050E : 3F C7		"? "		clr	X00C7
+0510 : 09 FD 9C		"   "		brclr	4,X00FD,L04AF
+0513 : 1B F8		"  "		bclr	5,X00F8
+				;
+0515 : 8B		" "		db	$8B
+				;
+0516 : F9		" "		adc	,x
+				;
+0517 : 8C		" "		db	$8C
+				;
+0518 : F8		" "		eor	,x
+				;
+0519 : 8A		" "		db	$8A
+				;
+051A : F9		" "		adc	,x
+				;
+051B				L051B:
+051B : 8B		" "		db	$8B
+				;
+051C : F8		" "		eor	,x
+				;
+051D : 89		" "		db	$89
+				;
+051E : F9		" "		adc	,x
+				;
+051F : 8A		" "		db	$8A
+				;
+0520 : F8		" "		eor	,x
+				;
+0521 : 88		" "		db	$88
+				;
+0522 : F9		" "		adc	,x
+				;
+0523 : 89		" "		db	$89
+				;
+0524 : F8		" "		eor	,x
+				;
+0525				L0525:
+0525 : 85		" "		db	$85
+				;
+0526 : FA		" "		ora	,x
+				;
+0527 : 86		" "		db	$86
+				;
+0528 : FA		" "		ora	,x
+				;
+0529 : 87		" "		db	$87
+				;
+052A : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+052C : 45		"E"		db	$45
+				;
+052D : B0 88		"  "		sub	X0088
+052F : 00 9D 4C		"  L"		brset	0,X009D,L057E
+0532 : F8		" "		eor	,x
+				;
+0533 : 87		" "		db	$87
+				;
+0534 : EC 10		"  "		jmp	L0010,x						;INFO: index jump
+				;
+0536 : 42		"B"		db	$42
+				;
+0537 : 9D		" "		nop
+0538 : 49		"I"		rola
+0539				L0539:
+0539 : FC		" "		jmp	,x						;INFO: index jump
+				;
+053A : 86 65		" e"		db	$86, $65
+				;
+053C : B0 88		"  "		sub	X0088
+053E				L053E:
+053E : 02 9D 4C		"  L"		brset	1,X009D,L058D
+0541 : F8		" "		eor	,x
+				;
+0542 : 85		" "		db	$85
+				;
+0543 : 05 B0 88		"   "		brclr	2,X00B0,L04CE
+0546 : 02 9D 4C		"  L"		brset	1,X009D,L0595
+0549 : B0 88		"  "		sub	X0088
+054B : 01 B0 85		"   "		brclr	0,X00B0,L04D3
+054E : 00 B0 86		"   "		brset	0,X00B0,L04D7
+0551 : 00 B0 87		"   "		brset	0,X00B0,L04DB
+0554 : 00 E8 85		"   "		brset	0,X00E8,L04DC
+0557 : FA		" "		ora	,x
+				;
+0558 : 88		" "		db	$88
+				;
+0559 : BC E6		"  "		jmp	L00E6
+				;
+055B : E8 85		"  "		eor	X0085,x
+055D : FA		" "		ora	,x
+				;
+055E : 89		" "		db	$89
+				;
+055F : BC E6		"  "		jmp	L00E6
+				;
+0561 : E8 85		"  "		eor	X0085,x
+0563 : FA		" "		ora	,x
+				;
+0564 : 8A		" "		db	$8A
+				;
+0565 : BC E6		"  "		jmp	L00E6
+				;
+0567 : E8 85		"  "		eor	X0085,x
+0569 : FA		" "		ora	,x
+				;
+056A : 8B		" "		db	$8B
+				;
+056B : BC E6		"  "		jmp	L00E6
+				;
+056D : E8 85		"  "		eor	X0085,x
+056F : FA		" "		ora	,x
+				;
+0570 : 8C		" "		db	$8C
+				;
+0571 : BC E6		"  "		jmp	L00E6
+				;
+0573 : F8		" "		eor	,x
+				;
+0574 : 85		" "		db	$85
+				;
+0575 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0577 : 65		"e"		db	$65
+				;
+0578 : B0 92		"  "		sub	X0092
+057A : 00 9D 94		"   "		brset	0,X009D,L0511
+057D : F8		" "		eor	,x
+				;
+057E				L057E:
+057E : 86		" "		db	$86
+				;
+057F : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+0581 : 65		"e"		db	$65
+				;
+0582 : B0 92		"  "		sub	X0092
+0584 : 01 9D 94		"   "		brclr	0,X009D,L051B
+0587 : F8		" "		eor	,x
+				;
+0588 : 87		" "		db	$87
+				;
+0589 : EC 03		"  "		jmp	L0003,x						;INFO: index jump
+				;
+058B : 65		"e"		db	$65
+				;
+058C : B0 92		"  "		sub	X0092
+058E : 02 9D 94		"   "		brset	1,X009D,L0525
+0591 : B0 92		"  "		sub	X0092
+0593 : 80		" "		rti
+				;
+0594				L0594:
+0594 : FE		" "		ldx	,x
+				;
+0595				L0595:
+0595 : 8E		" "		db	$8E
+				;
+0596 : C7 92 02		"   "		sta	X9202
+0599 : 9C		" "		rsp
+059A : 2A F8		"* "		bpl	L0594
+				;
+059C : 92		" "		db	$92
+				;
+059D : FC		" "		jmp	,x						;INFO: index jump
+				;
+059E : 8F		" "		db	$8F
+				;
+059F : 02 9E 08		"   "		brset	1,X009E,L05AA
+05A2 : F8		" "		eor	,x
+				;
+05A3 : 8D		" "		db	$8D
+				;
+05A4 : 0C F8 92		"   "		brset	6,X00F8,L0539
+05A7 : F9		" "		adc	,x
+				;
+05A8 : 8F		" "		db	$8F
+				;
+05A9 : B0 8D		"  "		sub	X008D
+05AB : 01 B0 90		"   "		brclr	0,X00B0,L053E
+05AE : 01 9C 2A		"  *"		brclr	0,X009C,L05DB
+05B1 : F8		" "		eor	,x
+				;
+05B2 : 8F		" "		db	$8F
+				;
+05B3 : 2A EC		"* "		bpl	L05A1
+05B5 : 01 02 9D		"   "		brclr	0,X0002,L0555
+05B8 : F8		" "		eor	,x
+05B9 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+05BB : 13 9E		"  "		bclr	1,X009E
+05BD : 01 F8 90		"   "		brclr	0,X00F8,L0550
+05C0 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+05C2 : 62		"b"		db	$62
+				;
+05C3 : 9D		" "		nop
+05C4 : D9 AD EC		"   "		adc	XADEC,x
+				;
+05C7 : 93		" "		db	$93
+				;
+05C8 : 02 9C 1B		"   "		brset	1,X009C,L05E6
+05CB : B9 F0		"  "		adc	X00F0
+05CD : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+05CF : F9		" "		adc	,x
+				;
+05D0 : 8F		" "		db	$8F
+				;
+05D1 : F8		" "		eor	,x
+				;
+05D2 : 91		" "		db	$91
+				;
+05D3 : F9		" "		adc	,x
+				;
+05D4 : 90		" "		db	$90
+				;
+05D5				X05D5:
+05D5 : FF		" "		stx	,x
+				;
+05D6 : 8D		" "		db	$8D
+				;
+05D7 : 9D		" "		nop
+				;
+05D8 : 96		" "		db	$96
+				;
+05D9 : F8		" "		eor	,x
+				;
+05DA : 90		" "		db	$90
+				;
+05DB				L05DB:
+05DB : FA		" "		ora	,x
+05DC : FF		" "		stx	,x
+05DD : FA		" "		ora	,x
+05DE : FF		" "		stx	,x
+05DF : FA		" "		ora	,x
+				;
+05E0 : 8F		" "		db	$8F
+				;
+05E1 : F1		" "		cmp	,x
+05E2 : A9 AD		"  "		adc	#$AD
+05E4 : EC 9F		"  "		jmp	L009F,x						;INFO: index jump
+				;
+05E6				L05E6:
+05E6 : 62		"b"		db	$62
+				;
+05E7 : 9C		" "		rsp
+05E8 : 1B FE		"  "		bclr	5,X00FE
+				;
+05EA : 8D		" "		db	$8D
+				;
+05EB : F8		" "		eor	,x
+				;
+05EC : 92		" "		db	$92
+				;
+05ED : F9		" "		adc	,x
+				;
+05EE : 8F		" "		db	$8F
+				;
+05EF : F8		" "		eor	,x
+				;
+05F0 : 90		" "		db	$90
+				;
+05F1 : F9		" "		adc	,x
+				;
+05F2 : 91		" "		db	$91
+				;
+05F3 : B0 90		"  "		sub	X0090
+05F5 : 01 9C 2A		"  *"		brclr	0,X009C,L0622
+05F8 : F8		" "		eor	,x
+				;
+05F9 : 90		" "		db	$90
+				;
+05FA : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+05FC : 42		"B"		db	$42
+				;
+05FD : 9D		" "		nop
+05FE : C5 9D D9		"   "		bit	X9DD9
+0601 : F8		" "		eor	,x
+				;
+0602 : 90		" "		db	$90
+				;
+0603 : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+0605 : 77		"w"		asr	,x
+0606 : 9D		" "		nop
+0607 : D9 F8 92		"   "		adc	XF892,x
+060A				L060A:
+060A : 2E FE		". "		bil	L060A
+				;
+060C : 90		" "		db	$90
+				;
+060D : F8		" "		eor	,x
+				;
+060E				L060E:
+060E : 90		" "		db	$90
+				;
+060F : EC 3F		" ?"		jmp	L003F,x						;INFO: index jump
+				;
+0611 : 63 B0		"c "		com	X00B0,x
+				;
+0613 : 90		" "		db	$90
+				;
+0614 : 3F 9C		"? "		clr	X009C
+0616 : 2A 9C		"* "		bpl	L05B4
+0618 : 1B FE		"  "		bclr	5,X00FE
+				;
+061A : 90		" "		db	$90
+				;
+061B : F8		" "		eor	,x
+				;
+061C : 90		" "		db	$90
+				;
+061D : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+061F : 75		"u"		db	$75
+				;
+0620 : AD EC		"  "		bsr	L060E
+				;
+0622				L0622:
+0622 : 94 42 9E		" B "		db	$94, $42, $9E
+				;
+0625 : 17 EB		"  "		bclr	3,X00EB
+				;
+0627 : 93		" "		db	$93
+				;
+0628 : F9		" "		adc	,x
+				;
+0629 : 8D		" "		db	$8D
+				;
+062A : F9		" "		adc	,x
+				;
+062B : 8A		" "		db	$8A
+				;
+062C : F8		" "		eor	,x
+				;
+062D : 8E		" "		db	$8E
+				;
+062E : EC 20		"  "		jmp	L0020,x						;INFO: index jump
+				;
+0630 : 42 9E		"B "		db	$42, $9E
+				;
+0632 : 17 B9		"  "		bclr	3,X00B9
+0634				L0634:
+0634 : AD EC		"  "		bsr	L0622
+				;
+0636 : 95 42 9E		" B "		db	$95, $42, $9E
+				;
+0639 : 4A		"J"		deca
+063A : B9 F0		"  "		adc	X00F0
+063C : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+063E : 0B A9 F0		"   "		brclr	5,X00A9,L0631
+0641 : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0643 : EC 01		"  "		jmp	L0001,x						;INFO: index jump
+				;
+0645 : 06 F0 EC		"   "		brset	3,X00F0,L0634
+0648 : 1C 66		" f"		bset	6,X0066
+				;
+064A : 9E		" "		db	$9E
+				;
+064B : 59		"Y"		rolx
+064C : F0		" "		sub	,x
+064D : EC 14		"  "		jmp	L0014,x						;INFO: index jump
+				;
+064F : 49		"I"		rola
+0650 : FF		" "		stx	,x
+				;
+0651				L0651:
+0651 : 8A		" "		db	$8A
+				;
+0652 : FF		" "		stx	,x
+				;
+0653 : 8A		" "		db	$8A
+				;
+0654 : F8		" "		eor	,x
+				;
+0655				L0655:
+0655 : 8A		" "		db	$8A
+				;
+0656 : BC 9E		"  "		jmp	L009E
+				;
+0658 : 33 B0		"3 "		com	X00B0
+				;
+065A : 85		" "		db	$85
+				;
+065B : FF		" "		stx	,x
+065C : B0 86		"  "		sub	X0086
+065E : FF		" "		stx	,x
+065F : B0 80		"  "		sub	X0080
+0661 : 18 B0		"  "		bset	4,X00B0
+0663 : 81		" "		rts
+				;
+0664 : 93		" "		db	$93
+				;
+0665 : E0 B5		"  "		sub	X00B5,x
+0667				L0667:
+0667 : B5 B5		"  "		bit	X00B5
+0669 : B5 B5		"  "		bit	X00B5
+066B				L066B:
+066B : ED 0F		"  "		jsr	L000F,x						;INFO: index jump
+066D : F9		" "		adc	,x
+				;
+066E : 85		" "		db	$85
+				;
+066F : E0 ED		"  "		sub	X00ED,x
+0671 : 0F F9 87		"   "		brclr	7,X00F9,L05FB
+0674 : EC 0F		"  "		jmp	L000F,x						;INFO: index jump
+				;
+0676 : 05 B0 86		"   "		brclr	2,X00B0,L05FF
+0679 : 08 9F 17		"   "		brset	4,X009F,L0693
+067C : FC		" "		jmp	,x						;INFO: index jump
+				;
+067D : 8A 61		" a"		db	$8A, $61
+				;
+067F : 4A		"J"		deca
+				;
+0680 : AC		" "		db	$AC
+				;
+0681 : FA		" "		ora	,x
+				;
+0682 : 87		" "		db	$87
+				;
+0683 : BC A8		"  "		jmp	L00A8
+				;
+0685 : B0 81		"  "		sub	X0081
+				;
+0687 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+068A : A8 E0		"  "		eor	#$E0
+068C : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+068E : F9		" "		adc	,x
+				;
+068F : 8C		" "		db	$8C
+				;
+0690				L0690:
+0690 : F0		" "		sub	,x
+0691 : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0693				L0693:
+0693 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0694 : 8C		" "		db	$8C
+				;
+0695 : 02 9E A7		"   "		brset	1,X009E,L063F
+0698 : E0 C7		"  "		sub	X00C7,x
+069A : FF		" "		stx	,x
+069B : 02 9E B3		"   "		brset	1,X009E,L0651
+				;
+069E : AC		" "		db	$AC
+				;
+069F : FA		" "		ora	,x
+				;
+06A0 : 87		" "		db	$87
+				;
+06A1 : BC B0		"  "		jmp	L00B0
+06A3 : 81		" "		rts
+				;
+06A4 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+06A7 : E0 C5		"  "		sub	X00C5,x
+06A9 : FF		" "		stx	,x
+06AA				L06AA:
+06AA : 02 9E FD		"   "		brset	1,X009E,L06AA
+06AD : C6 FF 02		"   "		lda	XFF02
+				;
+06B0 : 9E		" "		db	$9E
+				;
+06B1 : E1 A9		"  "		cmp	X00A9,x
+06B3 : FF		" "		stx	,x
+				;
+06B4 : 87		" "		db	$87
+				;
+06B5 : 22 9E		"" "		bhi	L0655
+				;
+06B7 : 8A		" "		db	$8A
+				;
+06B8 : AD EB		"  "		bsr	L06A5
+				;
+06BA : 93		" "		db	$93
+				;
+06BB : FC		" "		jmp	,x						;INFO: index jump
+				;
+06BC : 8A		" "		db	$8A
+				;
+06BD : 26 A8		"& "		bne	L0667
+06BF : B0 81		"  "		sub	X0081
+				;
+06C1 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+06C4 : F8		" "		eor	,x
+				;
+06C5 : 85		" "		db	$85
+				;
+06C6 : F9		" "		adc	,x
+				;
+06C7 : 86		" "		db	$86
+				;
+06C8 : EC 0E		"  "		jmp	L000E,x						;INFO: index jump
+				;
+06CA : 22 9F		"" "		bhi	L066B
+06CC : 17 B0		"  "		bclr	3,X00B0
+06CE : 81		" "		rts
+				;
+06CF : 93		" "		db	$93
+				;
+06D0 : A9 F0		"  "		adc	#$F0
+06D2 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+06D4 : EC 77		" w"		jmp	L0077,x						;INFO: index jump
+				;
+06D6 : 45		"E"		db	$45
+				;
+06D7 : B0 86		"  "		sub	X0086
+06D9 : 03 9F 17		"   "		brclr	1,X009F,L06F3
+06DC : B0 86		"  "		sub	X0086
+06DE				L06DE:
+06DE : 01 9F 17		"   "		brclr	0,X009F,L06F8
+06E1 : C0 8C 0A		"   "		sub	X8C0A
+06E4 : F0		" "		sub	,x
+06E5 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+06E7 : EC 5B		" ["		jmp	L005B,x						;INFO: index jump
+				;
+06E9 : 42 9E 9E 9E	"B   "		db	$42, $9E, $9E, $9E
+				;
+06ED : B2 EC		"  "		sbc	X00EC
+06EF				L06EF:
+06EF : 02 22 9E		" " "		brset	1,X0022,L0690
+06F2 : B2 F0		"  "		sbc	X00F0
+06F4 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+06F6 : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+06F8				L06F8:
+06F8 : 42 9E 9E 9E	"B   "		db	$42, $9E, $9E, $9E
+				;
+06FC : B2 C0		"  "		sbc	X00C0
+				;
+06FE : 8C		" "		db	$8C
+				;
+06FF : 0A F0 ED		"   "		brset	5,X00F0,L06EF
+0702 : FC		" "		jmp	,x						;INFO: index jump
+0703 : EC 5B		" ["		jmp	L005B,x						;INFO: index jump
+				;
+0705 : 42 9E		"B "		db	$42, $9E
+				;
+0707 : B2 9E		"  "		sbc	X009E
+				;
+0709 : 9E		" "		db	$9E
+				;
+070A : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+070C : 19 F0		"  "		bclr	4,X00F0
+070E : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+0710 : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+0712 : 42 9E		"B "		db	$42, $9E
+				;
+0714 : B2 9E		"  "		sbc	X009E
+				;
+0716 : 9E		" "		db	$9E
+				;
+0717 : C1 82 02		"   "		cmp	X8202
+071A : 9F		" "		txa
+071B : 4F		"O"		clra
+071C : F8		" "		eor	,x
+				;
+071D : 86		" "		db	$86
+				;
+071E : C3 FF 02		"   "		cpx	XFF02
+0721 : 9C		" "		rsp
+0722 : 1B F8		"  "		bclr	5,X00F8
+				;
+0724 : 86		" "		db	$86
+				;
+0725 : EA 55		" U"		ora	X0055,x
+0727 : BD F0		"  "		jsr	L00F0
+0729 : F9		" "		adc	,x
+				;
+072A : 88 8F 7B		"  {"		db	$88, $8F, $7B
+				;
+072D : B0 FE		"  "		sub	X00FE
+072F : FF		" "		stx	,x
+0730 : B0 09		"  "		sub	X0009
+0732 : 3F D8		"? "		clr	X00D8
+0734 : 01 E8 04		"   "		brclr	0,X00E8,L073B
+0737 : FF		" "		stx	,x
+0738 : FF		" "		stx	,x
+				;
+0739 : AC		" "		db	$AC
+				;
+073A : D0 01 E8		"   "		sub	X01E8,x
+073D : 04 FF FF		"   "		brset	2,X00FF,L073F
+				;
+0740 : AC		" "		db	$AC
+				;
+0741 : C7 09 EF		"   "		sta	X09EF
+0744				L0744:
+0744 : B0 FE		"  "		sub	X00FE
+0746 : 80		" "		rti
+				;
+0747 : B0 09		"  "		sub	X0009
+0749 : 3F C7		"? "		clr	X00C7
+074B : 09 FD 9C		"   "		brclr	4,X00FD,L06EA
+074E : 1B B0		"  "		bclr	5,X00B0
+0750 : 80		" "		rti
+				;
+0751 : FE		" "		ldx	,x
+0752 : F8		" "		eor	,x
+				;
+0753 : 86		" "		db	$86
+				;
+0754 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0756 : 68 24		"h$"		asl	X0024,x
+0758 : B0 80		"  "		sub	X0080
+075A : FB		" "		add	,x
+075B : 03 B0 80		"   "		brclr	1,X00B0,L06DE
+075E : FD		" "		jsr	,x						;INFO: index jump
+075F				L075F:
+075F : C7 00 09		"   "		sta	X0009
+				;
+0762 : AC		" "		db	$AC
+				;
+0763 : F9		" "		adc	,x
+0764 : 01 D7 01		"   "		brclr	0,X00D7,L0768
+0767 : DF 01 9C		"   "		stx	X019C,x
+076A : 1B E8		"  "		bclr	5,X00E8
+076C : 01 FF 86		"   "		brclr	0,X00FF,L06F5
+076F : CF 86 04		"   "		stx	X8604
+0772 : FA		" "		ora	,x
+0773 : FF		" "		stx	,x
+0774 : 9F		" "		txa
+0775 : 6D B4		"m "		tst	X00B4,x
+0777 : F9		" "		adc	,x
+0778 : 01 9C 1B		"   "		brclr	0,X009C,L0796
+077B : F8		" "		eor	,x
+				;
+077C : 88		" "		db	$88
+				;
+077D : D0 82 B0		"   "		sub	X82B0,x
+				;
+0780 : 89		" "		db	$89
+				;
+0781 : 06 B0 09		"   "		brset	3,X00B0,L078D
+				;
+0784 : 3B		";"		db	$3B
+				;
+0785 : B0 FE		"  "		sub	X00FE
+				;
+0787 : 82		" "		db	$82
+				;
+0788 : D7 01 C7		"   "		sta	X01C7,x
+078B : 09 FD B0		"   "		brclr	4,X00FD,L073E
+078E : FE		" "		ldx	,x
+078F : 34 DF		"4 "		lsr	X00DF
+0791 : 01 D7 09		"   "		brclr	0,X00D7,L079D
+0794 : C7 09 FD		"   "		sta	X09FD
+0797 : B0 FE		"  "		sub	X00FE
+0799 : 34 F9		"4 "		lsr	X00F9
+079B : 01 D7 09		"   "		brclr	0,X00D7,L07A7
+079E : FA		" "		ora	,x
+079F : FF		" "		stx	,x
+07A0 : FF		" "		stx	,x
+				;
+07A1 : 89		" "		db	$89
+				;
+07A2 : 22 9F		"" "		bhi	L0743
+07A4 : C2 C0 82		"   "		sbc	XC082
+07A7				L07A7:
+07A7 : 10 C7		"  "		bset	0,X00C7
+07A9 : 09 FD B0		"   "		brclr	4,X00FD,L075C
+07AC : 01 FE B0		"   "		brclr	0,X00FE,L075F
+07AF : FE		" "		ldx	,x
+07B0 : 40		"@"		nega
+07B1 : B0 09		"  "		sub	X0009
+07B3 : 3F C7		"? "		clr	X00C7
+07B5 : 09 FD B3		"   "		brclr	4,X00FD,L076B
+07B8 : F8		" "		eor	,x
+				;
+07B9 : 88		" "		db	$88
+				;
+07BA : B4 ED		"  "		and	X00ED
+07BC : FC		" "		jmp	,x						;INFO: index jump
+				;
+07BD : B0 89		"  "		sub	X0089
+07BF : 06 D8 82		"   "		brset	3,X00D8,L0744
+07C2 : C7 09 FD		"   "		sta	X09FD
+07C5 : 9F		" "		txa
+07C6 : 97		" "		tax
+07C7 : B0 80		"  "		sub	X0080
+				;
+07C9 : 52		"R"		db	$52
+				;
+07CA : B0 09		"  "		sub	X0009
+07CC : 08 B0 FE		"   "		brset	4,X00B0,L07CD
+07CF : 80		" "		rti
+				;
+07D0 : FB		" "		add	,x
+07D1 : FF		" "		stx	,x
+07D2 : C7 FE 09		"   "		sta	XFE09
+07D5 : A9 B9		"  "		adc	#$B9
+07D7 : A9 B9		"  "		adc	#$B9
+07D9 : FE		" "		ldx	,x
+07DA : FF		" "		stx	,x
+07DB : B8 15		"  "		eor	X0015
+07DD : B3 FC		"  "		cpx	X00FC
+07DF : 5D		"]"		tstx
+07E0 : 48		"H"		asla
+07E1 : FE		" "		ldx	,x
+				;
+07E2 : 87		" "		db	$87
+				;
+07E3 : B0 FE		"  "		sub	X00FE
+07E5 : 80		" "		rti
+				;
+07E6 : FB		" "		add	,x
+07E7 : FF		" "		stx	,x
+				;
+07E8 : 32		"2"		db	$32
+				;
+07E9 : FC		" "		jmp	,x						;INFO: index jump
+				;
+07EA : 5E 45		"^E"		db	$5E, $45
+				;
+07EC : FE		" "		ldx	,x
+				;
+07ED : 86		" "		db	$86
+				;
+07EE : 14 9F		"  "		bset	2,X009F
+07F0 : DB FC 5F		"  _"		add	XFC5F,x
+				;
+07F3 : 42		"B"		db	$42
+				;
+07F4 : FE		" "		ldx	,x
+				;
+07F5 : 85		" "		db	$85
+				;
+07F6 : 9F		" "		txa
+07F7 : E3 9B		"  "		cpx	X009B,x
+07F9 : E3 9A		"  "		cpx	X009A,x
+07FB : F6		" "		lda	,x
+07FC : 9C		" "		rsp
+07FD : 10 9C		"  "		bset	0,X009C
+07FF : 10 00		"  "		bset	0,X0000
+0801 : 00 00 00		"   "		brset	0,X0000,L0004
+0804 : 00 00 00		"   "		brset	0,X0000,L0007
+0807 : 00 00 00		"   "		brset	0,X0000,L000A
+080A : 00 00 00		"   "		brset	0,X0000,L000D
+080D : 00 00 00		"   "		brset	0,X0000,L0010
+0810 : 00 00 00		"   "		brset	0,X0000,L0013
+0813 : 00 00 00		"   "		brset	0,X0000,L0016
+0816 : 00 00 00		"   "		brset	0,X0000,L0019
+0819 : 00 00 00		"   "		brset	0,X0000,L001C
+081C : 00 00 00		"   "		brset	0,X0000,L001F
+081F : 00 00 00		"   "		brset	0,X0000,L0022
+0822 : 00 00 00		"   "		brset	0,X0000,L0025
+0825 : 00 00 00		"   "		brset	0,X0000,L0028
+0828 : 00 00 00		"   "		brset	0,X0000,L002B
+082B : 00 00 00		"   "		brset	0,X0000,L002E
+082E : 00 00 00		"   "		brset	0,X0000,L0031
+0831 : 00 00 00		"   "		brset	0,X0000,L0034
+0834 : 00 00 00		"   "		brset	0,X0000,L0037
+0837 : 00 00 00		"   "		brset	0,X0000,L003A
+083A : 00 00 00		"   "		brset	0,X0000,L003D
+083D : 00 00 00		"   "		brset	0,X0000,L0040
+0840 : 00 00 00		"   "		brset	0,X0000,L0043
+0843 : 00 00 00		"   "		brset	0,X0000,L0046
+0846 : 00 00 00		"   "		brset	0,X0000,L0049
+0849 : 00 00 00		"   "		brset	0,X0000,L004C
+084C : 00 00 00		"   "		brset	0,X0000,L004F
+084F : 00 00 00		"   "		brset	0,X0000,L0052
+0852 : 00 00 00		"   "		brset	0,X0000,L0055
+0855 : 00 00 00		"   "		brset	0,X0000,L0058
+0858 : 00 00 00		"   "		brset	0,X0000,L005B
+085B : 00 00 00		"   "		brset	0,X0000,L005E
+085E : 00 00 00		"   "		brset	0,X0000,L0061
+0861 : 00 00 00		"   "		brset	0,X0000,L0064
+0864 : 00 00 00		"   "		brset	0,X0000,L0067
+0867 : 00 00 00		"   "		brset	0,X0000,L006A
+086A : 00 00 00		"   "		brset	0,X0000,L006D
+086D : 00 00 00		"   "		brset	0,X0000,L0070
+0870 : 00 00 00		"   "		brset	0,X0000,L0073
+0873 : 00 00 00		"   "		brset	0,X0000,L0076
+0876 : 00 00 00		"   "		brset	0,X0000,L0079
+0879 : 00 00 00		"   "		brset	0,X0000,L007C
+087C : 00 00 00		"   "		brset	0,X0000,L007F
+087F : 00 00 00		"   "		brset	0,X0000,L0082
+0882 : 00 00 00		"   "		brset	0,X0000,L0085
+0885 : 00 00 00		"   "		brset	0,X0000,L0088
+0888 : 00 00 00		"   "		brset	0,X0000,L008B
+088B : 00 00 00		"   "		brset	0,X0000,L008E
+088E : 00 00 00		"   "		brset	0,X0000,L0091
+0891 : 00 00 00		"   "		brset	0,X0000,L0094
+0894 : 00 00 00		"   "		brset	0,X0000,L0097
+0897 : 00 00 00		"   "		brset	0,X0000,L009A
+089A : 00 00 00		"   "		brset	0,X0000,L009D
+089D : 00 00 00		"   "		brset	0,X0000,L00A0
+08A0 : 00 00 00		"   "		brset	0,X0000,L00A3
+08A3 : 00 00 00		"   "		brset	0,X0000,L00A6
+08A6 : 00 00 00		"   "		brset	0,X0000,L00A9
+08A9 : 00 00 00		"   "		brset	0,X0000,L00AC
+08AC : 00 00 00		"   "		brset	0,X0000,L00AF
+08AF : 00 00 00		"   "		brset	0,X0000,L00B2
+08B2 : 00 00 00		"   "		brset	0,X0000,L00B5
+08B5 : 00 00 00		"   "		brset	0,X0000,L00B8
+08B8 : 00 00 00		"   "		brset	0,X0000,L00BB
+08BB : 00 00 00		"   "		brset	0,X0000,L00BE
+08BE : 00 00 00		"   "		brset	0,X0000,L00C1
+08C1 : 00 00 00		"   "		brset	0,X0000,L00C4
+08C4 : 00 00 00		"   "		brset	0,X0000,L00C7
+08C7 : 00 00 00		"   "		brset	0,X0000,L00CA
+08CA : 00 00 00		"   "		brset	0,X0000,L00CD
+08CD : 00 00 00		"   "		brset	0,X0000,L00D0
+08D0 : 00 00 00		"   "		brset	0,X0000,L00D3
+08D3 : 00 00 00		"   "		brset	0,X0000,L00D6
+08D6 : 00 00 00		"   "		brset	0,X0000,L00D9
+08D9 : 00 00 00		"   "		brset	0,X0000,L00DC
+08DC : 00 00 00		"   "		brset	0,X0000,L00DF
+08DF : 00 00 00		"   "		brset	0,X0000,L00E2
+08E2 : 00 00 00		"   "		brset	0,X0000,L00E5
+08E5 : 00 00 00		"   "		brset	0,X0000,L00E8
+08E8 : 00 00 00		"   "		brset	0,X0000,L00EB
+08EB : 00 00 00		"   "		brset	0,X0000,L00EE
+08EE : 00 00 00		"   "		brset	0,X0000,L00F1
+08F1 : 00 00 00		"   "		brset	0,X0000,L00F4
+08F4 : 00 00 00		"   "		brset	0,X0000,L00F7
+08F7 : 00 00 00		"   "		brset	0,X0000,L00FA
+08FA : 00 00 00		"   "		brset	0,X0000,L00FD
+08FD : 00 00 00		"   "		brset	0,X0000,L0100
+0900 : 00 00 00		"   "		brset	0,X0000,L0103
+0903 : 00 00 00		"   "		brset	0,X0000,L0106
+0906 : 00 00 00		"   "		brset	0,X0000,L0109
+0909 : 00 00 00		"   "		brset	0,X0000,L010C
+090C : 00 00 00		"   "		brset	0,X0000,L010F
+090F : 00 00 00		"   "		brset	0,X0000,L0112
+0912 : 00 00 00		"   "		brset	0,X0000,L0115
+0915 : 00 00 00		"   "		brset	0,X0000,L0118
+0918 : 00 00 00		"   "		brset	0,X0000,L011B
+091B : 00 00 00		"   "		brset	0,X0000,L011E
+091E : 00 00 00		"   "		brset	0,X0000,L0121
+0921 : 00 00 00		"   "		brset	0,X0000,L0124
+0924 : 00 00 00		"   "		brset	0,X0000,L0127
+0927 : 00 00 00		"   "		brset	0,X0000,L012A
+092A : 00 00 00		"   "		brset	0,X0000,L012D
+092D : 00 00 00		"   "		brset	0,X0000,L0130
+0930 : 00 00 00		"   "		brset	0,X0000,L0133
+0933 : 00 00 00		"   "		brset	0,X0000,L0136
+0936 : 00 00 00		"   "		brset	0,X0000,L0139
+0939 : 00 00 00		"   "		brset	0,X0000,L013C
+093C : 00 00 00		"   "		brset	0,X0000,L013F
+093F : 00 00 00		"   "		brset	0,X0000,L0142
+0942 : 00 00 00		"   "		brset	0,X0000,L0145
+0945 : 00 00 00		"   "		brset	0,X0000,L0148
+0948 : 00 00 00		"   "		brset	0,X0000,L014B
+094B : 00 00 00		"   "		brset	0,X0000,L014E
+094E : 00 00 00		"   "		brset	0,X0000,L0151
+0951 : 00 00 00		"   "		brset	0,X0000,L0154
+0954 : 00 00 00		"   "		brset	0,X0000,L0157
+0957 : 00 00 00		"   "		brset	0,X0000,L015A
+095A : 00 00 00		"   "		brset	0,X0000,L015D
+095D : 00 00 00		"   "		brset	0,X0000,L0160
+0960 : 00 00 00		"   "		brset	0,X0000,L0163
+0963 : 00 00 00		"   "		brset	0,X0000,L0166
+0966 : 00 00 00		"   "		brset	0,X0000,L0169
+0969 : 00 00 00		"   "		brset	0,X0000,L016C
+096C : 00 00 00		"   "		brset	0,X0000,L016F
+096F : 00 00 00		"   "		brset	0,X0000,L0172
+0972 : 00 00 00		"   "		brset	0,X0000,L0175
+0975 : 00 00 00		"   "		brset	0,X0000,L0178
+0978 : 00 00 00		"   "		brset	0,X0000,L017B
+097B : 00 00 00		"   "		brset	0,X0000,L017E
+097E : 00 00 00		"   "		brset	0,X0000,L0181
+0981 : 00 00 00		"   "		brset	0,X0000,L0184
+0984 : 00 00 00		"   "		brset	0,X0000,L0187
+0987 : 00 00 00		"   "		brset	0,X0000,L018A
+098A : 00 00 00		"   "		brset	0,X0000,L018D
+098D : 00 00 00		"   "		brset	0,X0000,L0190
+0990 : 00 00 00		"   "		brset	0,X0000,L0193
+0993 : 00 00 00		"   "		brset	0,X0000,L0196
+0996 : 00 00 00		"   "		brset	0,X0000,L0199
+0999 : 00 00 00		"   "		brset	0,X0000,L019C
+099C : 00 00 00		"   "		brset	0,X0000,L019F
+099F : 00 00 00		"   "		brset	0,X0000,L01A2
+09A2 : 00 00 00		"   "		brset	0,X0000,L01A5
+09A5 : 00 00 00		"   "		brset	0,X0000,L01A8
+09A8 : 00 00 00		"   "		brset	0,X0000,L01AB
+09AB : 00 00 00		"   "		brset	0,X0000,L01AE
+09AE : 00 00 00		"   "		brset	0,X0000,L01B1
+09B1 : 00 00 00		"   "		brset	0,X0000,L01B4
+09B4 : 00 00 00		"   "		brset	0,X0000,L01B7
+09B7 : 00 00 00		"   "		brset	0,X0000,L01BA
+09BA : 00 00 00		"   "		brset	0,X0000,L01BD
+09BD : 00 00 00		"   "		brset	0,X0000,L01C0
+09C0 : 00 00 00		"   "		brset	0,X0000,L01C3
+09C3 : 00 00 00		"   "		brset	0,X0000,L01C6
+09C6 : 00 00 00		"   "		brset	0,X0000,L01C9
+09C9 : 00 00 00		"   "		brset	0,X0000,L01CC
+09CC : 00 00 00		"   "		brset	0,X0000,L01CF
+09CF				X09CF:
+09CF : 00 00 00		"   "		brset	0,X0000,L01D2
+09D2 : 00 00 00		"   "		brset	0,X0000,L01D5
+09D5 : 00 00 00		"   "		brset	0,X0000,L01D8
+09D8 : 00 00 00		"   "		brset	0,X0000,L01DB
+09DB : 00 00 00		"   "		brset	0,X0000,L01DE
+09DE : 00 00 00		"   "		brset	0,X0000,L01E1
+09E1				X09E1:
+09E1 : 00 00 00		"   "		brset	0,X0000,L01E4
+09E4 : 00 00 00		"   "		brset	0,X0000,L01E7
+09E7 : 00 00 00		"   "		brset	0,X0000,L01EA
+09EA : 00 00 00		"   "		brset	0,X0000,L01ED
+09ED : 00 00 00		"   "		brset	0,X0000,L01F0
+09F0 : 00 00 00		"   "		brset	0,X0000,L01F3
+09F3 : 00 00 00		"   "		brset	0,X0000,L01F6
+09F6 : 00 00 00		"   "		brset	0,X0000,L01F9
+09F9 : 00 00 00		"   "		brset	0,X0000,L01FC
+09FC : 00 00 00		"   "		brset	0,X0000,L01FF
+09FF : 00 00 00		"   "		brset	0,X0000,L0202
+0A02 : 00 00 00		"   "		brset	0,X0000,L0205
+0A05 : 00 00 00		"   "		brset	0,X0000,L0208
+0A08 : 00 00 00		"   "		brset	0,X0000,L020B
+0A0B : 00 00 00		"   "		brset	0,X0000,L020E
+0A0E : 00 00 00		"   "		brset	0,X0000,L0211
+0A11 : 00 00 00		"   "		brset	0,X0000,L0214
+0A14 : 00 00 00		"   "		brset	0,X0000,L0217
+0A17 : 00 00 00		"   "		brset	0,X0000,L021A
+0A1A : 00 00 00		"   "		brset	0,X0000,L021D
+0A1D : 00 00 00		"   "		brset	0,X0000,L0220
+0A20 : 00 00 00		"   "		brset	0,X0000,L0223
+0A23 : 00 00 00		"   "		brset	0,X0000,L0226
+0A26 : 00 00 00		"   "		brset	0,X0000,L0229
+0A29 : 00 00 00		"   "		brset	0,X0000,L022C
+0A2C : 00 00 00		"   "		brset	0,X0000,L022F
+0A2F : 00 00 00		"   "		brset	0,X0000,L0232
+0A32 : 00 00 00		"   "		brset	0,X0000,L0235
+0A35 : 00 00 00		"   "		brset	0,X0000,L0238
+0A38 : 00 00 00		"   "		brset	0,X0000,L023B
+0A3B : 00 00 00		"   "		brset	0,X0000,L023E
+0A3E : 00 00 00		"   "		brset	0,X0000,L0241
+0A41 : 00 00 00		"   "		brset	0,X0000,L0244
+0A44 : 00 00 00		"   "		brset	0,X0000,L0247
+0A47 : 00 00 00		"   "		brset	0,X0000,L024A
+0A4A : 00 00 00		"   "		brset	0,X0000,L024D
+0A4D : 00 00 00		"   "		brset	0,X0000,L0250
+0A50 : 00 00 00		"   "		brset	0,X0000,L0253
+0A53 : 00 00 00		"   "		brset	0,X0000,L0256
+0A56 : 00 00 00		"   "		brset	0,X0000,L0259
+0A59 : 00 00 00		"   "		brset	0,X0000,L025C
+0A5C : 00 00 00		"   "		brset	0,X0000,L025F
+0A5F : 00 00 00		"   "		brset	0,X0000,L0262
+0A62 : 00 00 00		"   "		brset	0,X0000,L0265
+0A65 : 00 00 00		"   "		brset	0,X0000,L0268
+0A68 : 00 00 00		"   "		brset	0,X0000,L026B
+0A6B : 00 00 00		"   "		brset	0,X0000,L026E
+0A6E : 00 00 00		"   "		brset	0,X0000,L0271
+0A71 : 00 00 00		"   "		brset	0,X0000,L0274
+0A74 : 00 00 00		"   "		brset	0,X0000,L0277
+0A77 : 00 00 00		"   "		brset	0,X0000,L027A
+0A7A : 00 00 00		"   "		brset	0,X0000,L027D
+0A7D : 00 00 00		"   "		brset	0,X0000,L0280
+0A80 : 00 00 00		"   "		brset	0,X0000,L0283
+0A83 : 00 00 00		"   "		brset	0,X0000,L0286
+0A86 : 00 00 00		"   "		brset	0,X0000,L0289
+0A89 : 00 00 00		"   "		brset	0,X0000,L028C
+0A8C : 00 00 00		"   "		brset	0,X0000,L028F
+0A8F : 00 00 00		"   "		brset	0,X0000,L0292
+0A92 : 00 00 00		"   "		brset	0,X0000,L0295
+0A95 : 00 00 00		"   "		brset	0,X0000,L0298
+0A98 : 00 00 00		"   "		brset	0,X0000,L029B
+0A9B : 00 00 00		"   "		brset	0,X0000,L029E
+0A9E : 00 00 00		"   "		brset	0,X0000,L02A1
+0AA1 : 00 00 00		"   "		brset	0,X0000,L02A4
+0AA4 : 00 00 00		"   "		brset	0,X0000,L02A7
+0AA7 : 00 00 00		"   "		brset	0,X0000,L02AA
+0AAA : 00 00 00		"   "		brset	0,X0000,L02AD
+0AAD : 00 00 00		"   "		brset	0,X0000,L02B0
+0AB0 : 00 00 00		"   "		brset	0,X0000,L02B3
+0AB3 : 00 00 00		"   "		brset	0,X0000,L02B6
+0AB6 : 00 00 00		"   "		brset	0,X0000,L02B9
+0AB9 : 00 00 00		"   "		brset	0,X0000,L02BC
+0ABC : 00 00 00		"   "		brset	0,X0000,L02BF
+0ABF : 00 00 00		"   "		brset	0,X0000,L02C2
+0AC2 : 00 00 00		"   "		brset	0,X0000,L02C5
+0AC5 : 00 00 00		"   "		brset	0,X0000,L02C8
+0AC8 : 00 00 00		"   "		brset	0,X0000,L02CB
+0ACB : 00 00 00		"   "		brset	0,X0000,L02CE
+0ACE : 00 00 00		"   "		brset	0,X0000,L02D1
+0AD1 : 00 00 00		"   "		brset	0,X0000,L02D4
+0AD4 : 00 00 00		"   "		brset	0,X0000,L02D7
+0AD7 : 00 00 00		"   "		brset	0,X0000,L02DA
+0ADA : 00 00 00		"   "		brset	0,X0000,L02DD
+0ADD : 00 00 00		"   "		brset	0,X0000,L02E0
+				;
+0AE0 : 65 8A		"e "		db	$65, $8A
+				;
+0AE2 : E6 EA		"  "		lda	X00EA,x
+0AE4 : 00 B3 F9		"   "		brset	0,X00B3,L02E0
+				;
+0AE7 : 9E		" "		db	$9E
+				;
+0AE8 : B4 F5		"  "		and	X00F5
+0AEA : B4 F9		"  "		and	X00F9
+0AEC : 9F		" "		txa
+0AED : F0		" "		sub	,x
+0AEE : B4 FD		"  "		and	X00FD
+				;
+0AF0 : 9E		" "		db	$9E
+				;
+0AF1 : B4 FD		"  "		and	X00FD
+0AF3 : 9F		" "		txa
+0AF4 : B4 B3		"  "		and	X00B3
+0AF6 : B0 83		"  "		sub	X0083
+0AF8 : 04 3F 7F		" ? "		brset	2,X003F,L037A
+0AFB : E8 00		"  "		eor	X0000,x
+0AFD : F9		" "		adc	,x
+0AFE : 00 DF 04		"   "		brset	0,X00DF,L0305
+0B01 : BE CA		"  "		ldx	X00CA
+				;
+0B03 : 82		" "		db	$82
+				;
+0B04 : 03 AA 8B		"   "		brclr	1,X00AA,L0292
+0B07 : 02 CF 82		"   "		brset	1,X00CF,L028C
+0B0A : 02 BA B3		"   "		brset	1,X00BA,L02C0
+				;
+0B0D : 8B		" "		db	$8B
+				;
+0B0E : FF		" "		stx	,x
+0B0F : C9 09 FD		"   "		adc	X09FD
+0B12 : 68 E8		"h "		asl	X00E8,x
+0B14 : 06 BC EB		"   "		brset	3,X00BC,L0302
+0B17 : 04 BD E8		"   "		brset	2,X00BD,L0302
+0B1A : 0F F9 84		"   "		brclr	7,X00F9,L02A1
+0B1D : AE F1		"  "		ldx	#$F1
+0B1F : FD		" "		jsr	,x						;INFO: index jump
+				;
+0B20 : 84		" "		db	$84
+				;
+0B21 : E1 AE		"  "		cmp	X00AE,x
+0B23 : F1		" "		cmp	,x
+0B24 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0B25 : FF		" "		stx	,x
+0B26 : 7F		" "		clr	,x
+0B27 : DB 01 DE		"   "		add	X01DE,x
+0B2A : 00 D2 02		"   "		brset	0,X00D2,L032F
+0B2D : F4		" "		and	,x
+0B2E : B4 33		" 3"		and	X0033
+0B30 : E0 B4		"  "		sub	X00B4,x
+0B32 : CF FF E6		"   "		stx	XFFE6
+0B35 : ED 00		"  "		jsr	L0000,x						;INFO: index jump
+0B37 : E1 B8		"  "		cmp	X00B8,x
+0B39 : B9 C5		"  "		adc	X00C5
+0B3B : 81		" "		rts
+0B3C : DC E8 0F		"   "		jmp	LE80F,x						;INFO: index jump
+				;
+0B3F : F9		" "		adc	,x
+0B40 : 05 FB 0A		"   "		brclr	2,X00FB,L034D
+0B43 : EB EE		"  "		add	X00EE,x
+0B45 : 1F F8		"  "		bclr	7,X00F8
+0B47 : 0B EC 1B		"   "		brclr	5,X00EC,L0365
+0B4A : 1F FE		"  "		bclr	7,X00FE
+0B4C : 01 8B 5E		"  ^"		brclr	0,X008B,L03AD
+0B4F : FA		" "		ora	,x
+0B50 : 0A EC 32		"  2"		brset	5,X00EC,L0385
+0B53 : 1F F8		"  "		bclr	7,X00F8
+0B55 : 0B EC BB		"   "		brclr	5,X00EC,L0313
+0B58 : 1F FE		"  "		bclr	7,X00FE
+0B5A : 01 FE 01		"   "		brclr	0,X00FE,L035E
+0B5D : 1F E8		"  "		bclr	7,X00E8
+0B5F : FF		" "		stx	,x
+0B60 : B4 1F		"  "		and	X001F
+				;
+0B62 : 8B		" "		db	$8B
+				;
+0B63 : CC 1F F1		"   "		jmp	L1FF1
+				;
+0B66 : B5 B9		"  "		bit	X00B9
+0B68 : B8 1B		"  "		eor	X001B
+0B6A : E8 55		" U"		eor	X0055,x
+				;
+0B6C : 8B		" "		db	$8B
+				;
+0B6D : CC F7 F4		"   "		jmp	LF7F4
+				;
+0B70 : F1		" "		cmp	,x
+0B71 : B4 B9		"  "		and	X00B9
+0B73 : B8 1A		"  "		eor	X001A
+0B75 : FA		" "		ora	,x
+0B76 : FF		" "		stx	,x
+0B77 : 54		"T"		lsrx
+0B78 : FB		" "		add	,x
+0B79 : FF		" "		stx	,x
+0B7A : 7F		" "		clr	,x
+				;
+0B7B : 8B		" "		db	$8B
+				;
+0B7C : CC F4 F1		"   "		jmp	LF4F1
+				;
+0B7F : B9 B8		"  "		adc	X00B8
+0B81 : 1B A8		"  "		bclr	5,X00A8
+0B83 : FA		" "		ora	,x
+0B84 : 0A EC 3B		"  ;"		brset	5,X00EC,L03C2
+0B87 : 1F FA		"  "		bclr	7,X00FA
+0B89 : 0B EC A1		"   "		brclr	5,X00EC,L032D
+0B8C : 1F E6		"  "		bclr	7,X00E6
+0B8E : D0 05 B0		"   "		sub	X05B0,x
+0B91 : 09 28 F8		" ( "		brclr	4,X0028,L038C
+0B94 : FD		" "		jsr	,x						;INFO: index jump
+0B95 : E0 C7		"  "		sub	X00C7,x
+0B97 : 09 FA E3		"   "		brclr	4,X00FA,L037D
+0B9A : 30 DC		"0 "		neg	X00DC
+0B9C : 09 B0 FE		"   "		brclr	4,X00B0,L039D
+0B9F : 06 C0 01		"   "		brset	3,X00C0,L03A3
+0BA2 : FD		" "		jsr	,x						;INFO: index jump
+0BA3 : D4 09 CF		"   "		and	X09CF,x
+0BA6 : 09 FD B0		"   "		brclr	4,X00FD,L0359
+0BA9 : FE		" "		ldx	,x
+0BAA : 04 D7 09		"   "		brset	2,X00D7,L03B6
+0BAD : D8 05 D5		"   "		eor	X05D5,x
+0BB0 : 09 D4 FF		"   "		brclr	4,X00D4,L03B2
+0BB3 : 33 32		"32"		com	X0032
+0BB5 : F9		" "		adc	,x
+0BB6 : FE		" "		ldx	,x
+0BB7 : E6 D0		"  "		lda	X00D0,x
+0BB9 : FD		" "		jsr	,x						;INFO: index jump
+0BBA : C7 09 FD		"   "		sta	X09FD
+0BBD : FE		" "		ldx	,x
+0BBE : 09 FE FE		"   "		brclr	4,X00FE,L03BF
+0BC1 : F9		" "		adc	,x
+0BC2 : FD		" "		jsr	,x						;INFO: index jump
+0BC3 : FA		" "		ora	,x
+0BC4 : FF		" "		stx	,x
+				;
+0BC5 : 52		"R"		db	$52
+				;
+0BC6 : AE B8		"  "		ldx	#$B8
+0BC8 : E2 A8		"  "		sbc	X00A8,x
+0BCA : 1D B3		"  "		bclr	6,X00B3
+0BCC : B0 80		"  "		sub	X0080
+0BCE : 1E B0		"  "		bset	7,X00B0
+0BD0 : 81		" "		rts
+				;
+0BD1 : 9F		" "		txa
+0BD2 : B3 C2		"  "		cpx	X00C2
+0BD4 : 83		" "		swi
+0BD5 : 0C D7 00		"   "		brset	6,X00D7,L03D8
+0BD8 : DB 01 DF		"   "		add	X01DF,x
+0BDB : FF		" "		stx	,x
+				;
+0BDC : 8A		" "		db	$8A
+				;
+0BDD : E0 F1		"  "		sub	X00F1,x
+0BDF : 5F		"_"		clrx
+0BE0 : BB 31		" 1"		add	X0031
+0BE2 : B2 72		" r"		sbc	X0072
+0BE4 : 25 D7		"% "		bcs	L03BD
+0BE6 : 04 C8 FE		"   "		brset	2,X00C8,L03E7
+0BE9 : F5		" "		bit	,x
+0BEA : B0 80		"  "		sub	X0080
+0BEC : 02 B0 09		"   "		brset	1,X00B0,L03F8
+0BEF : 27 AF		"' "		beq	L03A0
+0BF1 : B4 25		" %"		and	X0025
+0BF3 : B0 80		"  "		sub	X0080
+0BF5 : 06 DC 09		"   "		brset	3,X00DC,L0401
+0BF8 : DF 09 E1		"   "		stx	X09E1,x
+0BFB : B8 1D		"  "		eor	X001D
+0BFD : E1 BF		"  "		cmp	X00BF,x
+0BFF : FB		" "		add	,x
+0C00 : FF		" "		stx	,x
+0C01 : B2 4D		" M"		sbc	X004D
+0C03 : 43		"C"		coma
+0C04 : 36 38		"68"		ror	X0038
+0C06 : 30 34		"04"		neg	X0034
+0C08 : 4A		"J"		deca
+				;
+0C09 : 32		"2"		db	$32
+				;
+0C0A : 20 2D		" -"		bra	L0439
+0C0C : 20 41		" A"		bra	L044F
+				;
+0C0E : 54		"T"		lsrx
+0C0F : 58		"X"		aslx
+0C10 : B0 05		"  "		sub	X0005
+0C12 : FF		" "		stx	,x
+0C13 : B0 01		"  "		sub	X0001
+0C15 : FE		" "		ldx	,x
+0C16 : B0 04		"  "		sub	X0004
+0C18 : 00 D1 82		"   "		brset	0,X00D1,L039D
+0C1B : B0 81		"  "		sub	X0081
+0C1D : 1D B0		"  "		bclr	6,X00B0
+0C1F : 80		" "		rti
+				;
+0C20 : 83		" "		swi
+0C21 : E8 00		"  "		eor	X0000,x
+0C23 : E1 A8		"  "		cmp	X00A8,x
+0C25 : B9 1C		"  "		adc	X001C
+0C27 : B0 81		"  "		sub	X0081
+				;
+0C29 : 93		" "		db	$93
+				;
+0C2A : E8 00		"  "		eor	X0000,x
+0C2C : F9		" "		adc	,x
+				;
+0C2D : 85		" "		db	$85
+				;
+0C2E : F9		" "		adc	,x
+				;
+0C2F : 86		" "		db	$86
+				;
+0C30 : F9		" "		adc	,x
+				;
+0C31 : 87 8F		"  "		db	$87, $8F
+				;
+0C33 : C7 C1 82		"   "		sta	XC182
+0C36 : 02 9D 14		"   "		brset	1,X009D,L044D
+0C39 : B0 01		"  "		sub	X0001
+0C3B : 80		" "		rti
+				;
+0C3C : F8		" "		eor	,x
+0C3D : 00 ED F0		"   "		brset	0,X00ED,L0430
+0C40 : EC F0		"  "		jmp	L00F0,x						;INFO: index jump
+				;
+0C42 : 02 9D 14		"   "		brset	1,X009D,L0459
+0C45 : D1 82 B0		"   "		cmp	X82B0,x
+0C48 : 01 FC CC		"   "		brclr	0,X00FC,L0417
+0C4B : 00 05 B0		"   "		brset	0,X0005,L03FE
+				;
+0C4E : 88		" "		db	$88
+				;
+0C4F : DC 9C FD		"   "		jmp	L9CFD,x						;INFO: index jump
+				;
+0C52 : CD 00 05		"   "		jsr	L0005
+0C55 : B0 88		"  "		sub	X0088
+0C57 : 74		"t"		lsr	,x
+0C58 : 9C		" "		rsp
+0C59 : FD		" "		jsr	,x						;INFO: index jump
+0C5A : CE 00 07		"   "		ldx	X0007
+0C5D : D9 82 B0		"   "		adc	X82B0,x
+0C60 : 01 FF 9D		"   "		brclr	0,X00FF,L0400
+0C63 : 14 CF		"  "		bset	2,X00CF
+0C65 : 00 05 B0		"   "		brset	0,X0005,L0418
+				;
+0C68 : 88		" "		db	$88
+				;
+0C69 : 78		"x"		asl	,x
+0C6A : 9C		" "		rsp
+0C6B : FD		" "		jsr	,x						;INFO: index jump
+0C6C : B0 01		"  "		sub	X0001
+0C6E : FA		" "		ora	,x
+0C6F : CC 00 05		"   "		jmp	L0005
+				;
+0C72 : B0 88		"  "		sub	X0088
+0C74 : D8 9C FD		"   "		eor	X9CFD,x
+0C77 : CD 00 05		"   "		jsr	L0005
+0C7A : B0 88		"  "		sub	X0088
+0C7C : BC 9C		"  "		jmp	L009C
+				;
+0C7E : FD		" "		jsr	,x						;INFO: index jump
+0C7F : CE 00 05		"   "		ldx	X0005
+0C82 : B0 88		"  "		sub	X0088
+0C84 : EC 9C		"  "		jmp	L009C,x						;INFO: index jump
+				;
+0C86 : FD		" "		jsr	,x						;INFO: index jump
+0C87 : B0 01		"  "		sub	X0001
+0C89 : F6		" "		lda	,x
+0C8A : CD 00 05		"   "		jsr	L0005
+0C8D : B0 88		"  "		sub	X0088
+0C8F : B8 9C		"  "		eor	X009C
+0C91 : FD		" "		jsr	,x						;INFO: index jump
+0C92 : CE 00 05		"   "		ldx	X0005
+0C95 : B0 88		"  "		sub	X0088
+0C97 : E8 9C		"  "		eor	X009C,x
+0C99 : FD		" "		jsr	,x						;INFO: index jump
+0C9A : CF 00 05		"   "		stx	X0005
+0C9D : B0 88		"  "		sub	X0088
+0C9F : FC		" "		jmp	,x						;INFO: index jump
+				;
+0CA0 : 9C		" "		rsp
+0CA1 : FD		" "		jsr	,x						;INFO: index jump
+0CA2 : B0 01		"  "		sub	X0001
+0CA4 : EE CD		"  "		ldx	X00CD,x
+0CA6 : 00 05 B0		"   "		brset	0,X0005,L0459
+				;
+0CA9 : 88		" "		db	$88
+				;
+0CAA : B4 9C		"  "		and	X009C
+0CAC : FD		" "		jsr	,x						;INFO: index jump
+0CAD : CE 00 05		"   "		ldx	X0005
+0CB0 : B0 88		"  "		sub	X0088
+0CB2 : E4 9C		"  "		and	X009C,x
+0CB4 : FD		" "		jsr	,x						;INFO: index jump
+0CB5 : CF 00 05		"   "		stx	X0005
+0CB8 : B0 88		"  "		sub	X0088
+0CBA : F4		" "		and	,x
+0CBB : 9C		" "		rsp
+0CBC : FD		" "		jsr	,x						;INFO: index jump
+0CBD : B0 01		"  "		sub	X0001
+0CBF : DE CC 00		"   "		ldx	XCC00,x
+0CC2 : 05 B0 88		"   "		brclr	2,X00B0,L044D
+0CC5 : F8		" "		eor	,x
+0CC6 : 9C		" "		rsp
+0CC7 : FD		" "		jsr	,x						;INFO: index jump
+0CC8 : CD 00 05		"   "		jsr	L0005
+0CCB : B0 88		"  "		sub	X0088
+0CCD : 70		"p"		neg	,x
+0CCE : 9C		" "		rsp
+0CCF : FD		" "		jsr	,x						;INFO: index jump
+0CD0 : CE 00 05		"   "		ldx	X0005
+0CD3 : B0 88		"  "		sub	X0088
+0CD5 : E0 9C		"  "		sub	X009C,x
+0CD7 : FD		" "		jsr	,x						;INFO: index jump
+0CD8 : CF 00 05		"   "		stx	X0005
+0CDB : B0 88		"  "		sub	X0088
+0CDD : F0		" "		sub	,x
+0CDE : 9C		" "		rsp
+0CDF : FD		" "		jsr	,x						;INFO: index jump
+0CE0 : B0 01		"  "		sub	X0001
+0CE2 : BE CC		"  "		ldx	X00CC
+0CE4 : 00 05 B0		"   "		brset	0,X0005,L0497
+				;
+0CE7 : 88		" "		db	$88
+				;
+0CE8 : D0 9C FD		"   "		sub	X9CFD,x
+0CEB : CE 00 05		"   "		ldx	X0005
+0CEE : B0 88		"  "		sub	X0088
+0CF0 : 7C		"|"		inc	,x
+0CF1 : 9C		" "		rsp
+0CF2 : FD		" "		jsr	,x						;INFO: index jump
+0CF3 : CF 00 05		"   "		stx	X0005
+0CF6 : B0 88		"  "		sub	X0088
+0CF8 : D4 9C FD		"   "		and	X9CFD,x
+0CFB : 9D		" "		nop
+0CFC : 14 8F		"  "		bset	2,X008F
+				;
+0CFE : 7B		"{"		db	$7B
+				;
+0CFF : B0 01		"  "		sub	X0001
+0D01 : 80		" "		rti
+				;
+0D02 : F8		" "		eor	,x
+0D03 : 00 ED F0		"   "		brset	0,X00ED,L04F6
+0D06 : EC F0		"  "		jmp	L00F0,x						;INFO: index jump
+				;
+0D08 : 19 B0		"  "		bclr	4,X00B0
+0D0A : FE		" "		ldx	,x
+0D0B : 40		"@"		nega
+0D0C : B0 09		"  "		sub	X0009
+0D0E : 3F C7		"? "		clr	X00C7
+0D10 : 09 FD 9C		"   "		brclr	4,X00FD,L04AF
+0D13 : 1B F8		"  "		bclr	5,X00F8
+				;
+0D15 : 8B		" "		db	$8B
+				;
+0D16 : F9		" "		adc	,x
+				;
+0D17 : 8C		" "		db	$8C
+				;
+0D18 : F8		" "		eor	,x
+				;
+0D19 : 8A		" "		db	$8A
+				;
+0D1A : F9		" "		adc	,x
+				;
+0D1B : 8B		" "		db	$8B
+				;
+0D1C : F8		" "		eor	,x
+				;
+0D1D : 89		" "		db	$89
+				;
+0D1E : F9		" "		adc	,x
+				;
+0D1F : 8A		" "		db	$8A
+				;
+0D20 : F8		" "		eor	,x
+				;
+0D21 : 88		" "		db	$88
+				;
+0D22 : F9		" "		adc	,x
+				;
+0D23 : 89		" "		db	$89
+				;
+0D24 : F8		" "		eor	,x
+				;
+0D25 : 85		" "		db	$85
+				;
+0D26 : FA		" "		ora	,x
+				;
+0D27 : 86		" "		db	$86
+				;
+0D28 : FA		" "		ora	,x
+				;
+0D29 : 87		" "		db	$87
+				;
+0D2A : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0D2C : 45		"E"		db	$45
+				;
+0D2D : B0 88		"  "		sub	X0088
+0D2F : 00 9D 4C		"  L"		brset	0,X009D,L057E
+0D32 : F8		" "		eor	,x
+				;
+0D33 : 87		" "		db	$87
+				;
+0D34 : EC 10		"  "		jmp	L0010,x						;INFO: index jump
+				;
+0D36 : 42		"B"		db	$42
+				;
+0D37 : 9D		" "		nop
+0D38 : 49		"I"		rola
+0D39 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0D3A : 86 65		" e"		db	$86, $65
+				;
+0D3C : B0 88		"  "		sub	X0088
+0D3E : 02 9D 4C		"  L"		brset	1,X009D,L058D
+0D41 : F8		" "		eor	,x
+				;
+0D42 : 85		" "		db	$85
+				;
+0D43 : 05 B0 88		"   "		brclr	2,X00B0,L04CE
+0D46 : 02 9D 4C		"  L"		brset	1,X009D,L0595
+0D49 : B0 88		"  "		sub	X0088
+0D4B : 01 B0 85		"   "		brclr	0,X00B0,L04D3
+0D4E : 00 B0 86		"   "		brset	0,X00B0,L04D7
+0D51 : 00 B0 87		"   "		brset	0,X00B0,L04DB
+0D54 : 00 E8 85		"   "		brset	0,X00E8,L04DC
+0D57 : FA		" "		ora	,x
+				;
+0D58 : 88		" "		db	$88
+				;
+0D59 : BC E6		"  "		jmp	L00E6
+				;
+0D5B : E8 85		"  "		eor	X0085,x
+0D5D : FA		" "		ora	,x
+				;
+0D5E : 89		" "		db	$89
+				;
+0D5F : BC E6		"  "		jmp	L00E6
+				;
+0D61 : E8 85		"  "		eor	X0085,x
+0D63 : FA		" "		ora	,x
+				;
+0D64 : 8A		" "		db	$8A
+				;
+0D65 : BC E6		"  "		jmp	L00E6
+				;
+0D67 : E8 85		"  "		eor	X0085,x
+0D69 : FA		" "		ora	,x
+				;
+0D6A : 8B		" "		db	$8B
+				;
+0D6B : BC E6		"  "		jmp	L00E6
+				;
+0D6D : E8 85		"  "		eor	X0085,x
+0D6F : FA		" "		ora	,x
+				;
+0D70 : 8C		" "		db	$8C
+				;
+0D71 : BC E6		"  "		jmp	L00E6
+				;
+0D73 : F8		" "		eor	,x
+				;
+0D74 : 85		" "		db	$85
+				;
+0D75 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0D77 : 65		"e"		db	$65
+				;
+0D78 : B0 92		"  "		sub	X0092
+0D7A : 00 9D 94		"   "		brset	0,X009D,L0511
+0D7D : F8		" "		eor	,x
+				;
+0D7E : 86		" "		db	$86
+				;
+0D7F : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+0D81 : 65		"e"		db	$65
+				;
+0D82 : B0 92		"  "		sub	X0092
+0D84 : 01 9D 94		"   "		brclr	0,X009D,L051B
+0D87 : F8		" "		eor	,x
+				;
+0D88 : 87		" "		db	$87
+				;
+0D89 : EC 03		"  "		jmp	L0003,x						;INFO: index jump
+				;
+0D8B : 65		"e"		db	$65
+				;
+0D8C : B0 92		"  "		sub	X0092
+0D8E : 02 9D 94		"   "		brset	1,X009D,L0525
+0D91 : B0 92		"  "		sub	X0092
+0D93 : 80		" "		rti
+				;
+0D94 : FE		" "		ldx	,x
+				;
+0D95 : 8E		" "		db	$8E
+				;
+0D96 : C7 92 02		"   "		sta	X9202
+0D99 : 9C		" "		rsp
+0D9A : 2A F8		"* "		bpl	L0594
+				;
+0D9C : 92		" "		db	$92
+				;
+0D9D : FC		" "		jmp	,x						;INFO: index jump
+				;
+0D9E : 8F		" "		db	$8F
+				;
+0D9F : 02 9E 08		"   "		brset	1,X009E,L05AA
+0DA2 : F8		" "		eor	,x
+				;
+0DA3 : 8D		" "		db	$8D
+				;
+0DA4 : 0C F8 92		"   "		brset	6,X00F8,L0539
+0DA7 : F9		" "		adc	,x
+				;
+0DA8 : 8F		" "		db	$8F
+				;
+0DA9 : B0 8D		"  "		sub	X008D
+0DAB : 01 B0 90		"   "		brclr	0,X00B0,L053E
+0DAE : 01 9C 2A		"  *"		brclr	0,X009C,L05DB
+0DB1 : F8		" "		eor	,x
+				;
+0DB2 : 8F		" "		db	$8F
+				;
+0DB3 : 2A EC		"* "		bpl	L05A1
+0DB5 : 01 02 9D		"   "		brclr	0,X0002,L0555
+0DB8 : F8		" "		eor	,x
+0DB9 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0DBB : 13 9E		"  "		bclr	1,X009E
+0DBD : 01 F8 90		"   "		brclr	0,X00F8,L0550
+0DC0 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0DC2 : 62		"b"		db	$62
+				;
+0DC3 : 9D		" "		nop
+0DC4 : D9 AD EC		"   "		adc	XADEC,x
+				;
+0DC7 : 93		" "		db	$93
+				;
+0DC8 : 02 9C 1B		"   "		brset	1,X009C,L05E6
+0DCB : B9 F0		"  "		adc	X00F0
+0DCD : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0DCF : F9		" "		adc	,x
+				;
+0DD0 : 8F		" "		db	$8F
+				;
+0DD1 : F8		" "		eor	,x
+				;
+0DD2 : 91		" "		db	$91
+				;
+0DD3 : F9		" "		adc	,x
+				;
+0DD4 : 90		" "		db	$90
+				;
+0DD5 : FF		" "		stx	,x
+				;
+0DD6 : 8D		" "		db	$8D
+				;
+0DD7 : 9D		" "		nop
+				;
+0DD8 : 96		" "		db	$96
+				;
+0DD9 : F8		" "		eor	,x
+				;
+0DDA : 90		" "		db	$90
+				;
+0DDB : FA		" "		ora	,x
+0DDC : FF		" "		stx	,x
+0DDD : FA		" "		ora	,x
+0DDE : FF		" "		stx	,x
+0DDF : FA		" "		ora	,x
+				;
+0DE0 : 8F		" "		db	$8F
+				;
+0DE1 : F1		" "		cmp	,x
+0DE2 : A9 AD		"  "		adc	#$AD
+0DE4 : EC 9F		"  "		jmp	L009F,x						;INFO: index jump
+				;
+0DE6 : 62		"b"		db	$62
+				;
+0DE7 : 9C		" "		rsp
+0DE8 : 1B FE		"  "		bclr	5,X00FE
+				;
+0DEA : 8D		" "		db	$8D
+				;
+0DEB : F8		" "		eor	,x
+				;
+0DEC : 92		" "		db	$92
+				;
+0DED : F9		" "		adc	,x
+				;
+0DEE : 8F		" "		db	$8F
+				;
+0DEF : F8		" "		eor	,x
+				;
+0DF0 : 90		" "		db	$90
+				;
+0DF1 : F9		" "		adc	,x
+				;
+0DF2 : 91		" "		db	$91
+				;
+0DF3 : B0 90		"  "		sub	X0090
+0DF5 : 01 9C 2A		"  *"		brclr	0,X009C,L0622
+0DF8 : F8		" "		eor	,x
+				;
+0DF9 : 90		" "		db	$90
+				;
+0DFA : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+0DFC : 42		"B"		db	$42
+				;
+0DFD : 9D		" "		nop
+0DFE : C5 9D D9		"   "		bit	X9DD9
+0E01 : F8		" "		eor	,x
+				;
+0E02 : 90		" "		db	$90
+				;
+0E03 : EC 04		"  "		jmp	L0004,x						;INFO: index jump
+				;
+0E05 : 77		"w"		asr	,x
+0E06 : 9D		" "		nop
+0E07 : D9 F8 92		"   "		adc	XF892,x
+0E0A : 2E FE		". "		bil	L060A
+				;
+0E0C : 90		" "		db	$90
+				;
+0E0D : F8		" "		eor	,x
+				;
+0E0E : 90		" "		db	$90
+				;
+0E0F : EC 3F		" ?"		jmp	L003F,x						;INFO: index jump
+				;
+0E11 : 63 B0		"c "		com	X00B0,x
+				;
+0E13 : 90		" "		db	$90
+				;
+0E14 : 3F 9C		"? "		clr	X009C
+0E16 : 2A 9C		"* "		bpl	L05B4
+0E18 : 1B FE		"  "		bclr	5,X00FE
+				;
+0E1A : 90		" "		db	$90
+				;
+0E1B : F8		" "		eor	,x
+				;
+0E1C : 90		" "		db	$90
+				;
+0E1D : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+0E1F : 75		"u"		db	$75
+				;
+0E20 : AD EC		"  "		bsr	L060E
+				;
+0E22 : 94 42 9E		" B "		db	$94, $42, $9E
+				;
+0E25 : 17 EB		"  "		bclr	3,X00EB
+				;
+0E27 : 93		" "		db	$93
+				;
+0E28 : F9		" "		adc	,x
+				;
+0E29 : 8D		" "		db	$8D
+				;
+0E2A : F9		" "		adc	,x
+				;
+0E2B : 8A		" "		db	$8A
+				;
+0E2C : F8		" "		eor	,x
+				;
+0E2D : 8E		" "		db	$8E
+				;
+0E2E : EC 20		"  "		jmp	L0020,x						;INFO: index jump
+				;
+0E30 : 42 9E		"B "		db	$42, $9E
+				;
+0E32 : 17 B9		"  "		bclr	3,X00B9
+0E34 : AD EC		"  "		bsr	L0622
+				;
+0E36 : 95 42 9E		" B "		db	$95, $42, $9E
+				;
+0E39 : 4A		"J"		deca
+0E3A : B9 F0		"  "		adc	X00F0
+0E3C : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0E3E : 0B A9 F0		"   "		brclr	5,X00A9,L0631
+0E41 : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0E43 : EC 01		"  "		jmp	L0001,x						;INFO: index jump
+				;
+0E45 : 06 F0 EC		"   "		brset	3,X00F0,L0634
+0E48 : 1C 66		" f"		bset	6,X0066
+				;
+0E4A : 9E		" "		db	$9E
+				;
+0E4B : 59		"Y"		rolx
+0E4C : F0		" "		sub	,x
+0E4D : EC 14		"  "		jmp	L0014,x						;INFO: index jump
+				;
+0E4F : 49		"I"		rola
+0E50 : FF		" "		stx	,x
+				;
+0E51 : 8A		" "		db	$8A
+				;
+0E52 : FF		" "		stx	,x
+				;
+0E53 : 8A		" "		db	$8A
+				;
+0E54 : F8		" "		eor	,x
+				;
+0E55 : 8A		" "		db	$8A
+				;
+0E56 : BC 9E		"  "		jmp	L009E
+				;
+0E58 : 33 B0		"3 "		com	X00B0
+				;
+0E5A : 85		" "		db	$85
+				;
+0E5B : FF		" "		stx	,x
+0E5C : B0 86		"  "		sub	X0086
+0E5E : FF		" "		stx	,x
+0E5F : B0 80		"  "		sub	X0080
+0E61 : 18 B0		"  "		bset	4,X00B0
+0E63 : 81		" "		rts
+				;
+0E64 : 93		" "		db	$93
+				;
+0E65 : E0 B5		"  "		sub	X00B5,x
+0E67 : B5 B5		"  "		bit	X00B5
+0E69 : B5 B5		"  "		bit	X00B5
+0E6B : ED 0F		"  "		jsr	L000F,x						;INFO: index jump
+0E6D : F9		" "		adc	,x
+				;
+0E6E : 85		" "		db	$85
+				;
+0E6F : E0 ED		"  "		sub	X00ED,x
+0E71 : 0F F9 87		"   "		brclr	7,X00F9,L05FB
+0E74 : EC 0F		"  "		jmp	L000F,x						;INFO: index jump
+				;
+0E76 : 05 B0 86		"   "		brclr	2,X00B0,L05FF
+0E79 : 08 9F 17		"   "		brset	4,X009F,L0693
+0E7C : FC		" "		jmp	,x						;INFO: index jump
+				;
+0E7D : 8A 61		" a"		db	$8A, $61
+				;
+0E7F : 4A		"J"		deca
+				;
+0E80 : AC		" "		db	$AC
+				;
+0E81 : FA		" "		ora	,x
+				;
+0E82 : 87		" "		db	$87
+				;
+0E83 : BC A8		"  "		jmp	L00A8
+				;
+0E85 : B0 81		"  "		sub	X0081
+				;
+0E87 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+0E8A : A8 E0		"  "		eor	#$E0
+0E8C : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0E8E : F9		" "		adc	,x
+				;
+0E8F : 8C		" "		db	$8C
+				;
+0E90 : F0		" "		sub	,x
+0E91 : ED 03		"  "		jsr	L0003,x						;INFO: index jump
+0E93 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0E94 : 8C		" "		db	$8C
+				;
+0E95 : 02 9E A7		"   "		brset	1,X009E,L063F
+0E98 : E0 C7		"  "		sub	X00C7,x
+0E9A : FF		" "		stx	,x
+0E9B : 02 9E B3		"   "		brset	1,X009E,L0651
+				;
+0E9E : AC		" "		db	$AC
+				;
+0E9F : FA		" "		ora	,x
+				;
+0EA0 : 87		" "		db	$87
+				;
+0EA1 : BC B0		"  "		jmp	L00B0
+0EA3 : 81		" "		rts
+				;
+0EA4 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+0EA7 : E0 C5		"  "		sub	X00C5,x
+0EA9 : FF		" "		stx	,x
+0EAA : 02 9E FD		"   "		brset	1,X009E,L06AA
+0EAD : C6 FF 02		"   "		lda	XFF02
+				;
+0EB0 : 9E		" "		db	$9E
+				;
+0EB1 : E1 A9		"  "		cmp	X00A9,x
+0EB3 : FF		" "		stx	,x
+				;
+0EB4 : 87		" "		db	$87
+				;
+0EB5 : 22 9E		"" "		bhi	L0655
+				;
+0EB7 : 8A		" "		db	$8A
+				;
+0EB8 : AD EB		"  "		bsr	L06A5
+				;
+0EBA : 93		" "		db	$93
+				;
+0EBB : FC		" "		jmp	,x						;INFO: index jump
+				;
+0EBC : 8A		" "		db	$8A
+				;
+0EBD : 26 A8		"& "		bne	L0667
+0EBF : B0 81		"  "		sub	X0081
+				;
+0EC1 : 93 9E 65		"  e"		db	$93, $9E, $65
+				;
+0EC4 : F8		" "		eor	,x
+				;
+0EC5 : 85		" "		db	$85
+				;
+0EC6 : F9		" "		adc	,x
+				;
+0EC7 : 86		" "		db	$86
+				;
+0EC8 : EC 0E		"  "		jmp	L000E,x						;INFO: index jump
+				;
+0ECA : 22 9F		"" "		bhi	L066B
+0ECC : 17 B0		"  "		bclr	3,X00B0
+0ECE : 81		" "		rts
+				;
+0ECF : 93		" "		db	$93
+				;
+0ED0 : A9 F0		"  "		adc	#$F0
+0ED2 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+0ED4 : EC 77		" w"		jmp	L0077,x						;INFO: index jump
+				;
+0ED6 : 45		"E"		db	$45
+				;
+0ED7 : B0 86		"  "		sub	X0086
+0ED9 : 03 9F 17		"   "		brclr	1,X009F,L06F3
+0EDC : B0 86		"  "		sub	X0086
+0EDE : 01 9F 17		"   "		brclr	0,X009F,L06F8
+0EE1 : C0 8C 0A		"   "		sub	X8C0A
+0EE4 : F0		" "		sub	,x
+0EE5 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+0EE7 : EC 5B		" ["		jmp	L005B,x						;INFO: index jump
+				;
+0EE9 : 42 9E 9E 9E	"B   "		db	$42, $9E, $9E, $9E
+				;
+0EED : B2 EC		"  "		sbc	X00EC
+0EEF : 02 22 9E		" " "		brset	1,X0022,L0690
+0EF2 : B2 F0		"  "		sbc	X00F0
+0EF4 : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+0EF6 : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+0EF8 : 42 9E 9E 9E	"B   "		db	$42, $9E, $9E, $9E
+				;
+0EFC : B2 C0		"  "		sbc	X00C0
+				;
+0EFE : 8C		" "		db	$8C
+				;
+0EFF : 0A F0 ED		"   "		brset	5,X00F0,L06EF
+0F02 : FC		" "		jmp	,x						;INFO: index jump
+0F03 : EC 5B		" ["		jmp	L005B,x						;INFO: index jump
+				;
+0F05 : 42 9E		"B "		db	$42, $9E
+				;
+0F07 : B2 9E		"  "		sbc	X009E
+				;
+0F09 : 9E		" "		db	$9E
+				;
+0F0A : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0F0C : 19 F0		"  "		bclr	4,X00F0
+0F0E : ED FC		"  "		jsr	L00FC,x						;INFO: index jump
+0F10 : EC 18		"  "		jmp	L0018,x						;INFO: index jump
+				;
+0F12 : 42 9E		"B "		db	$42, $9E
+				;
+0F14 : B2 9E		"  "		sbc	X009E
+				;
+0F16 : 9E		" "		db	$9E
+				;
+0F17 : C1 82 02		"   "		cmp	X8202
+0F1A : 9F		" "		txa
+0F1B : 4F		"O"		clra
+0F1C : F8		" "		eor	,x
+				;
+0F1D : 86		" "		db	$86
+				;
+0F1E : C3 FF 02		"   "		cpx	XFF02
+0F21 : 9C		" "		rsp
+0F22 : 1B F8		"  "		bclr	5,X00F8
+				;
+0F24 : 86		" "		db	$86
+				;
+0F25 : EA 55		" U"		ora	X0055,x
+0F27 : BD F0		"  "		jsr	L00F0
+0F29 : F9		" "		adc	,x
+				;
+0F2A : 88 8F 7B		"  {"		db	$88, $8F, $7B
+				;
+0F2D : B0 FE		"  "		sub	X00FE
+0F2F : FF		" "		stx	,x
+0F30 : B0 09		"  "		sub	X0009
+0F32 : 3F D8		"? "		clr	X00D8
+0F34 : 01 E8 04		"   "		brclr	0,X00E8,L073B
+0F37 : FF		" "		stx	,x
+0F38 : FF		" "		stx	,x
+				;
+0F39 : AC		" "		db	$AC
+				;
+0F3A : D0 01 E8		"   "		sub	X01E8,x
+0F3D : 04 FF FF		"   "		brset	2,X00FF,L073F
+				;
+0F40 : AC		" "		db	$AC
+				;
+0F41 : C7 09 EF		"   "		sta	X09EF
+0F44 : B0 FE		"  "		sub	X00FE
+0F46 : 80		" "		rti
+				;
+0F47 : B0 09		"  "		sub	X0009
+0F49 : 3F C7		"? "		clr	X00C7
+0F4B : 09 FD 9C		"   "		brclr	4,X00FD,L06EA
+0F4E : 1B B0		"  "		bclr	5,X00B0
+0F50 : 80		" "		rti
+				;
+0F51 : FE		" "		ldx	,x
+0F52 : F8		" "		eor	,x
+				;
+0F53 : 86		" "		db	$86
+				;
+0F54 : EC 02		"  "		jmp	L0002,x						;INFO: index jump
+				;
+0F56 : 68 24		"h$"		asl	X0024,x
+0F58 : B0 80		"  "		sub	X0080
+0F5A : FB		" "		add	,x
+0F5B : 03 B0 80		"   "		brclr	1,X00B0,L06DE
+0F5E : FD		" "		jsr	,x						;INFO: index jump
+0F5F : C7 00 09		"   "		sta	X0009
+				;
+0F62 : AC		" "		db	$AC
+				;
+0F63 : F9		" "		adc	,x
+0F64 : 01 D7 01		"   "		brclr	0,X00D7,L0768
+0F67 : DF 01 9C		"   "		stx	X019C,x
+0F6A : 1B E8		"  "		bclr	5,X00E8
+0F6C : 01 FF 86		"   "		brclr	0,X00FF,L06F5
+0F6F : CF 86 04		"   "		stx	X8604
+0F72 : FA		" "		ora	,x
+0F73 : FF		" "		stx	,x
+0F74 : 9F		" "		txa
+0F75 : 6D B4		"m "		tst	X00B4,x
+0F77 : F9		" "		adc	,x
+0F78 : 01 9C 1B		"   "		brclr	0,X009C,L0796
+0F7B : F8		" "		eor	,x
+				;
+0F7C : 88		" "		db	$88
+				;
+0F7D : D0 82 B0		"   "		sub	X82B0,x
+				;
+0F80 : 89		" "		db	$89
+				;
+0F81 : 06 B0 09		"   "		brset	3,X00B0,L078D
+				;
+0F84 : 3B		";"		db	$3B
+				;
+0F85 : B0 FE		"  "		sub	X00FE
+				;
+0F87 : 82		" "		db	$82
+				;
+0F88 : D7 01 C7		"   "		sta	X01C7,x
+0F8B : 09 FD B0		"   "		brclr	4,X00FD,L073E
+0F8E : FE		" "		ldx	,x
+0F8F : 34 DF		"4 "		lsr	X00DF
+0F91 : 01 D7 09		"   "		brclr	0,X00D7,L079D
+0F94 : C7 09 FD		"   "		sta	X09FD
+0F97 : B0 FE		"  "		sub	X00FE
+0F99 : 34 F9		"4 "		lsr	X00F9
+0F9B : 01 D7 09		"   "		brclr	0,X00D7,L07A7
+0F9E : FA		" "		ora	,x
+0F9F : FF		" "		stx	,x
+0FA0 : FF		" "		stx	,x
+				;
+0FA1 : 89		" "		db	$89
+				;
+0FA2 : 22 9F		"" "		bhi	L0743
+0FA4 : C2 C0 82		"   "		sbc	XC082
+0FA7 : 10 C7		"  "		bset	0,X00C7
+0FA9 : 09 FD B0		"   "		brclr	4,X00FD,L075C
+0FAC : 01 FE B0		"   "		brclr	0,X00FE,L075F
+0FAF : FE		" "		ldx	,x
+0FB0 : 40		"@"		nega
+0FB1 : B0 09		"  "		sub	X0009
+0FB3 : 3F C7		"? "		clr	X00C7
+0FB5 : 09 FD B3		"   "		brclr	4,X00FD,L076B
+0FB8 : F8		" "		eor	,x
+				;
+0FB9 : 88		" "		db	$88
+				;
+0FBA : B4 ED		"  "		and	X00ED
+0FBC : FC		" "		jmp	,x						;INFO: index jump
+				;
+0FBD : B0 89		"  "		sub	X0089
+0FBF : 06 D8 82		"   "		brset	3,X00D8,L0744
+0FC2 : C7 09 FD		"   "		sta	X09FD
+0FC5 : 9F		" "		txa
+0FC6 : 97		" "		tax
+0FC7 : B0 80		"  "		sub	X0080
+				;
+0FC9 : 52		"R"		db	$52
+				;
+0FCA : B0 09		"  "		sub	X0009
+0FCC : 08 B0 FE		"   "		brset	4,X00B0,L07CD
+0FCF : 80		" "		rti
+				;
+0FD0 : FB		" "		add	,x
+0FD1 : FF		" "		stx	,x
+0FD2 : C7 FE 09		"   "		sta	XFE09
+0FD5 : A9 B9		"  "		adc	#$B9
+0FD7 : A9 B9		"  "		adc	#$B9
+0FD9 : FE		" "		ldx	,x
+0FDA : FF		" "		stx	,x
+0FDB : B8 15		"  "		eor	X0015
+0FDD : B3 FC		"  "		cpx	X00FC
+0FDF : 5D		"]"		tstx
+0FE0 : 48		"H"		asla
+0FE1 : FE		" "		ldx	,x
+				;
+0FE2 : 87		" "		db	$87
+				;
+0FE3 : B0 FE		"  "		sub	X00FE
+0FE5 : 80		" "		rti
+				;
+0FE6 : FB		" "		add	,x
+0FE7 : FF		" "		stx	,x
+				;
+0FE8 : 32		"2"		db	$32
+				;
+0FE9 : FC		" "		jmp	,x						;INFO: index jump
+				;
+0FEA : 5E 45		"^E"		db	$5E, $45
+				;
+0FEC : FE		" "		ldx	,x
+				;
+0FED : 86		" "		db	$86
+				;
+0FEE : 14 9F		"  "		bset	2,X009F
+0FF0 : DB FC 5F		"  _"		add	XFC5F,x
+				;
+0FF3 : 42		"B"		db	$42
+				;
+0FF4 : FE		" "		ldx	,x
+				;
+0FF5 : 85		" "		db	$85
+				;
+0FF6 : 9F		" "		txa
+0FF7 : E3 9B		"  "		cpx	X009B,x
+0FF9 : E3 9A		"  "		cpx	X009A,x
+0FFB : F6		" "		lda	,x
+0FFC : 9C		" "		rsp
+0FFD : 10 9C		"  "		bset	0,X009C
+				;
+0FFF : 10		" "		db	$10
+
+;--------------------------------------------------------------
+Symbol table
+============
+
+Value		Type	Name
+-----		----	----
+0000		Data	X0000
+0000		Code	L0000
+0001		Data	X0001
+0001		Code	L0001
+0002		Code	L0002
+0003		Code	L0003
+0004		Data	X0004
+0004		Code	L0004
+0005		Data	X0005
+0006		Code	L0006
+0007		Data	X0007
+0007		Code	L0007
+0009		Code	L0009
+0009		Data	X0009
+000A		Code	L000A
+000C		Code	L000C
+000D		Code	L000D
+000E		Code	L000E
+000F		Code	L000F
+0010		Code	L0010
+0012		Code	L0012
+0013		Code	L0013
+0014		Code	L0014
+0015		Code	L0015
+0015		Data	X0015
+0016		Code	L0016
+0018		Code	L0018
+0019		Code	L0019
+001A		Data	X001A
+001B		Code	L001B
+001B		Data	X001B
+001C		Data	X001C
+001C		Code	L001C
+001D		Data	X001D
+001E		Code	L001E
+001F		Data	X001F
+001F		Code	L001F
+0020		Code	L0020
+0021		Code	L0021
+0022		Data	X0022
+0022		Code	L0022
+0024		Code	L0024
+0024		Data	X0024
+0025		Data	X0025
+0025		Code	L0025
+0027		Code	L0027
+0028		Data	X0028
+0028		Code	L0028
+002A		Code	L002A
+002B		Code	L002B
+002D		Code	L002D
+002E		Code	L002E
+0030		Code	L0030
+0031		Data	X0031
+0031		Code	L0031
+0032		Data	X0032
+0033		Code	L0033
+0033		Data	X0033
+0034		Data	X0034
+0034		Code	L0034
+0036		Code	L0036
+0037		Code	L0037
+0038		Data	X0038
+0039		Code	L0039
+003A		Code	L003A
+003C		Code	L003C
+003D		Code	L003D
+003F		Code	L003F
+003F		Data	X003F
+0040		Code	L0040
+0042		Code	L0042
+0043		Code	L0043
+0045		Code	L0045
+0046		Code	L0046
+0048		Code	L0048
+0049		Code	L0049
+004B		Code	L004B
+004C		Code	L004C
+004D		Data	X004D
+004E		Code	L004E
+004F		Code	L004F
+0051		Code	L0051
+0052		Code	L0052
+0054		Code	L0054
+0055		Data	X0055
+0055		Code	L0055
+0057		Code	L0057
+0058		Code	L0058
+005A		Code	L005A
+005B		Code	L005B
+005D		Code	L005D
+005E		Code	L005E
+0060		Code	L0060
+0061		Code	L0061
+0063		Code	L0063
+0064		Code	L0064
+0065		Data	X0065
+0066		Code	L0066
+0066		Data	X0066
+0067		Code	L0067
+0069		Code	L0069
+006A		Code	L006A
+006C		Code	L006C
+006D		Code	L006D
+006F		Code	L006F
+0070		Code	L0070
+0072		Code	L0072
+0072		Data	X0072
+0073		Code	L0073
+0075		Code	L0075
+0076		Code	L0076
+0077		Code	L0077
+0078		Code	L0078
+0079		Code	L0079
+007B		Code	L007B
+007C		Code	L007C
+007E		Code	L007E
+007F		Code	L007F
+0080		Data	X0080
+0081		Code	L0081
+0081		Data	X0081
+0082		Code	L0082
+0083		Data	X0083
+0084		Code	L0084
+0085		Data	X0085
+0085		Code	L0085
+0086		Data	X0086
+0087		Code	L0087
+0088		Data	X0088
+0088		Code	L0088
+0089		Data	X0089
+008A		Code	L008A
+008B		Data	X008B
+008B		Code	L008B
+008D		Code	L008D
+008D		Data	X008D
+008E		Code	L008E
+008F		Data	X008F
+0090		Code	L0090
+0090		Data	X0090
+0091		Code	L0091
+0092		Data	X0092
+0093		Code	L0093
+0094		Code	L0094
+0096		Code	L0096
+0097		Code	L0097
+0099		Code	L0099
+009A		Data	X009A
+009A		Code	L009A
+009B		Data	X009B
+009C		Code	L009C
+009C		Data	X009C
+009D		Data	X009D
+009D		Code	L009D
+009E		Data	X009E
+009F		Code	L009F
+009F		Data	X009F
+00A0		Code	L00A0
+00A2		Code	L00A2
+00A3		Code	L00A3
+00A5		Code	L00A5
+00A6		Code	L00A6
+00A8		Code	L00A8
+00A8		Data	X00A8
+00A9		Data	X00A9
+00A9		Code	L00A9
+00AA		Data	X00AA
+00AB		Code	L00AB
+00AC		Code	L00AC
+00AE		Code	L00AE
+00AE		Data	X00AE
+00AF		Code	L00AF
+00B0		Data	X00B0
+00B1		Code	L00B1
+00B2		Code	L00B2
+00B3		Data	X00B3
+00B4		Code	L00B4
+00B4		Data	X00B4
+00B5		Data	X00B5
+00B5		Code	L00B5
+00B7		Code	L00B7
+00B8		Data	X00B8
+00B8		Code	L00B8
+00B9		Data	X00B9
+00BA		Code	L00BA
+00BA		Data	X00BA
+00BB		Code	L00BB
+00BC		Data	X00BC
+00BD		Code	L00BD
+00BD		Data	X00BD
+00BE		Code	L00BE
+00BF		Data	X00BF
+00C0		Code	L00C0
+00C0		Data	X00C0
+00C1		Code	L00C1
+00C2		Data	X00C2
+00C3		Code	L00C3
+00C4		Code	L00C4
+00C5		Data	X00C5
+00C6		Code	L00C6
+00C7		Data	X00C7
+00C8		Data	X00C8
+00C9		Code	L00C9
+00CA		Data	X00CA
+00CA		Code	L00CA
+00CC		Code	L00CC
+00CC		Data	X00CC
+00CD		Data	X00CD
+00CD		Code	L00CD
+00CF		Code	L00CF
+00CF		Data	X00CF
+00D0		Data	X00D0
+00D0		Code	L00D0
+00D1		Data	X00D1
+00D2		Code	L00D2
+00D2		Data	X00D2
+00D3		Code	L00D3
+00D4		Data	X00D4
+00D5		Code	L00D5
+00D6		Code	L00D6
+00D7		Data	X00D7
+00D8		Code	L00D8
+00D8		Data	X00D8
+00D9		Code	L00D9
+00DB		Code	L00DB
+00DC		Data	X00DC
+00DC		Code	L00DC
+00DE		Code	L00DE
+00DF		Data	X00DF
+00E1		Code	L00E1
+00E2		Code	L00E2
+00E4		Code	L00E4
+00E5		Code	L00E5
+00E6		Data	X00E6
+00E7		Code	L00E7
+00E8		Data	X00E8
+00EA		Code	L00EA
+00EA		Data	X00EA
+00EB		Data	X00EB
+00EB		Code	L00EB
+00EC		Data	X00EC
+00ED		Code	L00ED
+00ED		Data	X00ED
+00EE		Data	X00EE
+00EE		Code	L00EE
+00F0		Code	L00F0
+00F0		Data	X00F0
+00F1		Data	X00F1
+00F1		Code	L00F1
+00F3		Code	L00F3
+00F4		Code	L00F4
+00F5		Data	X00F5
+00F6		Code	L00F6
+00F7		Code	L00F7
+00F8		Data	X00F8
+00F9		Code	L00F9
+00F9		Data	X00F9
+00FA		Data	X00FA
+00FA		Code	L00FA
+00FB		Data	X00FB
+00FC		Code	L00FC
+00FC		Data	X00FC
+00FD		Data	X00FD
+00FD		Code	L00FD
+00FE		Data	X00FE
+00FF		Code	L00FF
+00FF		Data	X00FF
+0102		Code	L0102
+0103		Code	L0103
+0105		Code	L0105
+0106		Code	L0106
+0108		Code	L0108
+010B		Code	L010B
+010C		Code	L010C
+010E		Code	L010E
+010F		Code	L010F
+0111		Code	L0111
+0112		Code	L0112
+0114		Code	L0114
+0117		Code	L0117
+0118		Code	L0118
+011A		Code	L011A
+011D		Code	L011D
+011E		Code	L011E
+0120		Code	L0120
+0121		Code	L0121
+0123		Code	L0123
+0126		Code	L0126
+0127		Code	L0127
+0129		Code	L0129
+012A		Code	L012A
+012C		Code	L012C
+012D		Code	L012D
+012F		Code	L012F
+0130		Code	L0130
+0132		Code	L0132
+0135		Code	L0135
+0136		Code	L0136
+0138		Code	L0138
+0139		Code	L0139
+013B		Code	L013B
+013C		Code	L013C
+013E		Code	L013E
+0141		Code	L0141
+0142		Code	L0142
+0144		Code	L0144
+0145		Code	L0145
+0147		Code	L0147
+0148		Code	L0148
+014A		Code	L014A
+014B		Code	L014B
+014D		Code	L014D
+014E		Code	L014E
+0150		Code	L0150
+0151		Code	L0151
+0153		Code	L0153
+0154		Code	L0154
+0156		Code	L0156
+0157		Code	L0157
+0159		Code	L0159
+015A		Code	L015A
+015C		Code	L015C
+015D		Code	L015D
+015F		Code	L015F
+0160		Code	L0160
+0162		Code	L0162
+0163		Code	L0163
+0165		Code	L0165
+0168		Code	L0168
+0169		Code	L0169
+016B		Code	L016B
+016C		Code	L016C
+016E		Code	L016E
+016F		Code	L016F
+0171		Code	L0171
+0174		Code	L0174
+0175		Code	L0175
+0177		Code	L0177
+0178		Code	L0178
+017A		Code	L017A
+017B		Code	L017B
+017D		Code	L017D
+017E		Code	L017E
+0180		Code	L0180
+0183		Code	L0183
+0184		Code	L0184
+0186		Code	L0186
+0187		Code	L0187
+0189		Code	L0189
+018A		Code	L018A
+018C		Code	L018C
+018F		Code	L018F
+0192		Code	L0192
+0193		Code	L0193
+0195		Code	L0195
+0196		Code	L0196
+0198		Code	L0198
+0199		Code	L0199
+019B		Code	L019B
+019E		Code	L019E
+01A1		Code	L01A1
+01A2		Code	L01A2
+01A4		Code	L01A4
+01A5		Code	L01A5
+01A7		Code	L01A7
+01AA		Code	L01AA
+01AB		Code	L01AB
+01AD		Code	L01AD
+01B0		Code	L01B0
+01B1		Code	L01B1
+01B3		Code	L01B3
+01B6		Code	L01B6
+01B7		Code	L01B7
+01B9		Code	L01B9
+01BC		Code	L01BC
+01BF		Code	L01BF
+01C2		Code	L01C2
+01C3		Code	L01C3
+01C5		Code	L01C5
+01C6		Code	L01C6
+01C7		Data	X01C7
+01C8		Code	L01C8
+01C9		Code	L01C9
+01CB		Code	L01CB
+01CE		Code	L01CE
+01D1		Code	L01D1
+01D4		Code	L01D4
+01D5		Code	L01D5
+01D7		Code	L01D7
+01DA		Code	L01DA
+01DB		Code	L01DB
+01DD		Code	L01DD
+01DE		Data	X01DE
+01DE		Code	L01DE
+01DF		Data	X01DF
+01E0		Code	L01E0
+01E1		Code	L01E1
+01E3		Code	L01E3
+01E4		Code	L01E4
+01E6		Code	L01E6
+01E7		Code	L01E7
+01E8		Data	X01E8
+01E9		Code	L01E9
+01EC		Code	L01EC
+01EF		Code	L01EF
+01F2		Code	L01F2
+01F3		Code	L01F3
+01F5		Code	L01F5
+01F6		Code	L01F6
+01F8		Code	L01F8
+01FB		Code	L01FB
+01FE		Code	L01FE
+0201		Code	L0201
+0204		Code	L0204
+0207		Code	L0207
+0208		Code	L0208
+020A		Code	L020A
+020B		Code	L020B
+020D		Code	L020D
+020E		Code	L020E
+0210		Code	L0210
+0211		Code	L0211
+0213		Code	L0213
+0214		Code	L0214
+0216		Code	L0216
+0217		Code	L0217
+0219		Code	L0219
+021A		Code	L021A
+021C		Code	L021C
+021D		Code	L021D
+021F		Code	L021F
+0220		Code	L0220
+0222		Code	L0222
+0223		Code	L0223
+0225		Code	L0225
+0226		Code	L0226
+0228		Code	L0228
+0229		Code	L0229
+022B		Code	L022B
+022C		Code	L022C
+022E		Code	L022E
+022F		Code	L022F
+0231		Code	L0231
+0232		Code	L0232
+0234		Code	L0234
+0235		Code	L0235
+0237		Code	L0237
+0238		Code	L0238
+023A		Code	L023A
+023B		Code	L023B
+023D		Code	L023D
+023E		Code	L023E
+0240		Code	L0240
+0241		Code	L0241
+0243		Code	L0243
+0244		Code	L0244
+0246		Code	L0246
+0247		Code	L0247
+0249		Code	L0249
+024A		Code	L024A
+024C		Code	L024C
+024D		Code	L024D
+024F		Code	L024F
+0250		Code	L0250
+0252		Code	L0252
+0253		Code	L0253
+0255		Code	L0255
+0256		Code	L0256
+0258		Code	L0258
+0259		Code	L0259
+025B		Code	L025B
+025C		Code	L025C
+025E		Code	L025E
+025F		Code	L025F
+0261		Code	L0261
+0262		Code	L0262
+0264		Code	L0264
+0265		Code	L0265
+0267		Code	L0267
+0268		Code	L0268
+026A		Code	L026A
+026B		Code	L026B
+026C		Code	L026C
+026D		Code	L026D
+026E		Code	L026E
+0270		Code	L0270
+0271		Code	L0271
+0273		Code	L0273
+0274		Code	L0274
+0276		Code	L0276
+0277		Code	L0277
+0279		Code	L0279
+027A		Code	L027A
+027C		Code	L027C
+027D		Code	L027D
+027F		Code	L027F
+0280		Code	L0280
+0282		Code	L0282
+0283		Code	L0283
+0285		Code	L0285
+0286		Code	L0286
+0288		Code	L0288
+0289		Code	L0289
+028B		Code	L028B
+028C		Code	L028C
+028E		Code	L028E
+028F		Code	L028F
+0291		Code	L0291
+0292		Code	L0292
+0294		Code	L0294
+0295		Code	L0295
+0297		Code	L0297
+0298		Code	L0298
+029A		Code	L029A
+029B		Code	L029B
+029D		Code	L029D
+02A0		Code	L02A0
+02A1		Code	L02A1
+02A3		Code	L02A3
+02A4		Code	L02A4
+02A6		Code	L02A6
+02A7		Code	L02A7
+02A9		Code	L02A9
+02AA		Code	L02AA
+02AC		Code	L02AC
+02AD		Code	L02AD
+02AF		Code	L02AF
+02B2		Code	L02B2
+02B3		Code	L02B3
+02B5		Code	L02B5
+02B6		Code	L02B6
+02B8		Code	L02B8
+02B9		Code	L02B9
+02BB		Code	L02BB
+02BC		Code	L02BC
+02BE		Code	L02BE
+02BF		Code	L02BF
+02C0		Code	L02C0
+02C1		Code	L02C1
+02C2		Code	L02C2
+02C4		Code	L02C4
+02C5		Code	L02C5
+02C7		Code	L02C7
+02C8		Code	L02C8
+02CA		Code	L02CA
+02CB		Code	L02CB
+02CD		Code	L02CD
+02CE		Code	L02CE
+02D0		Code	L02D0
+02D1		Code	L02D1
+02D3		Code	L02D3
+02D4		Code	L02D4
+02D6		Code	L02D6
+02D7		Code	L02D7
+02D9		Code	L02D9
+02DA		Code	L02DA
+02DC		Code	L02DC
+02DD		Code	L02DD
+02DF		Code	L02DF
+02E0		Code	L02E0
+0302		Code	L0302
+0305		Code	L0305
+0313		Code	L0313
+032D		Code	L032D
+032F		Code	L032F
+034D		Code	L034D
+0359		Code	L0359
+035E		Code	L035E
+0365		Code	L0365
+037A		Code	L037A
+037D		Code	L037D
+0385		Code	L0385
+038C		Code	L038C
+039D		Code	L039D
+03A0		Code	L03A0
+03A3		Code	L03A3
+03AD		Code	L03AD
+03B2		Code	L03B2
+03B6		Code	L03B6
+03BD		Code	L03BD
+03BF		Code	L03BF
+03C2		Code	L03C2
+03D8		Code	L03D8
+03E7		Code	L03E7
+03F8		Code	L03F8
+03FE		Code	L03FE
+0400		Code	L0400
+0401		Code	L0401
+0417		Code	L0417
+0418		Code	L0418
+0430		Code	L0430
+0439		Code	L0439
+044D		Code	L044D
+044F		Code	L044F
+0459		Code	L0459
+0497		Code	L0497
+04AF		Code	L04AF
+04CE		Code	L04CE
+04D3		Code	L04D3
+04D7		Code	L04D7
+04DB		Code	L04DB
+04DC		Code	L04DC
+04F6		Code	L04F6
+0511		Code	L0511
+051B		Code	L051B
+0525		Code	L0525
+0539		Code	L0539
+053E		Code	L053E
+0550		Code	L0550
+0555		Code	L0555
+057E		Code	L057E
+058D		Code	L058D
+0594		Code	L0594
+0595		Code	L0595
+05A1		Code	L05A1
+05AA		Code	L05AA
+05B0		Data	X05B0
+05B4		Code	L05B4
+05D5		Data	X05D5
+05DB		Code	L05DB
+05E6		Code	L05E6
+05FB		Code	L05FB
+05FF		Code	L05FF
+060A		Code	L060A
+060E		Code	L060E
+0622		Code	L0622
+0631		Code	L0631
+0634		Code	L0634
+063F		Code	L063F
+0651		Code	L0651
+0655		Code	L0655
+0667		Code	L0667
+066B		Code	L066B
+0690		Code	L0690
+0693		Code	L0693
+06A5		Code	L06A5
+06AA		Code	L06AA
+06DE		Code	L06DE
+06EA		Code	L06EA
+06EF		Code	L06EF
+06F3		Code	L06F3
+06F5		Code	L06F5
+06F8		Code	L06F8
+073B		Code	L073B
+073E		Code	L073E
+073F		Code	L073F
+0743		Code	L0743
+0744		Code	L0744
+075C		Code	L075C
+075F		Code	L075F
+0768		Code	L0768
+076B		Code	L076B
+078D		Code	L078D
+0796		Code	L0796
+079D		Code	L079D
+07A7		Code	L07A7
+07CD		Code	L07CD
+09CF		Data	X09CF
+09E1		Data	X09E1
+09EF		Data	X09EF
+09FD		Data	X09FD
+1FF1		Code	L1FF1
+8202		Data	X8202
+82B0		Data	X82B0
+8604		Data	X8604
+8C0A		Data	X8C0A
+9202		Data	X9202
+9CFD		Code	L9CFD
+9CFD		Data	X9CFD
+9DD9		Data	X9DD9
+ADEC		Data	XADEC
+C082		Data	XC082
+C182		Data	XC182
+CC00		Data	XCC00
+E80F		Code	LE80F
+F4F1		Code	LF4F1
+F7F4		Code	LF7F4
+F892		Data	XF892
+FC5F		Data	XFC5F
+FE09		Data	XFE09
+FF02		Data	XFF02
+FFE6		Data	XFFE6
+
+Number of symbols:			725
+
+;--------------------------------------------------------------

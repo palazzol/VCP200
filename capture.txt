@@ -1,0 +1,28 @@
+
+MC6804J2 ROM VERIFY Mode:
+
+one frame clock every 12 bits
+one cycle of data every 24 bits
+we get the address twice
+we get 0xff for the first data byte (not real)
+we get the real data for the second data byte
+
+also, the data is delayed by 24 bits (1 address cycle)
+
+Example as seen in the capture pic:
+
+1 00000000000 D1, PB7 frame clock
+1 00000111010 D2, PB5 reverse is (010 1110 0000) (0x2e0 address)
+1 10000000011 D7, PB0 reverse is (11 00000000 1) (0x00 data from 0x2df)
+
+1 00000000000 (frame clock)
+1 10000111010 reverse is (010 1110 0001) (0x2e1 address)
+1 11111111111 reverse is (11 01100101 1) (0xff data not real)
+
+1 00000000000 (frame clock)
+1 10000111010 reverse is (010 1110 0001) (0x2e1 address)
+1 11010011011 reverse is (11 01100101 1) (0x65 data from 0x2e0)
+
+1 00000000000 (frame clock)
+1 01000111010 reverse is (010 1110 0010) (0x2e2 address)
+1 11111111111 reverse is (11 11111111 1) (0xff data not real)
