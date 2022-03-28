@@ -182,14 +182,14 @@ decoder = {
         0xa6: ['Reserved Opcode', ''],
         0xa7: ['Reserved Opcode', ''],
     
-        0xa8: ['INC', '$80'],
-        0xa9: ['INC', '$81'],
-        0xaa: ['INC', '$82'],
-        0xab: ['INC', '$83'],
-        0xac: ['LDA', '$80'],
-        0xad: ['LDA', '$81'],
-        0xae: ['LDA', '$82'],
-        0xaf: ['LDA', '$83'],
+        0xa8: ['INC', 'X'],
+        0xa9: ['INC', 'Y'],
+        0xaa: ['INC', 'V'],
+        0xab: ['INC', 'W'],
+        0xac: ['LDA', 'X'],
+        0xad: ['LDA', 'Y'],
+        0xae: ['LDA', 'V'],
+        0xaf: ['LDA', 'W'],
         
         0xb0: ['MVI', 'IMM2'],
         
@@ -202,14 +202,14 @@ decoder = {
         0xb6: ['STOP', ''],
         0xb7: ['WAIT', ''],
         
-        0xb8: ['DEC', '$80'],
-        0xb9: ['DEC', '$81'],
-        0xba: ['DEC', '$82'],
-        0xbb: ['DEC', '$83'],
-        0xbc: ['STA', '$80'],
-        0xbd: ['STA', '$81'],
-        0xbe: ['STA', '$82'],
-        0xbf: ['STA', '$83'],
+        0xb8: ['DEC', 'X'],
+        0xb9: ['DEC', 'Y'],
+        0xba: ['DEC', 'V'],
+        0xbb: ['DEC', 'W'],
+        0xbc: ['STA', 'X'],
+        0xbd: ['STA', 'Y'],
+        0xbe: ['STA', 'V'],
+        0xbf: ['STA', 'W'],
 
         0xc0: ['BRCLR', 'BTB'],
         0xc1: ['BRCLR', 'BTB'],
@@ -245,14 +245,14 @@ decoder = {
         0xde: ['BSET', 'BSC'],
         0xdf: ['BSET', 'BSC'],
         
-        0xe0: ['LDA', '[$80]'],
-        0xe1: ['STA', '[$80]'],
-        0xe2: ['ADD', '[$80]'],
-        0xe3: ['SUB', '[$80]'],
-        0xe4: ['CMP', '[$80]'],
-        0xe5: ['AND', '[$80]'],
-        0xe6: ['INC', '[$80]'],
-        0xe7: ['DEC', '[$80]'],
+        0xe0: ['LDA', '[X]'],
+        0xe1: ['STA', '[X]'],
+        0xe2: ['ADD', '[X]'],
+        0xe3: ['SUB', '[X]'],
+        0xe4: ['CMP', '[X]'],
+        0xe5: ['AND', '[X]'],
+        0xe6: ['INC', '[X]'],
+        0xe7: ['DEC', '[X]'],
         
         0xe8: ['LDA', 'IMM'],
         
@@ -266,14 +266,14 @@ decoder = {
         0xee: ['Illegal Opcode', ''],
         0xef: ['Illegal Opcode', ''],
 
-        0xf0: ['LDA', '[$81]'],
-        0xf1: ['STA', '[$81]'],
-        0xf2: ['ADD', '[$81]'],
-        0xf3: ['SUB', '[$81]'],
-        0xf4: ['CMP', '[$81]'],
-        0xf5: ['AND', '[$81]'],
-        0xf6: ['INC', '[$81]'],
-        0xf7: ['DEC', '[$81]'],
+        0xf0: ['LDA', '[Y]'],
+        0xf1: ['STA', '[Y]'],
+        0xf2: ['ADD', '[Y]'],
+        0xf3: ['SUB', '[Y]'],
+        0xf4: ['CMP', '[Y]'],
+        0xf5: ['AND', '[Y]'],
+        0xf6: ['INC', '[Y]'],
+        0xf7: ['DEC', '[Y]'],
         
         0xf8: ['LDA', 'DIR'],
         0xf9: ['STA', 'DIR'],
@@ -284,6 +284,21 @@ decoder = {
         0xfe: ['INC', 'DIR'],
         0xff: ['DEC', 'DIR']
         
+}
+
+J2DataLabels = {
+    0x00: "PORTA",
+    0x01: "PORTB",
+    0x04: "DDRA",
+    0x05: "DDRB",
+    0x09: "TSTATUS",
+    0x80: "X",
+    0x81: "Y",
+    0x82: "V",
+    0x83: "W",
+    0xFD: "PRESCALE",
+    0xFE: "TCOUNT",
+    0xFF: "A"
 }
 
 # Hex Formatting Functions
@@ -305,23 +320,23 @@ def Extended(x1, x2):
     return '$'+Hex12(offs)
 
 def Immediate2(x1, x2):
-    return '$'+Hex8(x1)+',#$'+Hex8(x2)
+    return J2DataLabels[x1]+',#$'+Hex8(x2)
 
 def BitTestBranch(PC, x1, bytetotest, offs):
     bittotest = x1 & 0x7
     if offs > 127:
         offs = offs - 256
-    return str(bittotest)+',$'+Hex8(bytetotest)+',$'+Hex12(PC+3+offs)
+    return str(bittotest)+','+J2DataLabels[bytetotest]+',$'+Hex12(PC+3+offs)
 
 def BitSetClear(x1, x2):
     bittotest = x1 & 0x07
-    return str(bittotest)+',$'+Hex8(x2)
+    return str(bittotest)+','+J2DataLabels[x2]
 
 def Immediate(x):
     return '#$'+Hex8(x)
 
 def Direct(x):
-    return '$'+Hex8(x)
+    return J2DataLabels[x]
 
 # Format up to 3 Raw Bytes for display
 def FormatRawBytes(xlist):
@@ -334,6 +349,14 @@ def FormatRawBytes(xlist):
             s = s + '   ' # Space for no Hex value
     return s
     
+for i in range(0x18, 0x60):
+    J2DataLabels[i] = "ROM"+Hex8(i)
+for i in range(0x84, 0xA0):
+    J2DataLabels[i] = "RAM"+Hex8(i)
+for i in range(0x00, 0x100):
+    if i not in J2DataLabels.keys():
+        J2DataLabels[i] = '$'+Hex8(i)
+
 # Read file contents into bytearray
 with open('vcp200_program_rom.bin','rb') as f:
     data = f.read(0x1000)
@@ -391,7 +414,7 @@ while (addr < 0x1000):
     addr = nextaddr
 
 # Write out file
-with open('disassembly.txt','w') as f:
+with open('disassemblynew.txt','w') as f:
     for line in disassembly:
         f.write(line)
 

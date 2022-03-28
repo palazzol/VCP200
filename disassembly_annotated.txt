@@ -1,3 +1,22 @@
+;
+; VCP200 circuit
+;
+; PB0 - 8 - GO/NO-ON 
+; PB1 - 9 - TURN RIGHT/YES-OFF
+; PB2 - 10 - REVERSE/NOT SURE
+; PB3 - 11 - SLOW
+; PB4 - 12 - STOP
+; PB5 - 13 - TAXI or RESET
+; PB6 - 14 - LEFT TURN
+; PB7 - 15 - BUCKETS or LIGHTS
+; TIMER - 7 - DATA IN 
+; PA7 - 19 - MODE - high = Yes/No/On/Off mode
+; PA6 - 18 - grounded
+; PA5 - 17 - Vcc
+; PA4 - 16 - Vcc
+; ~IRQ - 2 - Hardwired to + (unused)
+; 10 Mhz Xtal
+;
 
 ; VCP200 - Program ROM
 
@@ -6,38 +25,41 @@ AE1: 8A E6       JSR $AE6
 AE3: EA 00       ADD #$00
 AE5: B3          RTS
 
-AE6: F9 9E       STA $9E
+AE6: F9 9E       STA RAM9E
 AE8: B4          COMA 
-AE9: F5          AND [$81]
+AE9: F5          AND [Y]
 AEA: B4          COMA 
-AEB: F9 9F       STA $9F
-AED: F0          LDA [$81]
+AEB: F9 9F       STA RAM9F
+AED: F0          LDA [Y]
 AEE: B4          COMA 
-AEF: FD 9E       AND $9E
+AEF: FD 9E       AND RAM9E
 AF1: B4          COMA 
-AF2: FD 9F       AND $9F
+AF2: FD 9F       AND RAM9F
 AF4: B4          COMA 
 AF5: B3          RTS
 
 ; SELF-TEST START
-AF6: B0 83 04    MVI $83,#$04	; 0x04 -> W register
+
+SELFTST:
+
+AF6: B0 83 04    MVI W,#$04	        ; 0x04 -> W register
 AF9: 3F          BEQ $AF9		; ???
 AFA: 7F          BCS $AFA		; ???
 AFB: E8 00       LDA #$00		; A = 0
 AFD: F9 00       STA $00		; Clear PORTA
-AFF: DF 04       BSET 7,$04		; Set PA7 As OUTPUT
+AFF: DF 04       BSET 7,DDRA		; Set PA7 As OUTPUT
 
 ; Stack Test
 
 ; JSR 4 times
-B01: BE          STA $82		; Clear V Register
-B02: CA 82 03    BRSET 2,$82,$B08	; exit if V == 4
-B05: AA          INC $82		; V = V + 1
+B01: BE          STA V		        ; Clear V Register
+B02: CA 82 03    BRSET 2,V,$B08	        ; exit if V == 4
+B05: AA          INC V		        ; V = V + 1
 B06: 8B 02       JSR $B02		; add a stack level
 
 ; RTS 5 times
-B08: CF 82 02    BRSET 7,$82,$B0D	; Exit if V == -1
-B0B: BA          DEC $82		; V = V - 1
+B08: CF 82 02    BRSET 7,V,$B0D	        ; Exit if V == -1
+B0B: BA          DEC V		        ; V = V - 1
 B0C: B3          RTS
 
 B0D: 8B FF       JSR $BFF		; A=0, Clear interrupt mask?
@@ -46,53 +68,53 @@ B0F: C9 09 FD    BRSET 1,$09,$B0F	; wait for timer?
 
 B12: 68          BCS $B1B
 B13: E8 06       LDA #$06		; DDRC into X
-B15: BC          STA $80
+B15: BC          STA X
 B16: EB 04       SUB #$04		; DDRA into Y
-B18: BD          STA $81
+B18: BD          STA Y
 B19: E8 0F       LDA #$0F		
-B1B: F9 84       STA $84		; 0x0F into $84
-B1D: AE          LDA $82		; Put V into DDRA (should be 0xff)
-B1E: F1          STA [$81]		; Select PORTA as all outputs
-B1F: FD 84       AND $84		; A = 0x0F
-B21: E1          STA [$80]		; Select PC0-PC3 as all outputs
-B22: AE          LDA $82		
-B23: F1          STA [$81]		; Select PORTA as all outputs, again
+B1B: F9 84       STA RAM84		; 0x0F into $84
+B1D: AE          LDA V		        ; Put V into DDRA (should be 0xff)
+B1E: F1          STA [Y]		; Select PORTA as all outputs
+B1F: FD 84       AND RAM84		; A = 0x0F
+B21: E1          STA [X]		; Select PC0-PC3 as all outputs
+B22: AE          LDA V		
+B23: F1          STA [Y]		; Select PORTA as all outputs, again
 B24: FC FF       CMP $FF		; All outputs?
 B26: 7F          BCS $B26		; 
-B27: DB 01       BSET 3,$01		; Set PB3 HIGH - nIRQ
-B29: DE 00       BSET 6,$00		; Set PA6 as Output - turn on LED
+B27: DB 01       BSET 3,PORTB		; Set PB3 HIGH - nIRQ
+B29: DE 00       BSET 6,PORTA		; Set PA6 as Output - turn on LED
 B2B: D2 02       BCLR 2,$02		; Set PC2 LOW - no effect
-B2D: F4          CMP [$81]		; DDRA all outputs?
+B2D: F4          CMP [Y]		; DDRA all outputs?
 B2E: B4          COMA 			; A = 0xff
 B2F: 33          BEQ $B23
-B30: E0          LDA [$80]
+B30: E0          LDA [X]
 B31: B4          COMA 
 B32: CF FF E6    BRSET 7,$FF,$B1B
 B35: ED 00       AND #$00
-B37: E1          STA [$80]
-B38: B8          DEC $80
-B39: B9          DEC $81
-B3A: C5 81 DC    BRCLR 5,$81,$B19
+B37: E1          STA [X]
+B38: B8          DEC X
+B39: B9          DEC Y
+B3A: C5 81 DC    BRCLR 5,Y,$B19
 
 B3D: E8 0F       LDA #$0F
-B3F: F9 05       STA $05		; PB0-PB3 as outputs
-B41: FB 0A       SUB $0A		
+B3F: F9 05       STA DDRB		; PB0-PB3 as outputs
+B41: FB 0A       SUB $0A
 B43: EB EE       SUB #$EE
 B45: 1F          BNE $B45
 B46: F8 0B       LDA $0B
 B48: EC 1B       CMP #$1B
 B4A: 1F          BNE $B4A
 
-B4B: FE 01       INC $01		; PB0-PB3 -> 1
-B4D: 8B 5E       JSR $B5E
+B4B: FE 01       INC PORTB		; PB0-PB3 -> 1
+B4D: 8B 5E       JSR $B5E               ; Do Ram Clear
 B4F: FA 0A       ADD $0A
 B51: EC 32       CMP #$32
 B53: 1F          BNE $B53
 B54: F8 0B       LDA $0B
 B56: EC BB       CMP #$BB
 B58: 1F          BNE $B58
-B59: FE 01       INC $01		; PB0-PB3 -> 2
-B5B: FE 01       INC $01		; PB0-PB3 -> 3
+B59: FE 01       INC PORTB		; PB0-PB3 -> 2
+B5B: FE 01       INC PORTB		; PB0-PB3 -> 3
 B5D: 1F          BNE $B5D
 
 ; RAM clear, from $82-$9F
@@ -102,117 +124,121 @@ B60: B4          COMA
 B61: 1F          BNE $B61
 B62: 8B CC       JSR $BCC
 B64: 1F          BNE $B64
-B65: F1          STA [$81]		; Clear [Y]
+B65: F1          STA [Y]		; Clear [Y]
 B66: B5          ROLA 			
-B67: B9          DEC $81
-B68: B8          DEC $80
+B67: B9          DEC Y
+B68: B8          DEC X
 B69: 1B          BNE $B65 
 
 ; RAM tests
 
 B6A: E8 55       LDA #$55
 B6C: 8B CC       JSR $BCC
-B6E: F7          DEC [$81]
-B6F: F4          CMP [$81]
-B70: F1          STA [$81]
+B6E: F7          DEC [Y]
+B6F: F4          CMP [Y]
+B70: F1          STA [Y]
 B71: B4          COMA 
-B72: B9          DEC $81
-B73: B8          DEC $80
+B72: B9          DEC Y
+B73: B8          DEC X
 B74: 1A          BNE $B6F
-B75: FA FF       ADD $FF
+B75: FA FF       ADD A
 B77: 54          BCC $B6C
-B78: FB FF       SUB $FF
+B78: FB FF       SUB A
 B7A: 7F          BCS $B7A
 
 B7B: 8B CC       JSR $BCC
-B7D: F4          CMP [$81]
-B7E: F1          STA [$81]
-B7F: B9          DEC $81
-B80: B8          DEC $80
+B7D: F4          CMP [Y]
+B7E: F1          STA [Y]
+B7F: B9          DEC Y
+B80: B8          DEC X
 B81: 1B          BNE $B7D
-B82: A8          INC $80
+B82: A8          INC X
 B83: FA 0A       ADD $0A
 B85: EC 3B       CMP #$3B
 B87: 1F          BNE $B87
 B88: FA 0B       ADD $0B
 B8A: EC A1       CMP #$A1
 B8C: 1F          BNE $B8C
-B8D: E6          INC [$80]
+B8D: E6          INC [X]
 
-B8E: D0 05       BCLR 0,$05		; PB0 Low
+B8E: D0 05       BCLR 0,DDRB		; PB0 Low
 
 ; Timer Test
 
-B90: B0 09 28    MVI $09,#$28
-B93: F8 FD       LDA $FD
-B95: E0          LDA [$80]
-B96: C7 09 FA    BRCLR 7,$09,$B93
-B99: E3          SUB [$80]
+B90: B0 09 28    MVI TSTATUS,#$28
+B93: F8 FD       LDA PRESCALE
+B95: E0          LDA [X]
+B96: C7 09 FA    BRCLR 7,TSTATUS,$B93
+B99: E3          SUB [X]
 B9A: 30          BEQ $B8B
-B9B: DC 09       BSET 4,$09
-B9D: B0 FE 06    MVI $FE,#$06
-BA0: C0 01 FD    BRCLR 0,$01,$BA0
-BA3: D4 09       BCLR 4,$09
-BA5: CF 09 FD    BRSET 7,$09,$BA5
-BA8: B0 FE 04    MVI $FE,#$04
-BAB: D7 09       BCLR 7,$09
-BAD: D8 05       BSET 0,$05		; PB0 High
-BAF: D5 09       BCLR 5,$09
-BB1: D4 FF       BCLR 4,$FF
+B9B: DC 09       BSET 4,TSTATUS
+B9D: B0 FE 06    MVI TCOUNT,#$06
+BA0: C0 01 FD    BRCLR 0,PORTB,$BA0
+BA3: D4 09       BCLR 4,TSTATUS
+BA5: CF 09 FD    BRSET 7,TSTATUS,$BA5
+BA8: B0 FE 04    MVI TCOUNT,#$04
+BAB: D7 09       BCLR 7,TSTATUS
+BAD: D8 05       BSET 0,DDRB		; PB0 High
+BAF: D5 09       BCLR 5,TSTATUS
+BB1: D4 FF       BCLR 4,A
 BB3: 33          BEQ $BA7
 BB4: 32          BEQ $BA7
-BB5: F9 FE       STA $FE
-BB7: E6          INC [$80]
-BB8: D0 FD       BCLR 0,$FD
-BBA: C7 09 FD    BRCLR 7,$09,$BBA
-BBD: FE 09       INC $09
-BBF: FE FE       INC $FE
-BC1: F9 FD       STA $FD
-BC3: FA FF       ADD $FF
+BB5: F9 FE       STA TCOUNT
+BB7: E6          INC [X]
+BB8: D0 FD       BCLR 0,PRESCALE
+BBA: C7 09 FD    BRCLR 7,TSTATUS,$BBA
+BBD: FE 09       INC TSTATUS
+BBF: FE FE       INC TCOUNT
+BC1: F9 FD       STA PRESCALE
+BC3: FA FF       ADD A
 BC5: 52          BCC $BB8
-BC6: AE          LDA $82
-BC7: B8          DEC $80
-BC8: E2          ADD [$80]
-BC9: A8          INC $80
-BCA: 1D          BNE $BC8
-BCB: B3          RTS
 
-BCC: B0 80 1E    MVI $80,#$1E		; #$1E -> X (number of bytes)
-BCF: B0 81 9F    MVI $81,#$9F		; #$9F -> Y (last ram location)
+BC6: AE          LDA V
+BC7: B8          DEC X
+BC8: E2          ADD [X]
+BC9: A8          INC X
+BCA: 1D          BNE $BC8
+BCB: B3          RTS 
+
+BCC: B0 80 1E    MVI X,#$1E		; #$1E -> X (number of bytes)
+BCF: B0 81 9F    MVI Y,#$9F		; #$9F -> Y (last ram location)
 BD2: B3          RTS
 
-BD3: C2 83 0C    BRCLR 2,$83,$BE2
-BD6: D7 00       BCLR 7,$00		;Clear PA7
-BD8: DB 01       BSET 3,$01		;Set PB3
-BDA: DF FF       BSET 7,$FF
+BD3: C2 83 0C    BRCLR 2,W,$BE2
+BD6: D7 00       BCLR 7,PORTA		;Clear PA7
+BD8: DB 01       BSET 3,PORTB           ;Set PB3
+BDA: DF FF       BSET 7,A
 BDC: 8A E0       JSR $AE0
-BDE: F1          STA [$81]
+BDE: F1          STA [Y]
 BDF: 5F          BCC $BDF
-BE0: BB          DEC $83
+BE0: BB          DEC W
 BE1: 31          BEQ $BD3
 BE2: B2          RTI 
 
 ; SELF TEST IRQ HANDLER ENTRY
+
+SELFIRQ:
+
 BE3: 72          BCS $BD6
 BE4: 25          BEQ $BEA
-BE5: D7 04       BCLR 7,$04
-BE7: C8 FE F5    BRSET 0,$FE,$BDF
-BEA: B0 80 02    MVI $80,#$02
-BED: B0 09 27    MVI $09,#$27
-BF0: AF          LDA $83
+BE5: D7 04       BCLR 7,DDRA
+BE7: C8 FE F5    BRSET 0,TCOUNT,$BDF
+BEA: B0 80 02    MVI X,#$02
+BED: B0 09 27    MVI TSTATUS,#$27
+BF0: AF          LDA W
 BF1: B4          COMA 
 BF2: 25          BEQ $BF8
-BF3: B0 80 06    MVI $80,#$06
-BF6: DC 09       BSET 4,$09
-BF8: DF 09       BSET 7,$09
-BFA: E1          STA [$80]
-BFB: B8          DEC $80
+BF3: B0 80 06    MVI X,#$06
+BF6: DC 09       BSET 4,TSTATUS
+BF8: DF 09       BSET 7,TSTATUS
+BFA: E1          STA [X]
+BFB: B8          DEC X
 BFC: 1D          BNE $BFA
-BFD: E1          STA [$80]
-BFE: BF          STA $83
+BFD: E1          STA [X]
+BFE: BF          STA W
 
-BFF: FB FF       SUB $FF	; Clear A	
-C01: B2          RTI 
+BFF: FB FF       SUB A          ; Clear A
+C01: B2          RTI
 
 ; ASCII ID - 'MC6804J2 - ATX'
 C02: 4D
@@ -234,193 +260,210 @@ C0F: 58
 ; VCP200 - USER PROGRAM START
 ;
 
-C10: B0 05 FF    MVI $05,#$FF		
-C13: B0 01 FE    MVI $01,#$FE
-C16: B0 04 00    MVI $04,#$00
-C19: D1 82       BCLR 1,$82
-C1B: B0 81 1D    MVI $81,#$1D
-C1E: B0 80 83    MVI $80,#$83
-C21: E8 00       LDA #$00
-C23: E1          STA [$80]
-C24: A8          INC $80
-C25: B9          DEC $81
-C26: 1C          BNE $C23
+START:
 
-C27: B0 81 93    MVI $81,#$93
+; Init pins
+C10: B0 05 FF    MVI DDRB,#$FF
+C13: B0 01 FE    MVI PORTB,#$FE
+C16: B0 04 00    MVI DDRA,#$00
+
+; Init RAM
+C19: D1 82       BCLR 1,V               ; clear test bit??
+; Main loop
+C1B: B0 81 1D    MVI Y,#$1D
+C1E: B0 80 83    MVI X,#$83
+; clear $83 to $9F
+C21: E8 00       LDA #$00
+RAMCLR:
+C23: E1          STA [X]
+C24: A8          INC X
+C25: B9          DEC Y
+C26: 1C          BNE RAMCLR     ;$C23
+
+C27: B0 81 93    MVI Y,#$93
 C2A: E8 00       LDA #$00
-C2C: F9 85       STA $85
-C2E: F9 86       STA $86
-C30: F9 87       STA $87
-C32: 8F C7       JSR $FC7
-C34: C1 82 02    BRCLR 1,$82,$C39
+C2C: F9 85       STA RAM85
+C2E: F9 86       STA RAM86
+C30: F9 87       STA RAM87
+C32: 8F C7       JSR $FC7               ; Read and classify frames?
+C34: C1 82 02    BRCLR 1,V,$C39
+
 C37: 9D 14       JMP $D14
-C39: B0 01 80    MVI $01,#$80
-C3C: F8 00       LDA $00
+
+C39: B0 01 80    MVI PORTB,#$80         ; 1000 0000
+C3C: F8 00       LDA PORTA              ; check PORTA upper nibble
 C3E: ED F0       AND #$F0
 C40: EC F0       CMP #$F0
-C42: 02          BNE $C45
-C43: 9D 14       JMP $D14
-C45: D1 82       BCLR 1,$82
-C47: B0 01 FC    MVI $01,#$FC
-C4A: CC 00 05    BRSET 4,$00,$C52
-C4D: B0 88 DC    MVI $88,#$DC
-C50: 9C FD       JMP $CFD
-C52: CD 00 05    BRSET 5,$00,$C5A
-C55: B0 88 74    MVI $88,#$74
-C58: 9C FD       JMP $CFD
-C5A: CE 00 07    BRSET 6,$00,$C64
-C5D: D9 82       BSET 1,$82
-C5F: B0 01 FF    MVI $01,#$FF
-C62: 9D 14       JMP $D14
-C64: CF 00 05    BRSET 7,$00,$C6C
-C67: B0 88 78    MVI $88,#$78
-C6A: 9C FD       JMP $CFD
-C6C: B0 01 FA    MVI $01,#$FA
-C6F: CC 00 05    BRSET 4,$00,$C77
-C72: B0 88 D8    MVI $88,#$D8
-C75: 9C FD       JMP $CFD
-C77: CD 00 05    BRSET 5,$00,$C7F
-C7A: B0 88 BC    MVI $88,#$BC
-C7D: 9C FD       JMP $CFD
-C7F: CE 00 05    BRSET 6,$00,$C87
-C82: B0 88 EC    MVI $88,#$EC
-C85: 9C FD       JMP $CFD
-C87: B0 01 F6    MVI $01,#$F6
-C8A: CD 00 05    BRSET 5,$00,$C92
-C8D: B0 88 B8    MVI $88,#$B8
-C90: 9C FD       JMP $CFD
-C92: CE 00 05    BRSET 6,$00,$C9A
-C95: B0 88 E8    MVI $88,#$E8
-C98: 9C FD       JMP $CFD
-C9A: CF 00 05    BRSET 7,$00,$CA2
-C9D: B0 88 FC    MVI $88,#$FC
-CA0: 9C FD       JMP $CFD
-CA2: B0 01 EE    MVI $01,#$EE
-CA5: CD 00 05    BRSET 5,$00,$CAD
-CA8: B0 88 B4    MVI $88,#$B4
-CAB: 9C FD       JMP $CFD
-CAD: CE 00 05    BRSET 6,$00,$CB5
-CB0: B0 88 E4    MVI $88,#$E4
-CB3: 9C FD       JMP $CFD
-CB5: CF 00 05    BRSET 7,$00,$CBD
-CB8: B0 88 F4    MVI $88,#$F4
-CBB: 9C FD       JMP $CFD
-CBD: B0 01 DE    MVI $01,#$DE
-CC0: CC 00 05    BRSET 4,$00,$CC8
-CC3: B0 88 F8    MVI $88,#$F8
-CC6: 9C FD       JMP $CFD
-CC8: CD 00 05    BRSET 5,$00,$CD0
-CCB: B0 88 70    MVI $88,#$70
-CCE: 9C FD       JMP $CFD
-CD0: CE 00 05    BRSET 6,$00,$CD8
-CD3: B0 88 E0    MVI $88,#$E0
-CD6: 9C FD       JMP $CFD
-CD8: CF 00 05    BRSET 7,$00,$CE0
-CDB: B0 88 F0    MVI $88,#$F0
-CDE: 9C FD       JMP $CFD
-CE0: B0 01 BE    MVI $01,#$BE
-CE3: CC 00 05    BRSET 4,$00,$CEB
-CE6: B0 88 D0    MVI $88,#$D0
-CE9: 9C FD       JMP $CFD
-CEB: CE 00 05    BRSET 6,$00,$CF3
-CEE: B0 88 7C    MVI $88,#$7C
-CF1: 9C FD       JMP $CFD
-CF3: CF 00 05    BRSET 7,$00,$CFB
-CF6: B0 88 D4    MVI $88,#$D4
-CF9: 9C FD       JMP $CFD
+C42: 02          BNE $C45               ; always jump because PA6 is grounded?
+C43: 9D 14       JMP $D14               ; PORTA is 1111 - unknown mode jump?
+
+; Normal mode
+C45: D1 82       BCLR 1,V
+C47: B0 01 FC    MVI PORTB,#$FC         ; 1111 1100
+C4A: CC 00 05    BRSET 4,PORTA,$C52     ; should be high
+C4D: B0 88 DC    MVI RAM88,#$DC
+C50: 9C FD       JMP $CFD               ; PORTA is XXX0 - secret code 0xdc?
+C52: CD 00 05    BRSET 5,PORTA,$C5A     ; should be high
+C55: B0 88 74    MVI RAM88,#$74
+C58: 9C FD       JMP $CFD               ; PORTA is XX01 - secret code 0x74?
+C5A: CE 00 07    BRSET 6,PORTA,$C64     ; should be low
+C5D: D9 82       BSET 1,V
+C5F: B0 01 FF    MVI PORTB,#$FF         ; 1111 1111
+C62: 9D 14       JMP $D14               ; PORTA is X011 - normal
+
+C64: CF 00 05    BRSET 7,PORTA,$C6C     ;
+C67: B0 88 78    MVI RAM88,#$78
+C6A: 9C FD       JMP $CFD               ; PORTA is 0111 - secret code 0x78?
+C6C: B0 01 FA    MVI PORTB,#$FA         ; PORTA is 1111 - 1111 1010
+C6F: CC 00 05    BRSET 4,PORTA,$C77     
+C72: B0 88 D8    MVI RAM88,#$D8
+C75: 9C FD       JMP $CFD               ; secret code 0xd8?
+C77: CD 00 05    BRSET 5,PORTA,$C7F
+C7A: B0 88 BC    MVI RAM88,#$BC         
+C7D: 9C FD       JMP $CFD               ; secret code 0xbc?
+C7F: CE 00 05    BRSET 6,PORTA,$C87
+C82: B0 88 EC    MVI RAM88,#$EC
+C85: 9C FD       JMP $CFD               ; secret code 0xec?
+C87: B0 01 F6    MVI PORTB,#$F6         ; 1111 0110
+C8A: CD 00 05    BRSET 5,PORTA,$C92
+C8D: B0 88 B8    MVI RAM88,#$B8
+C90: 9C FD       JMP $CFD               ; secret code 0xb8?
+C92: CE 00 05    BRSET 6,PORTA,$C9A
+C95: B0 88 E8    MVI RAM88,#$E8
+C98: 9C FD       JMP $CFD               ; secret code 0xe8?
+C9A: CF 00 05    BRSET 7,PORTA,$CA2
+C9D: B0 88 FC    MVI RAM88,#$FC
+CA0: 9C FD       JMP $CFD               ; secret code 0xfc?
+CA2: B0 01 EE    MVI PORTB,#$EE         ; 1110 1110
+CA5: CD 00 05    BRSET 5,PORTA,$CAD
+CA8: B0 88 B4    MVI RAM88,#$B4
+CAB: 9C FD       JMP $CFD               ; secret code 0xb4?
+CAD: CE 00 05    BRSET 6,PORTA,$CB5
+CB0: B0 88 E4    MVI RAM88,#$E4
+CB3: 9C FD       JMP $CFD               ; secret code 0xe4?
+CB5: CF 00 05    BRSET 7,PORTA,$CBD
+CB8: B0 88 F4    MVI RAM88,#$F4
+CBB: 9C FD       JMP $CFD               ; secret code 0xf4?
+CBD: B0 01 DE    MVI PORTB,#$DE         ; 1101 1110
+CC0: CC 00 05    BRSET 4,PORTA,$CC8
+CC3: B0 88 F8    MVI RAM88,#$F8
+CC6: 9C FD       JMP $CFD               ; secret code 0xf8?
+CC8: CD 00 05    BRSET 5,PORTA,$CD0
+CCB: B0 88 70    MVI RAM88,#$70
+CCE: 9C FD       JMP $CFD               ; secret code 0x70?
+CD0: CE 00 05    BRSET 6,PORTA,$CD8
+CD3: B0 88 E0    MVI RAM88,#$E0
+CD6: 9C FD       JMP $CFD               ; secret code 0xe0?
+CD8: CF 00 05    BRSET 7,PORTA,$CE0
+CDB: B0 88 F0    MVI RAM88,#$F0
+CDE: 9C FD       JMP $CFD               ; secret code 0xf0?
+CE0: B0 01 BE    MVI PORTB,#$BE         ; 1011 1110
+CE3: CC 00 05    BRSET 4,PORTA,$CEB
+CE6: B0 88 D0    MVI RAM88,#$D0
+CE9: 9C FD       JMP $CFD               ; secret code 0xd0?
+CEB: CE 00 05    BRSET 6,PORTA,$CF3
+CEE: B0 88 7C    MVI RAM88,#$7C
+CF1: 9C FD       JMP $CFD               ; secret code 0x7c?
+CF3: CF 00 05    BRSET 7,PORTA,$CFB
+CF6: B0 88 D4    MVI RAM88,#$D4
+CF9: 9C FD       JMP $CFD               ; secret code 0xd4?
 CFB: 9D 14       JMP $D14
-CFD: 8F 7B       JSR $F7B
-CFF: B0 01 80    MVI $01,#$80
-D02: F8 00       LDA $00
+
+CFD: 8F 7B       JSR $F7B                       ; secret code trampoline
+
+CFF: B0 01 80    MVI PORTB,#$80                 ; 1000 0000
+D02: F8 00       LDA PORTA                      ; wait loop until PORTA = 1111
 D04: ED F0       AND #$F0
 D06: EC F0       CMP #$F0
-D08: 19          BNE $D02
-D09: B0 FE 40    MVI $FE,#$40
-D0C: B0 09 3F    MVI $09,#$3F
-D0F: C7 09 FD    BRCLR 7,$09,$D0F
+D08: 19          BNE $D02                       
+D09: B0 FE 40    MVI TCOUNT,#$40
+D0C: B0 09 3F    MVI TSTATUS,#$3F
+D0F: C7 09 FD    BRCLR 7,TSTATUS,$D0F
 D12: 9C 1B       JMP $C1B
-D14: F8 8B       LDA $8B
-D16: F9 8C       STA $8C
-D18: F8 8A       LDA $8A
-D1A: F9 8B       STA $8B
-D1C: F8 89       LDA $89
-D1E: F9 8A       STA $8A
-D20: F8 88       LDA $88
-D22: F9 89       STA $89
-D24: F8 85       LDA $85
-D26: FA 86       ADD $86
-D28: FA 87       ADD $87
+
+; ???
+D14: F8 8B       LDA RAM8B
+D16: F9 8C       STA RAM8C
+D18: F8 8A       LDA RAM8A
+D1A: F9 8B       STA RAM8B
+D1C: F8 89       LDA RAM89
+D1E: F9 8A       STA RAM8A
+D20: F8 88       LDA RAM88
+D22: F9 89       STA RAM89
+D24: F8 85       LDA RAM85
+D26: FA 86       ADD RAM86
+D28: FA 87       ADD RAM87
 D2A: EC 02       CMP #$02
 D2C: 45          BCC $D32
-D2D: B0 88 00    MVI $88,#$00
+D2D: B0 88 00    MVI RAM88,#$00
 D30: 9D 4C       JMP $D4C
-D32: F8 87       LDA $87
+D32: F8 87       LDA RAM87
 D34: EC 10       CMP #$10
 D36: 42          BCC $D39
 D37: 9D 49       JMP $D49
-D39: FC 86       CMP $86
+D39: FC 86       CMP RAM86
 D3B: 65          BCS $D41
-D3C: B0 88 02    MVI $88,#$02
+D3C: B0 88 02    MVI RAM88,#$02
 D3F: 9D 4C       JMP $D4C
-D41: F8 85       LDA $85
+D41: F8 85       LDA RAM85
 D43: 05          BNE $D49
-D44: B0 88 02    MVI $88,#$02
+D44: B0 88 02    MVI RAM88,#$02
 D47: 9D 4C       JMP $D4C
-D49: B0 88 01    MVI $88,#$01
-D4C: B0 85 00    MVI $85,#$00
-D4F: B0 86 00    MVI $86,#$00
-D52: B0 87 00    MVI $87,#$00
+D49: B0 88 01    MVI RAM88,#$01
+D4C: B0 85 00    MVI RAM85,#$00
+D4F: B0 86 00    MVI RAM86,#$00
+D52: B0 87 00    MVI RAM87,#$00
 D55: E8 85       LDA #$85
-D57: FA 88       ADD $88
-D59: BC          STA $80
-D5A: E6          INC [$80]
+D57: FA 88       ADD RAM88
+D59: BC          STA X
+D5A: E6          INC [X]
 D5B: E8 85       LDA #$85
-D5D: FA 89       ADD $89
-D5F: BC          STA $80
-D60: E6          INC [$80]
+D5D: FA 89       ADD RAM89
+D5F: BC          STA X
+D60: E6          INC [X]
 D61: E8 85       LDA #$85
-D63: FA 8A       ADD $8A
-D65: BC          STA $80
-D66: E6          INC [$80]
+D63: FA 8A       ADD RAM8A
+D65: BC          STA X
+D66: E6          INC [X]
 D67: E8 85       LDA #$85
-D69: FA 8B       ADD $8B
-D6B: BC          STA $80
-D6C: E6          INC [$80]
+D69: FA 8B       ADD RAM8B
+D6B: BC          STA X
+D6C: E6          INC [X]
 D6D: E8 85       LDA #$85
-D6F: FA 8C       ADD $8C
-D71: BC          STA $80
-D72: E6          INC [$80]
-D73: F8 85       LDA $85
+D6F: FA 8C       ADD RAM8C
+D71: BC          STA X
+D72: E6          INC [X]
+D73: F8 85       LDA RAM85
 D75: EC 02       CMP #$02
 D77: 65          BCS $D7D
-D78: B0 92 00    MVI $92,#$00
+D78: B0 92 00    MVI RAM92,#$00
 D7B: 9D 94       JMP $D94
-D7D: F8 86       LDA $86
+D7D: F8 86       LDA RAM86
 D7F: EC 04       CMP #$04
 D81: 65          BCS $D87
-D82: B0 92 01    MVI $92,#$01
+D82: B0 92 01    MVI RAM92,#$01
 D85: 9D 94       JMP $D94
-D87: F8 87       LDA $87
+D87: F8 87       LDA RAM87
 D89: EC 03       CMP #$03
 D8B: 65          BCS $D91
-D8C: B0 92 02    MVI $92,#$02
+D8C: B0 92 02    MVI RAM92,#$02
 D8F: 9D 94       JMP $D94
-D91: B0 92 80    MVI $92,#$80
-D94: FE 8E       INC $8E
-D96: C7 92 02    BRCLR 7,$92,$D9B
+D91: B0 92 80    MVI RAM92,#$80
+D94: FE 8E       INC RAM8E
+D96: C7 92 02    BRCLR 7,RAM92,$D9B
 D99: 9C 2A       JMP $C2A
-D9B: F8 92       LDA $92
-D9D: FC 8F       CMP $8F
+D9B: F8 92       LDA RAM92
+D9D: FC 8F       CMP RAM8F
 D9F: 02          BNE $DA2
 DA0: 9E 08       JMP $E08
-DA2: F8 8D       LDA $8D
+DA2: F8 8D       LDA RAM8D
 DA4: 0C          BNE $DB1
-DA5: F8 92       LDA $92
-DA7: F9 8F       STA $8F
-DA9: B0 8D 01    MVI $8D,#$01
-DAC: B0 90 01    MVI $90,#$01
+DA5: F8 92       LDA RAM92
+DA7: F9 8F       STA RAM8F
+DA9: B0 8D 01    MVI RAM8D,#$01
+DAC: B0 90 01    MVI RAM90,#$01
 DAF: 9C 2A       JMP $C2A
-DB1: F8 8F       LDA $8F
+DB1: F8 8F       LDA RAM8F
 DB3: 2A          BEQ $DBE
 DB4: EC 01       CMP #$01
 DB6: 02          BNE $DB9
@@ -428,176 +471,180 @@ DB7: 9D F8       JMP $DF8
 DB9: EC 02       CMP #$02
 DBB: 13          BNE $DAF
 DBC: 9E 01       JMP $E01
-DBE: F8 90       LDA $90
+DBE: F8 90       LDA RAM90
 DC0: EC 02       CMP #$02
 DC2: 62          BCS $DC5
 DC3: 9D D9       JMP $DD9
-DC5: AD          LDA $81
+DC5: AD          LDA Y
 DC6: EC 93       CMP #$93
 DC8: 02          BNE $DCB
 DC9: 9C 1B       JMP $C1B
-DCB: B9          DEC $81
-DCC: F0          LDA [$81]
+
+DCB: B9          DEC Y
+DCC: F0          LDA [Y]
 DCD: ED 03       AND #$03
-DCF: F9 8F       STA $8F
-DD1: F8 91       LDA $91
-DD3: F9 90       STA $90
-DD5: FF 8D       DEC $8D
+DCF: F9 8F       STA RAM8F
+DD1: F8 91       LDA RAM91
+DD3: F9 90       STA RAM90
+DD5: FF 8D       DEC RAM8D
 DD7: 9D 96       JMP $D96
-DD9: F8 90       LDA $90
-DDB: FA FF       ADD $FF
-DDD: FA FF       ADD $FF
-DDF: FA 8F       ADD $8F
-DE1: F1          STA [$81]
-DE2: A9          INC $81
-DE3: AD          LDA $81
+DD9: F8 90       LDA RAM90
+DDB: FA FF       ADD A
+DDD: FA FF       ADD A
+DDF: FA 8F       ADD RAM8F
+DE1: F1          STA [Y]
+DE2: A9          INC Y
+DE3: AD          LDA Y
 DE4: EC 9F       CMP #$9F
 DE6: 62          BCS $DE9
 DE7: 9C 1B       JMP $C1B
-DE9: FE 8D       INC $8D
-DEB: F8 92       LDA $92
-DED: F9 8F       STA $8F
-DEF: F8 90       LDA $90
-DF1: F9 91       STA $91
-DF3: B0 90 01    MVI $90,#$01
+
+DE9: FE 8D       INC RAM8D
+DEB: F8 92       LDA RAM92
+DED: F9 8F       STA RAM8F
+DEF: F8 90       LDA RAM90
+DF1: F9 91       STA RAM91
+DF3: B0 90 01    MVI RAM90,#$01
 DF6: 9C 2A       JMP $C2A
-DF8: F8 90       LDA $90
+DF8: F8 90       LDA RAM90
 DFA: EC 04       CMP #$04
 DFC: 42          BCC $DFF
 DFD: 9D C5       JMP $DC5
 DFF: 9D D9       JMP $DD9
-E01: F8 90       LDA $90
+E01: F8 90       LDA RAM90
 E03: EC 04       CMP #$04
 E05: 77          BCS $DFD
 E06: 9D D9       JMP $DD9
-E08: F8 92       LDA $92
+E08: F8 92       LDA RAM92
 E0A: 2E          BEQ $E19
-E0B: FE 90       INC $90
-E0D: F8 90       LDA $90
+E0B: FE 90       INC RAM90
+E0D: F8 90       LDA RAM90
 E0F: EC 3F       CMP #$3F
 E11: 63          BCS $E15
-E12: B0 90 3F    MVI $90,#$3F
+E12: B0 90 3F    MVI RAM90,#$3F
 E15: 9C 2A       JMP $C2A
 E17: 9C 1B       JMP $C1B
-E19: FE 90       INC $90
-E1B: F8 90       LDA $90
+
+E19: FE 90       INC RAM90
+E1B: F8 90       LDA RAM90
 E1D: EC 18       CMP #$18
 E1F: 75          BCS $E15
-E20: AD          LDA $81
+E20: AD          LDA Y
 E21: EC 94       CMP #$94
 E23: 42          BCC $E26
 E24: 9E 17       JMP $E17
 E26: EB 93       SUB #$93
-E28: F9 8D       STA $8D
-E2A: F9 8A       STA $8A
-E2C: F8 8E       LDA $8E
+E28: F9 8D       STA RAM8D
+E2A: F9 8A       STA RAM8A
+E2C: F8 8E       LDA RAM8E
 E2E: EC 20       CMP #$20
 E30: 42          BCC $E33
 E31: 9E 17       JMP $E17
-E33: B9          DEC $81
-E34: AD          LDA $81
+E33: B9          DEC Y
+E34: AD          LDA Y
 E35: EC 95       CMP #$95
 E37: 42          BCC $E3A
 E38: 9E 4A       JMP $E4A
-E3A: B9          DEC $81
-E3B: F0          LDA [$81]
+E3A: B9          DEC Y
+E3B: F0          LDA [Y]
 E3C: ED 03       AND #$03
 E3E: 0B          BNE $E4A
-E3F: A9          INC $81
-E40: F0          LDA [$81]
+E3F: A9          INC Y
+E40: F0          LDA [Y]
 E41: ED 03       AND #$03
 E43: EC 01       CMP #$01
 E45: 06          BNE $E4C
-E46: F0          LDA [$81]
+E46: F0          LDA [Y]
 E47: EC 1C       CMP #$1C
 E49: 66          BCS $E50
 E4A: 9E 59       JMP $E59
-E4C: F0          LDA [$81]
+E4C: F0          LDA [Y]
 E4D: EC 14       CMP #$14
 E4F: 49          BCC $E59
-E50: FF 8A       DEC $8A
-E52: FF 8A       DEC $8A
-E54: F8 8A       LDA $8A
-E56: BC          STA $80
+E50: FF 8A       DEC RAM8A
+E52: FF 8A       DEC RAM8A
+E54: F8 8A       LDA RAM8A
+E56: BC          STA X
 E57: 9E 33       JMP $E33
-E59: B0 85 FF    MVI $85,#$FF
-E5C: B0 86 FF    MVI $86,#$FF
-E5F: B0 80 18    MVI $80,#$18
-E62: B0 81 93    MVI $81,#$93
-E65: E0          LDA [$80]
+
+E59: B0 85 FF    MVI RAM85,#$FF
+E5C: B0 86 FF    MVI RAM86,#$FF
+E5F: B0 80 18    MVI X,#$18                     ; Read from DATA ROM :(
+E62: B0 81 93    MVI Y,#$93
+E65: E0          LDA [X]
 E66: B5          ROLA 
 E67: B5          ROLA 
 E68: B5          ROLA 
 E69: B5          ROLA 
 E6A: B5          ROLA 
 E6B: ED 0F       AND #$0F
-E6D: F9 85       STA $85
-E6F: E0          LDA [$80]
+E6D: F9 85       STA RAM85
+E6F: E0          LDA [X]
 E70: ED 0F       AND #$0F
-E72: F9 87       STA $87
+E72: F9 87       STA RAM87
 E74: EC 0F       CMP #$0F
 E76: 05          BNE $E7C
-E77: B0 86 08    MVI $86,#$08
+E77: B0 86 08    MVI RAM86,#$08
 E7A: 9F 17       JMP $F17
-E7C: FC 8A       CMP $8A
+E7C: FC 8A       CMP RAM8A
 E7E: 61          BCS $E80
 E7F: 4A          BCC $E8A
-E80: AC          LDA $80
-E81: FA 87       ADD $87
-E83: BC          STA $80
-E84: A8          INC $80
-E85: B0 81 93    MVI $81,#$93
+E80: AC          LDA X
+E81: FA 87       ADD RAM87
+E83: BC          STA X
+E84: A8          INC X
+E85: B0 81 93    MVI Y,#$93
 E88: 9E 65       JMP $E65
-E8A: A8          INC $80
-E8B: E0          LDA [$80]
+E8A: A8          INC X
+E8B: E0          LDA [X]
 E8C: ED 03       AND #$03
-E8E: F9 8C       STA $8C
-E90: F0          LDA [$81]
+E8E: F9 8C       STA RAM8C
+E90: F0          LDA [Y]
 E91: ED 03       AND #$03
-E93: FC 8C       CMP $8C
+E93: FC 8C       CMP RAM8C
 E95: 02          BNE $E98
 E96: 9E A7       JMP $EA7
-E98: E0          LDA [$80]
-E99: C7 FF 02    BRCLR 7,$FF,$E9E
+E98: E0          LDA [X]
+E99: C7 FF 02    BRCLR 7,A,$E9E
 E9C: 9E B3       JMP $EB3
-E9E: AC          LDA $80
-E9F: FA 87       ADD $87
-EA1: BC          STA $80
-EA2: B0 81 93    MVI $81,#$93
+E9E: AC          LDA X
+E9F: FA 87       ADD RAM87
+EA1: BC          STA X
+EA2: B0 81 93    MVI Y,#$93
 EA5: 9E 65       JMP $E65
-EA7: E0          LDA [$80]
-EA8: C5 FF 02    BRCLR 5,$FF,$EAD
+EA7: E0          LDA [X]
+EA8: C5 FF 02    BRCLR 5,A,$EAD
 EAB: 9E FD       JMP $EFD
-EAD: C6 FF 02    BRCLR 6,$FF,$EB2
+EAD: C6 FF 02    BRCLR 6,A,$EB2
 EB0: 9E E1       JMP $EE1
-EB2: A9          INC $81
-EB3: FF 87       DEC $87
+EB2: A9          INC Y
+EB3: FF 87       DEC RAM87
 EB5: 22          BEQ $EB8
 EB6: 9E 8A       JMP $E8A
-EB8: AD          LDA $81
+EB8: AD          LDA Y
 EB9: EB 93       SUB #$93
-EBB: FC 8A       CMP $8A
+EBB: FC 8A       CMP RAM8A
 EBD: 26          BEQ $EC4
-EBE: A8          INC $80
-EBF: B0 81 93    MVI $81,#$93
+EBE: A8          INC X
+EBF: B0 81 93    MVI Y,#$93
 EC2: 9E 65       JMP $E65
-EC4: F8 85       LDA $85
-EC6: F9 86       STA $86
+EC4: F8 85       LDA RAM85
+EC6: F9 86       STA RAM86
 EC8: EC 0E       CMP #$0E
 ECA: 22          BEQ $ECD
 ECB: 9F 17       JMP $F17
-ECD: B0 81 93    MVI $81,#$93
-ED0: A9          INC $81
-ED1: F0          LDA [$81]
+ECD: B0 81 93    MVI Y,#$93
+ED0: A9          INC Y
+ED1: F0          LDA [Y]
 ED2: ED FC       AND #$FC
 ED4: EC 77       CMP #$77
 ED6: 45          BCC $EDC
-ED7: B0 86 03    MVI $86,#$03
+ED7: B0 86 03    MVI RAM86,#$03
 EDA: 9F 17       JMP $F17
-EDC: B0 86 01    MVI $86,#$01
+EDC: B0 86 01    MVI RAM86,#$01
 EDF: 9F 17       JMP $F17
-EE1: C0 8C 0A    BRCLR 0,$8C,$EEE
-EE4: F0          LDA [$81]
+EE1: C0 8C 0A    BRCLR 0,RAM8C,$EEE
+EE4: F0          LDA [Y]
 EE5: ED FC       AND #$FC
 EE7: EC 5B       CMP #$5B
 EE9: 42          BCC $EEC
@@ -606,14 +653,14 @@ EEC: 9E B2       JMP $EB2
 EEE: EC 02       CMP #$02
 EF0: 22          BEQ $EF3
 EF1: 9E B2       JMP $EB2
-EF3: F0          LDA [$81]
+EF3: F0          LDA [Y]
 EF4: ED FC       AND #$FC
 EF6: EC 18       CMP #$18
 EF8: 42          BCC $EFB
 EF9: 9E 9E       JMP $E9E
 EFB: 9E B2       JMP $EB2
-EFD: C0 8C 0A    BRCLR 0,$8C,$F0A
-F00: F0          LDA [$81]
+EFD: C0 8C 0A    BRCLR 0,RAM8C,$F0A
+F00: F0          LDA [Y]
 F01: ED FC       AND #$FC
 F03: EC 5B       CMP #$5B
 F05: 42          BCC $F08
@@ -621,126 +668,138 @@ F06: 9E B2       JMP $EB2
 F08: 9E 9E       JMP $E9E
 F0A: EC 02       CMP #$02
 F0C: 19          BNE $F06
-F0D: F0          LDA [$81]
+F0D: F0          LDA [Y]
 F0E: ED FC       AND #$FC
 F10: EC 18       CMP #$18
 F12: 42          BCC $F15
 F13: 9E B2       JMP $EB2
 F15: 9E 9E       JMP $E9E
-F17: C1 82 02    BRCLR 1,$82,$F1C
+F17: C1 82 02    BRCLR 1,V,$F1C
 F1A: 9F 4F       JMP $F4F
-F1C: F8 86       LDA $86
-F1E: C3 FF 02    BRCLR 3,$FF,$F23
+F1C: F8 86       LDA RAM86
+F1E: C3 FF 02    BRCLR 3,A,$F23
 F21: 9C 1B       JMP $C1B
-F23: F8 86       LDA $86
+
+F23: F8 86       LDA RAM86
 F25: EA 55       ADD #$55
-F27: BD          STA $81
-F28: F0          LDA [$81]
-F29: F9 88       STA $88
+F27: BD          STA Y
+F28: F0          LDA [Y]
+F29: F9 88       STA RAM88
 F2B: 8F 7B       JSR $F7B
-F2D: B0 FE FF    MVI $FE,#$FF
-F30: B0 09 3F    MVI $09,#$3F
-F33: D8 01       BSET 0,$01
+F2D: B0 FE FF    MVI TCOUNT,#$FF
+F30: B0 09 3F    MVI TSTATUS,#$3F
+F33: D8 01       BSET 0,PORTB                   ; XXXX XXX1
 F35: E8 04       LDA #$04
-F37: FF FF       DEC $FF
-F39: AC          LDA $80
-F3A: D0 01       BCLR 0,$01
+F37: FF FF       DEC A
+F39: AC          LDA X
+F3A: D0 01       BCLR 0,PORTB                   ; XXXX XXX0
 F3C: E8 04       LDA #$04
-F3E: FF FF       DEC $FF
-F40: AC          LDA $80
-F41: C7 09 EF    BRCLR 7,$09,$F33
-F44: B0 FE 80    MVI $FE,#$80
-F47: B0 09 3F    MVI $09,#$3F
-F4A: C7 09 FD    BRCLR 7,$09,$F4A
+F3E: FF FF       DEC A
+F40: AC          LDA X
+F41: C7 09 EF    BRCLR 7,TSTATUS,$F33
+F44: B0 FE 80    MVI TCOUNT,#$80
+F47: B0 09 3F    MVI TSTATUS,#$3F
+F4A: C7 09 FD    BRCLR 7,TSTATUS,$F4A
 F4D: 9C 1B       JMP $C1B
-F4F: B0 80 FE    MVI $80,#$FE
-F52: F8 86       LDA $86
+
+F4F: B0 80 FE    MVI X,#$FE
+F52: F8 86       LDA RAM86
 F54: EC 02       CMP #$02
 F56: 68          BCS $F5F
 F57: 24          BEQ $F5C
-F58: B0 80 FB    MVI $80,#$FB
+F58: B0 80 FB    MVI X,#$FB
 F5B: 03          BNE $F5F
-F5C: B0 80 FD    MVI $80,#$FD
-F5F: C7 00 09    BRCLR 7,$00,$F6B
-F62: AC          LDA $80
-F63: F9 01       STA $01
-F65: D7 01       BCLR 7,$01
-F67: DF 01       BSET 7,$01
+F5C: B0 80 FD    MVI X,#$FD
+F5F: C7 00 09    BRCLR 7,PORTA,$F6B             ; check mode bit
+
+; mode bit is 1
+F62: AC          LDA X
+F63: F9 01       STA PORTB
+F65: D7 01       BCLR 7,PORTB                   ; 0XXX XXXX
+F67: DF 01       BSET 7,PORTB                   ; 1XXX XXXX
 F69: 9C 1B       JMP $C1B
+
+; mode bit is 0
 F6B: E8 01       LDA #$01
-F6D: FF 86       DEC $86
-F6F: CF 86 04    BRSET 7,$86,$F76
-F72: FA FF       ADD $FF
+F6D: FF 86       DEC RAM86
+F6F: CF 86 04    BRSET 7,RAM86,$F76
+F72: FA FF       ADD A
 F74: 9F 6D       JMP $F6D
 F76: B4          COMA 
-F77: F9 01       STA $01
+F77: F9 01       STA PORTB
 F79: 9C 1B       JMP $C1B
-F7B: F8 88       LDA $88
-F7D: D0 82       BCLR 0,$82
-F7F: B0 89 06    MVI $89,#$06
-F82: B0 09 3B    MVI $09,#$3B
-F85: B0 FE 82    MVI $FE,#$82
-F88: D7 01       BCLR 7,$01
-F8A: C7 09 FD    BRCLR 7,$09,$F8A
-F8D: B0 FE 34    MVI $FE,#$34
-F90: DF 01       BSET 7,$01
-F92: D7 09       BCLR 7,$09
-F94: C7 09 FD    BRCLR 7,$09,$F94
-F97: B0 FE 34    MVI $FE,#$34
-F9A: F9 01       STA $01
-F9C: D7 09       BCLR 7,$09
-F9E: FA FF       ADD $FF
-FA0: FF 89       DEC $89
+
+; Secret code - parameter in RAM88
+F7B: F8 88       LDA RAM88
+
+F7D: D0 82       BCLR 0,V
+F7F: B0 89 06    MVI RAM89,#$06
+F82: B0 09 3B    MVI TSTATUS,#$3B
+F85: B0 FE 82    MVI TCOUNT,#$82
+F88: D7 01       BCLR 7,PORTB                   ; 0XXX XXXX
+F8A: C7 09 FD    BRCLR 7,TSTATUS,$F8A
+F8D: B0 FE 34    MVI TCOUNT,#$34
+F90: DF 01       BSET 7,PORTB                   ; 1XXX XXXX
+F92: D7 09       BCLR 7,TSTATUS
+F94: C7 09 FD    BRCLR 7,TSTATUS,$F94
+F97: B0 FE 34    MVI TCOUNT,#$34
+F9A: F9 01       STA PORTB                      ; PPPP PPPP
+F9C: D7 09       BCLR 7,TSTATUS
+F9E: FA FF       ADD A
+FA0: FF 89       DEC RAM89      
 FA2: 22          BEQ $FA5
 FA3: 9F C2       JMP $FC2
-FA5: C0 82 10    BRCLR 0,$82,$FB8
-FA8: C7 09 FD    BRCLR 7,$09,$FA8
-FAB: B0 01 FE    MVI $01,#$FE
-FAE: B0 FE 40    MVI $FE,#$40
-FB1: B0 09 3F    MVI $09,#$3F
-FB4: C7 09 FD    BRCLR 7,$09,$FB4
-FB7: B3          RTS
+FA5: C0 82 10    BRCLR 0,V,$FB8
+FA8: C7 09 FD    BRCLR 7,TSTATUS,$FA8
+FAB: B0 01 FE    MVI PORTB,#$FE                 ; 1111 1110
+FAE: B0 FE 40    MVI TCOUNT,#$40
+FB1: B0 09 3F    MVI TSTATUS,#$3F
+FB4: C7 09 FD    BRCLR 7,TSTATUS,$FB4
+FB7: B3          RTS 
 
-FB8: F8 88       LDA $88
+FB8: F8 88       LDA RAM88
 FBA: B4          COMA 
 FBB: ED FC       AND #$FC
-FBD: B0 89 06    MVI $89,#$06
-FC0: D8 82       BSET 0,$82
-FC2: C7 09 FD    BRCLR 7,$09,$FC2
+FBD: B0 89 06    MVI RAM89,#$06
+FC0: D8 82       BSET 0,V
+
+FC2: C7 09 FD    BRCLR 7,TSTATUS,$FC2
 FC5: 9F 97       JMP $F97
 
-FC7: B0 80 52    MVI $80,#$52
-FCA: B0 09 08    MVI $09,#$08
-FCD: B0 FE 80    MVI $FE,#$80
-FD0: FB FF       SUB $FF
-FD2: C7 FE 09    BRCLR 7,$FE,$FDE
-FD5: A9          INC $81
-FD6: B9          DEC $81
-FD7: A9          INC $81
-FD8: B9          DEC $81
-FD9: FE FF       INC $FF
-FDB: B8          DEC $80
-FDC: 15          BNE $FD2
-FDD: B3          RTS
+; Read and classify Frames?
 
-FDE: FC 5D       CMP $5D		; Compare against User Data ROM
+FC7: B0 80 52    MVI X,#$52
+FCA: B0 09 08    MVI TSTATUS,#$08
+FCD: B0 FE 80    MVI TCOUNT,#$80
+FD0: FB FF       SUB A
+FD2: C7 FE 09    BRCLR 7,TCOUNT,$FDE
+FD5: A9          INC Y
+FD6: B9          DEC Y
+FD7: A9          INC Y
+FD8: B9          DEC Y
+FD9: FE FF       INC A
+FDB: B8          DEC X
+FDC: 15          BNE $FD2               ; Delay loop
+FDD: B3          RTS 
+
+FDE: FC 5D       CMP ROM5D              ; Compare against User Data ROM
 FE0: 48          BCC $FE9
-FE1: FE 87       INC $87
-FE3: B0 FE 80    MVI $FE,#$80
-FE6: FB FF       SUB $FF
+FE1: FE 87       INC RAM87
+FE3: B0 FE 80    MVI TCOUNT,#$80
+FE6: FB FF       SUB A
 FE8: 32          BEQ $FDB
-FE9: FC 5E       CMP $5E		; Compare against User Data ROM
+FE9: FC 5E       CMP ROM5E              ; Compare against User Data ROM
 FEB: 45          BCC $FF1
-FEC: FE 86       INC $86
+FEC: FE 86       INC RAM86
 FEE: 14          BNE $FE3
 FEF: 9F DB       JMP $FDB
-FF1: FC 5F       CMP $5F		; Compare against User Data ROM
+FF1: FC 5F       CMP ROM5F              ; Compare against User Data ROM
 FF3: 42          BCC $FF6
-FF4: FE 85       INC $85
+FF4: FE 85       INC RAM85
 FF6: 9F E3       JMP $FE3
 
-FF8: 9B E3       JMP $BE3		;SELF-TEST IRQ VECTOR
-FFA: 9A F6       JMP $AF6		;SELF-TEST RESTART VECTOR
+FF8: 9B E3       JMP SELFIRQ		;SELF-TEST IRQ VECTOR
+FFA: 9A F6       JMP SELFTST		;SELF-TEST RESTART VECTOR
 
-FFC: 9C 10       JMP $C10		;USER IRQ VECTOR
-FFE: 9C 10       JMP $C10		;USER RESTART VECTOR
+FFC: 9C 10       JMP START		;USER IRQ VECTOR
+FFE: 9C 10       JMP START		;USER RESTART VECTOR
